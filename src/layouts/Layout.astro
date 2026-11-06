@@ -1,23 +1,271 @@
+---
+import Header from "../components/Header.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "What to Play Today?",
+  description = "Music history for every day: events, musician birthdays and important dates in music.",
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+
+    <script is:inline>
+      const savedTheme = localStorage.getItem("theme");
+      document.documentElement.dataset.theme =
+        savedTheme === "dark" ? "dark" : "light";
+    </script>
+  </head>
+
+  <body>
+    <Header isDatePage={Astro.params.date !== undefined} />
+
+    <main>
+      <slot />
+    </main>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  /* =================================
+     DESIGN TOKENS
+  ================================= */
+
+  :root {
+    color-scheme: light;
+
+    --bg: #F5F1E8;
+    --surface: #FFFCF6;
+    --surface-soft: #EAE5DA;
+
+    --text: #24212A;
+    --muted: #817B80;
+
+    --accent: #E95D45;
+    --accent-hover: #D94C37;
+    --accent-soft: #F7DFD8;
+
+    --lavender: #A99BD5;
+    --blue: #A9C9D8;
+    --yellow: #E8C96A;
+
+    --border: rgba(36, 33, 42, 0.12);
+
+    --shadow: 0 8px 32px rgba(36, 33, 42, 0.045);
+
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 26px;
+
+    --content-width: 1240px;
+
+    --font-main: "DM Sans", sans-serif;
+    --font-editorial: "DM Serif Display", Georgia, serif;
+    --font-mono: "Space Mono", monospace;
+
+    --transition: 220ms ease;
+  }
+
+  /* =================================
+     DARK THEME
+  ================================= */
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+
+    /* Backgrounds */
+    --bg: #17151C;
+    --surface: #211E29;
+    --surface-soft: #2B2635;
+
+    /* Typography */
+    --text: #F3EDF2;
+    --muted: #B0A5B3;
+
+    /* Coral accent — keep logo identity */
+    --accent: #FF8068;
+    --accent-hover: #FF9985;
+    --accent-soft: #3B282B;
+
+    /* Decorative colors */
+    --lavender: #B9A8E8;
+    --blue: #91BBD0;
+    --yellow: #E8C96A;
+
+    /* Borders and shadows */
+    --border: rgba(243, 237, 242, 0.11);
+    --shadow: 0 10px 36px rgba(0, 0, 0, 0.24);
+  }
+
+  /* =================================
+     RESET
+  ================================= */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.6;
+
+    background:
+      radial-gradient(
+        ellipse at 5% 0%,
+        color-mix(in srgb, var(--accent) 5%, transparent),
+        transparent 32%
+      ),
+      radial-gradient(
+        ellipse at 95% 15%,
+        color-mix(in srgb, var(--lavender) 7%, transparent),
+        transparent 30%
+      ),
+      var(--bg);
+
+    color: var(--text);
+
+    transition:
+      background-color var(--transition),
+      color var(--transition);
+  }
+
+  /* =================================
+     TYPOGRAPHY
+  ================================= */
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--text);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-editorial);
+    font-weight: 400;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  /* =================================
+     MAIN LAYOUT
+  ================================= */
+
+  main {
+    width: min(var(--content-width), calc(100% - 48px));
+    margin: 0 auto;
+    padding: 64px 0 100px;
+  }
+
+  /* =================================
+     GLOBAL UI
+  ================================= */
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* =================================
+     THEME TRANSITIONS
+  ================================= */
+
+  body,
+  header,
+  main,
+  section,
+  article,
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    transition:
+      background-color var(--transition),
+      border-color var(--transition),
+      color var(--transition),
+      box-shadow var(--transition);
+  }
+
+  /* =================================
+     RESPONSIVE
+  ================================= */
+
+  @media (max-width: 700px) {
+    main {
+      width: calc(100% - 32px);
+      padding: 38px 0 72px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
 </style>

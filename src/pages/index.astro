@@ -1,11 +1,1996 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+import Layout from "../layouts/Layout.astro";
+import fs from "node:fs";
+import path from "node:path";
+
+const dataDir = path.resolve("data");
+const preparedDir = path.resolve("data/prepared");
+
+const preparedFiles = fs
+  .readdirSync(preparedDir)
+  .filter((file) => file.endsWith(".json"));
+
+const homeData = {};
+
+for (const file of preparedFiles) {
+  const slug = file.replace(".json", "");
+
+  const sourcePath = path.join(dataDir, `${slug}.json`);
+  const preparedPath = path.join(preparedDir, file);
+
+  const events = fs.existsSync(sourcePath)
+    ? JSON.parse(fs.readFileSync(sourcePath, "utf-8"))
+    : [];
+
+  const prepared = JSON.parse(
+    fs.readFileSync(preparedPath, "utf-8")
+  );
+
+  /* Group music works by historical event */
+
+  const eventMap = new Map(
+    events.map((event) => [String(event.nID), event])
+  );
+
+  const groupedWorksMap = new Map();
+
+  (prepared.works || []).forEach((work, index) => {
+    const hasEventId =
+      work.eventId !== undefined &&
+      work.eventId !== null &&
+      String(work.eventId).trim() !== "";
+
+    const groupKey = hasEventId
+      ? `event-${String(work.eventId)}`
+      : `work-${index}`;
+
+    if (!groupedWorksMap.has(groupKey)) {
+      const sourceEvent = hasEventId
+        ? eventMap.get(String(work.eventId))
+        : null;
+
+      groupedWorksMap.set(groupKey, {
+        eventArtist: sourceEvent?.sArtist || "",
+        year: sourceEvent?.nYear || work.year || null,
+        description:
+          sourceEvent?.sDescription ||
+          work.eventDescription ||
+          "",
+        works: [],
+      });
+    }
+
+    const group = groupedWorksMap.get(groupKey);
+
+    if (!group.description && work.eventDescription) {
+      group.description = work.eventDescription;
+    }
+
+    group.works.push({
+      title: work.title || "",
+      type: work.type || "song",
+      artist: work.artist || "",
+      coverUrl: work.coverUrl || null,
+      youtubeUrl: work.youtubeUrl || null,
+      chordsUrl: work.chordsUrl || null,
+    });
+  });
+
+  const stories = Array.from(groupedWorksMap.values());
+
+  homeData[slug] = {
+    stories: stories.slice(0, 3).map((story) => ({
+      ...story,
+      works: story.works.slice(0, 2),
+      moreWorksCount: Math.max(0, story.works.length - 2),
+    })),
+
+    events: events.slice(0, 4).map((event) => ({
+      description: event.sDescription || "",
+      artist: event.sArtist || "",
+    })),
+
+    people: (prepared.people || []).slice(0, 6).map((person) => ({
+      name: person.name,
+      year: person.year || null,
+      photo: person.photo || null,
+    })),
+
+    peopleCount: (prepared.people || []).length,
+    eventCount: events.length,
+    worksCount: (prepared.works || []).length,
+  };
+}
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="What to Play Today?"
+  description="Discover music connected with today's date and find ideas for what to play, listen to or learn."
+>
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-topline">
+      <span class="eyebrow">
+        <span class="live-dot"></span>
+        YOUR DAILY MUSIC JOURNAL
+      </span>
+
+      <span class="edition">MUSIC ARCHIVE · 365 DAYS</span>
+    </div>
+
+    <div class="hero-content">
+
+      <div class="hero-main">
+
+        <p class="hero-pretitle">A LITTLE MUSIC HISTORY, EVERY DAY</p>
+
+        <h1>
+          Every day has
+          <span>a soundtrack.</span>
+        </h1>
+
+        <p class="hero-description">
+          Discover the songs, artists, albums and moments
+          that made this day unforgettable.
+          And maybe find something worth playing yourself.
+        </p>
+
+        <a href="/" id="today-button" class="primary-button">
+          <span>Explore today's music</span>
+          <span class="button-arrow">↗</span>
+        </a>
+
+      </div>
+
+      <div class="hero-aside">
+
+        <div class="date-artwork">
+
+          <span class="artwork-label">TODAY IN MUSIC</span>
+
+          <div class="artwork-decoration">
+            <img src="/logo-mark-pink.svg" alt="" class="hero-logo hero-logo-one" />
+            <img src="/logo-mark-pink.svg" alt="" class="hero-logo hero-logo-two" />
+            <img src="/logo-mark-pink.svg" alt="" class="hero-logo hero-logo-three" />
+          </div>
+
+          <div class="artwork-bottom">
+            <span class="artwork-small">A NEW CHAPTER</span>
+            <span class="artwork-title">365</span>
+            <span class="artwork-caption">DAYS OF MUSIC</span>
+          </div>
+
+        </div>
+
+        <div class="hero-aside-note">
+          <span class="aside-line"></span>
+          <span>One date. Countless stories.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-bottom">
+      <span>SCROLL TO DISCOVER</span>
+      <span class="scroll-arrow">↓</span>
+      <span class="hero-bottom-right">MUSIC NEVER STANDS STILL</span>
+    </div>
+
+  </section>
+
+
+  <!-- TODAY'S MUSIC -->
+
+  <section class="today-section" id="today">
+
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">01 / THE DAILY ARCHIVE</p>
+        <h2>Today in music<span class="accent-dot">.</span></h2>
+      </div>
+
+      <div class="section-date">
+        <span class="date-label">TODAY'S EDITION</span>
+        <span id="today-date" class="date-value">Loading...</span>
+      </div>
+    </div>
+
+    <!-- MUSIC HISTORY -->
+
+    <div class="music-archive">
+
+      <div class="archive-heading">
+        <div>
+          <span class="archive-overline">THE SOUNDTRACK OF THIS DAY</span>
+          <h3>It happened <em>today.</em></h3>
+        </div>
+
+        <span class="archive-symbol">♫</span>
+      </div>
+
+      <div id="today-events" class="today-stories">
+        <p class="loading-text">Discovering music history...</p>
+      </div>
+
+      <a href="/" id="history-link" class="archive-more">
+        <span class="archive-more-text">
+          Explore the complete story of this date
+        </span>
+        <span class="archive-more-arrow">→</span>
+      </a>
+
+    </div>
+
+    <!-- ARTIST BIRTHDAYS -->
+
+    <div class="birthday-archive" id="birthdays">
+
+      <div class="birthday-heading">
+        <div>
+          <p class="section-kicker">THE PEOPLE BEHIND THE MUSIC</p>
+          <h3>Born <em>today.</em></h3>
+        </div>
+
+        <a href="/" id="birthdays-link" class="birthday-link">
+          All artists <span>↗</span>
+        </a>
+      </div>
+
+      <div id="born-people" class="people-list">
+        <p class="loading-text">Finding today's artists...</p>
+      </div>
+
+    </div>
+
+    <div class="archive-footer">
+      <span>EVERY DATE HAS ITS OWN MUSICAL STORY</span>
+      <span class="archive-decoration">♫</span>
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+
+  <section class="discover-section">
+
+    <div class="discover-heading">
+
+      <div>
+        <p class="section-kicker">02 / YOUR NEXT DISCOVERY</p>
+
+        <h2>
+          Find your next
+          <span>favorite sound.</span>
+        </h2>
+      </div>
+
+      <p class="discover-description">
+        A song you forgot. An artist you haven't heard of.
+        A piece of music you've always wanted to learn.
+        Start anywhere.
+      </p>
+
+    </div>
+
+
+    <div class="discover-grid">
+
+      <article class="discover-card discover-one">
+
+        <div class="discover-number">01</div>
+
+        <img src="/logo-mark.svg" alt="" class="discover-icon" />
+
+        <div class="discover-card-bottom">
+          <h3>Explore</h3>
+
+          <p>
+            Travel through music history.
+            Discover what happened on any date.
+          </p>
+        </div>
+
+        <span class="discover-decoration">DISCOVER MORE ↗</span>
+
+      </article>
+
+
+      <article class="discover-card discover-two">
+
+        <div class="discover-number">02</div>
+
+        <img src="/logo-mark.svg" alt="" class="discover-icon" />
+
+        <div class="discover-card-bottom">
+          <h3>Listen</h3>
+
+          <p>
+            Find songs and albums that deserve
+            a place in your playlist.
+          </p>
+        </div>
+
+        <span class="discover-decoration">FIND YOUR SOUND ↗</span>
+
+      </article>
+
+
+      <article class="discover-card discover-three">
+
+        <div class="discover-number">03</div>
+
+        <img src="/logo-mark.svg" alt="" class="discover-icon" />
+
+        <div class="discover-card-bottom">
+          <h3>Play</h3>
+
+          <p>
+            Find inspiration to pick up
+            an instrument and start playing.
+          </p>
+        </div>
+
+        <span class="discover-decoration">MAKE SOME MUSIC ↗</span>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOTTOM CTA -->
+
+  <section class="calendar-cta">
+
+    <div class="cta-copy">
+      <p class="section-kicker">03 / THE WHOLE YEAR IN MUSIC</p>
+
+      <h2>
+        There's always
+        <span>another story.</span>
+      </h2>
+
+      <p>
+        Every day, every year, every generation.
+        Pick a date and see what the world was listening to.
+      </p>
+    </div>
+
+    <a href="/calendar/" id="calendar-button" class="calendar-button">
+      Explore the calendar
+      <span>↗</span>
+    </a>
+
+    <div class="cta-decoration">365</div>
+
+  </section>
+
+
+  <script define:vars={{ homeData }}>
+    const todayButton = document.querySelector("#today-button");
+    const exploreLink = document.querySelector("#history-link");
+    const birthdaysLink = document.querySelector("#birthdays-link");
+    const calendarButton = document.querySelector("#calendar-button");
+
+    const todayDate = document.querySelector("#today-date");
+    const eventsContainer = document.querySelector("#today-events");
+    const peopleContainer = document.querySelector("#born-people");
+
+    // Safely escape dynamic content before inserting HTML.
+
+    const escapeHTML = (value) =>
+      String(value ?? "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      })[char]);
+
+    // Remove HTML tags and decode entities in event descriptions.
+    const plainText = (value) => {
+      const doc = new DOMParser().parseFromString(
+        String(value ?? ""),
+        "text/html"
+      );
+
+      return (doc.body.textContent || "")
+        .replace(/\s+/g, " ")
+        .trim();
+    };
+
+    // Today's date
+
+    const now = new Date();
+
+    const dateParts = new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "2-digit",
+    }).formatToParts(now);
+
+    const month = dateParts
+      .find((part) => part.type === "month")
+      ?.value.toLowerCase();
+
+    const day = dateParts
+      .find((part) => part.type === "day")
+      ?.value;
+
+    if (!month || !day) {
+      throw new Error("Could not determine today's date.");
+    }
+
+    const todaySlug = `${month}-${day}`;
+    const todayUrl = `/${todaySlug}/`;
+
+    const displayDate = new Intl.DateTimeFormat("en-US", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }).format(now);
+
+    const data = homeData[todaySlug];
+
+    // Update links
+
+    if (todayButton) todayButton.href = todayUrl;
+    if (exploreLink) exploreLink.href = todayUrl;
+    if (birthdaysLink) birthdaysLink.href = `${todayUrl}#birthdays`;
+
+    // Calendar page
+    if (calendarButton) {
+      calendarButton.href = "/calendar/";
+    }
+
+    // Display date
+
+    if (todayDate) {
+      todayDate.textContent = displayDate;
+    }
+
+    // Music stories
+
+    if (eventsContainer) {
+      if (data?.stories?.length) {
+
+        eventsContainer.innerHTML = data.stories
+          .map((story, index) => {
+
+            const description = plainText(story.description);
+
+            return `
+              <article class="today-story">
+
+                <div class="story-intro">
+
+                  <div class="story-meta">
+                    <span class="story-number">
+                      ${String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    ${
+                      story.year
+                        ? `<span class="story-year">${escapeHTML(story.year)}</span>`
+                        : ""
+                    }
+
+                    <span class="story-label">ON THIS DAY</span>
+                  </div>
+
+                  ${
+                    story.eventArtist
+                      ? `<h4 class="story-title">${escapeHTML(story.eventArtist)}</h4>`
+                      : `<h4 class="story-title">A moment in music</h4>`
+                  }
+
+                  ${
+                    description
+                      ? `<p class="story-description">${escapeHTML(description)}</p>`
+                      : ""
+                  }
+
+                </div>
+
+                <div class="story-music">
+
+                  ${
+                    story.works.length
+                      ? story.works.map((work) => `
+                        <article class="music-item">
+
+                          <div class="music-cover">
+                            ${
+                              work.coverUrl
+                                ? `
+                                  <img
+                                    src="${escapeHTML(work.coverUrl)}"
+                                    alt="${escapeHTML(work.artist)} — ${escapeHTML(work.title)}"
+                                    loading="lazy"
+                                    onerror="this.remove(); this.parentElement.innerHTML='<span>♫</span>';"
+                                  />
+                                `
+                                : `<span>♫</span>`
+                            }
+                          </div>
+
+                          <div class="music-info">
+
+                            <span class="music-type">
+                              ${work.type === "album" ? "ALBUM" : "SONG"}
+                            </span>
+
+                            <h5>${escapeHTML(work.title)}</h5>
+
+                            ${
+                              work.artist
+                                ? `<p>${escapeHTML(work.artist)}</p>`
+                                : ""
+                            }
+
+                            <div class="music-actions">
+
+                              ${
+                                work.youtubeUrl
+                                  ? `
+                                    <a
+                                      href="${escapeHTML(work.youtubeUrl)}"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      class="music-action music-action-listen"
+                                    >
+                                      ▶ Listen
+                                    </a>
+                                  `
+                                  : ""
+                              }
+
+                              ${
+                                work.chordsUrl
+                                  ? `
+                                    <a
+                                      href="${escapeHTML(work.chordsUrl)}"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      class="music-action music-action-chords"
+                                    >
+                                      ♫ Chords
+                                    </a>
+                                  `
+                                  : ""
+                              }
+
+                            </div>
+
+                          </div>
+
+                        </article>
+                      `).join("")
+                      : `<p class="empty-state">No music links available.</p>`
+                  }
+
+                </div>
+
+                ${
+                  story.moreWorksCount > 0
+                    ? `<span class="story-extra">+ ${story.moreWorksCount} more works in the full archive</span>`
+                    : ""
+                }
+
+              </article>
+            `;
+          })
+          .join("");
+
+      } else if (data?.events?.length) {
+
+        eventsContainer.innerHTML = data.events
+          .map((event, index) => `
+            <article class="today-story today-story-text">
+
+              <div class="story-intro">
+
+                <div class="story-meta">
+                  <span class="story-number">
+                    ${String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span class="story-label">MUSIC HISTORY</span>
+                </div>
+
+                ${
+                  event.artist
+                    ? `<h4 class="story-title">${escapeHTML(event.artist)}</h4>`
+                    : ""
+                }
+
+                <p class="story-description">
+                  ${escapeHTML(plainText(event.description))}
+                </p>
+
+              </div>
+
+            </article>
+          `)
+          .join("");
+
+      } else {
+
+        eventsContainer.innerHTML = `
+          <p class="empty-state">
+            No events have been added for this date yet.
+            Explore the archive to discover more.
+          </p>
+        `;
+
+      }
+    }
+
+    // Artist birthdays
+
+    if (peopleContainer) {
+      if (data?.people?.length) {
+        peopleContainer.innerHTML = data.people
+          .map((person) => `
+            <div class="person">
+
+              ${
+                person.photo
+                  ? `
+                    <img
+                      src="${escapeHTML(person.photo)}"
+                      alt="${escapeHTML(person.name)}"
+                      loading="lazy"
+                    />
+                  `
+                  : `
+                    <div class="person-placeholder">♪</div>
+                  `
+              }
+
+              <div class="person-info">
+
+                <a
+                  class="person-name"
+                  href="https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(person.name)}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ${escapeHTML(person.name)}
+                </a>
+
+                ${
+                  person.year
+                    ? `
+                      <span class="person-year">
+                        Born ${escapeHTML(person.year)}
+                      </span>
+                    `
+                    : ""
+                }
+
+              </div>
+
+            </div>
+          `)
+          .join("");
+      } else {
+        peopleContainer.innerHTML = `
+          <p class="empty-state">
+            No birthdays recorded for this date yet.
+          </p>
+        `;
+      }
+    }
+  </script>
+
+<style is:global>
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+  padding: 16px 0 25px;
+  margin-bottom: 110px;
+}
+
+.hero-topline,
+.hero-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-topline {
+  padding-bottom: 18px;
+}
+
+.eyebrow,
+.edition,
+.hero-pretitle,
+.hero-bottom,
+.artwork-label,
+.artwork-small,
+.artwork-caption,
+.section-kicker,
+.date-label,
+.archive-overline,
+.story-meta,
+.music-type,
+.archive-footer,
+.discover-number,
+.discover-decoration {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: .1em;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.edition,
+.hero-bottom,
+.date-label {
+  color: var(--muted);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 70px;
+  align-items: center;
+  padding: 90px 25px 85px;
+}
+
+.hero-main {
+  max-width: 760px;
+}
+
+.hero-pretitle {
+  margin: 0 0 25px;
+  color: var(--accent);
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-editorial, Georgia, serif);
+  font-size: clamp(68px, 8vw, 110px);
+  line-height: .94;
+  letter-spacing: -.055em;
+  font-weight: 400;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 550px;
+  margin: 30px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.primary-button,
+.calendar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 15px 19px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.primary-button {
+  margin-top: 35px;
+}
+
+.primary-button:hover,
+.calendar-button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.button-arrow,
+.calendar-button span {
+  font-size: 19px;
+}
+
+.hero-aside {
+  width: 100%;
+}
+
+.date-artwork {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 355px;
+  overflow: hidden;
+  padding: 24px;
+  border-radius: 3px;
+  background: #E95D45;
+  color: #FFFCF6;
+  box-shadow: 12px 12px 0 var(--accent-soft);
+  transform: rotate(2deg);
+}
+
+:root[data-theme="dark"] .date-artwork {
+  background: #68423F;
+  box-shadow: 12px 12px 0 var(--surface-soft);
+}
+
+.artwork-decoration {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.artwork-label,
+.artwork-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo {
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  object-fit: contain;
+  opacity: 0.75;
+}
+
+.hero-logo-one {
+  top: 55px;
+  left: 15px;
+  transform: rotate(-15deg);
+}
+
+.hero-logo-two {
+  top: 105px;
+  right: -15px;
+  width: 180px;
+  height: 180px;
+  transform: rotate(12deg);
+}
+
+.hero-logo-three {
+  top: 15px;
+  right: 65px;
+  width: 85px;
+  height: 85px;
+  transform: rotate(8deg);
+}
+
+.artwork-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.artwork-title {
+  font-family: var(--font-editorial, Georgia, serif);
+  font-size: 112px;
+  line-height: .9;
+  letter-spacing: -.08em;
+}
+
+.artwork-caption {
+  margin-top: 8px;
+}
+
+.hero-aside-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 27px 0 0 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.aside-line {
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero-bottom {
+  justify-content: flex-start;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  border-bottom: 0;
+}
+
+.scroll-arrow {
+  color: var(--accent);
+  font-size: 17px;
+}
+
+.hero-bottom-right {
+  margin-left: auto;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-kicker {
+  margin: 0 0 16px;
+  color: var(--accent);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.section-header h2,
+.discover-heading h2,
+.calendar-cta h2 {
+  margin: 0;
+  font-family: var(--font-editorial, Georgia, serif);
+  font-size: clamp(46px, 5.5vw, 68px);
+  line-height: 1;
+  letter-spacing: -.05em;
+  font-weight: 400;
+}
+
+.accent-dot {
+  color: var(--accent);
+}
+
+.section-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.date-value {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   TODAY IN MUSIC
+========================================= */
+
+.today-section {
+  margin-bottom: 120px;
+}
+
+.music-archive {
+  overflow: hidden;
+  padding: 38px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.archive-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 29px;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-overline {
+  color: var(--accent);
+}
+
+.archive-heading h3,
+.birthday-heading h3 {
+  margin: 10px 0 0;
+  font-family: var(--font-editorial, Georgia, serif);
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.archive-heading h3 em,
+.birthday-heading h3 em {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.archive-symbol {
+  color: var(--accent);
+  font-family: Georgia, serif;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.today-stories {
+  display: flex;
+  flex-direction: column;
+}
+
+.today-story {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: 42px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.today-story:last-child {
+  border-bottom: 0;
+}
+
+.story-intro {
+  min-width: 0;
+}
+
+.story-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.story-number {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.story-year {
+  color: var(--text);
+  font-size: 11px;
+}
+
+.story-label {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.story-title {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-editorial, Georgia, serif);
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.04em;
+}
+
+.story-description {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+
+/* =========================================
+   SONGS AND ALBUMS
+========================================= */
+
+.story-music {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.music-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--bg, var(--surface));
+  transition: .2s ease;
+}
+
+.music-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.music-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 112px;
+  width: 112px;
+  height: 112px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: var(--surface-soft);
+  color: var(--accent);
+  font-family: Georgia, serif;
+  font-size: 38px;
+}
+
+.music-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.music-item:hover .music-cover img {
+  transform: scale(1.05);
+}
+
+.music-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  padding: 4px 0;
+}
+
+.music-type {
+  color: var(--accent);
+  font-size: 9px;
+}
+
+.music-info h5 {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 8px 0 5px;
+  color: var(--text);
+  font-family: var(--font-editorial, Georgia, serif);
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.15;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.music-info p {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.music-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.music-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 11px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.music-action-listen {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.music-action-listen:hover {
+  background: var(--accent-hover);
+}
+
+.music-action-chords {
+  border-color: var(--lavender);
+  background: var(--lavender);
+  color: white;
+}
+
+.music-action-chords:hover {
+  opacity: .85;
+}
+
+.story-extra {
+  grid-column: 2;
+  color: var(--muted);
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+}
+
+.today-story-text {
+  grid-template-columns: 1fr;
+}
+
+
+/* =========================================
+   ARTIST BIRTHDAYS
+========================================= */
+
+.birthday-archive {
+  margin-top: 27px;
+  padding: 34px 38px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-soft);
+}
+
+.birthday-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 29px;
+}
+
+.birthday-heading .section-kicker {
+  margin: 0;
+}
+
+.birthday-heading h3 {
+  font-size: 39px;
+}
+
+.birthday-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.birthday-link span {
+  color: var(--accent);
+  font-size: 19px;
+}
+
+.people-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 28px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.person img,
+.person-placeholder {
+  display: block;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.person-placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.person-name {
+  display: inline-block;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+
+.person-name:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.person-year {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.archive-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+  color: var(--muted);
+}
+
+.archive-decoration {
+  color: var(--accent);
+  font-size: 21px;
+}
+
+
+/* =========================================
+   DISCOVER
+========================================= */
+
+.discover-section {
+  margin: 0 0 115px;
+}
+
+.discover-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, .65fr);
+  align-items: end;
+  gap: 55px;
+  margin-bottom: 40px;
+}
+
+.discover-heading h2 {
+  max-width: 650px;
+}
+
+.discover-heading h2 span {
+  display: block;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.discover-description {
+  max-width: 360px;
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.discover-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 300px;
+  overflow: hidden;
+  padding: 27px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface);
+  transition: .25s ease;
+}
+
+.discover-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.discover-two {
+  background: var(--surface-soft);
+}
+
+.discover-number {
+  position: relative;
+  z-index: 2;
+  color: var(--accent);
+}
+
+.discover-icon {
+  position: absolute;
+  top: 34px;
+  right: 27px;
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+  opacity: .8;
+}
+
+.discover-card-bottom {
+  position: relative;
+  z-index: 2;
+  max-width: 280px;
+  margin-top: auto;
+  padding-top: 85px;
+}
+
+.discover-card-bottom h3 {
+  margin: 0 0 11px;
+  font-family: var(--font-editorial, Georgia, serif);
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -.04em;
+}
+
+.discover-card-bottom p {
+  max-width: 250px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.discover-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 26px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.discover-decoration::after {
+  content: "↗";
+  color: var(--accent);
+  font-family: sans-serif;
+  font-size: 17px;
+}
+
+
+/* =========================================
+   BOTTOM CALENDAR CTA
+========================================= */
+
+.calendar-cta {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+  overflow: hidden;
+  padding: 45px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-soft);
+}
+
+.cta-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.calendar-cta h2 span {
+  display: block;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.cta-copy > p:last-child {
+  max-width: 440px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.calendar-button {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.cta-decoration {
+  position: absolute;
+  top: -60px;
+  right: 25px;
+  color: var(--text);
+  font-family: var(--font-editorial, Georgia, serif);
+  font-size: 240px;
+  line-height: 1;
+  opacity: .035;
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero h1 {
+    font-size: clamp(58px, 8vw, 82px);
+  }
+
+  .date-artwork {
+    min-height: 310px;
+  }
+
+  .artwork-title {
+    font-size: 90px;
+  }
+
+  .today-story {
+    gap: 25px;
+  }
+
+  .music-cover {
+    flex-basis: 95px;
+    width: 95px;
+    height: 95px;
+  }
+
+  .people-list {
+    gap: 20px;
+  }
+
+  .discover-heading {
+    gap: 25px;
+  }
+
+  .discover-card {
+    min-height: 270px;
+    padding: 22px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .hero {
+    margin-bottom: 75px;
+  }
+
+  .eyebrow,
+  .edition {
+    font-size: 8px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 55px 5px 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(56px, 12vw, 78px);
+  }
+
+  .hero-description {
+    margin-top: 22px;
+    font-size: 14px;
+  }
+
+  .hero-aside {
+    width: min(280px, 82%);
+    margin: 0 15px 0 auto;
+  }
+
+  .date-artwork {
+    min-height: 285px;
+  }
+
+  .artwork-title {
+    font-size: 90px;
+  }
+
+  .hero-bottom {
+    font-size: 8px;
+  }
+
+  .today-section,
+  .discover-section {
+    margin-bottom: 80px;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .section-header h2,
+  .discover-heading h2,
+  .calendar-cta h2 {
+    font-size: 45px;
+  }
+
+  .section-date {
+    align-items: flex-start;
+  }
+
+  .music-archive {
+    padding: 23px;
+  }
+
+  .archive-heading h3 {
+    font-size: 33px;
+  }
+
+  .today-story {
+    grid-template-columns: 1fr;
+    gap: 21px;
+    padding: 28px 0;
+  }
+
+  .story-title {
+    font-size: 30px;
+  }
+
+  .story-description {
+    font-size: 13px;
+  }
+
+  .music-item {
+    gap: 13px;
+    padding: 9px;
+  }
+
+  .music-cover {
+    flex-basis: 88px;
+    width: 88px;
+    height: 88px;
+  }
+
+  .music-info h5 {
+    font-size: 19px;
+  }
+
+  .music-actions {
+    margin-top: 10px;
+  }
+
+  .music-action {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+
+  .story-extra {
+    grid-column: 1;
+  }
+
+  .birthday-archive {
+    padding: 25px 23px;
+  }
+
+  .birthday-heading h3 {
+    font-size: 33px;
+  }
+
+  .people-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px 12px;
+  }
+
+  .person {
+    gap: 10px;
+  }
+
+  .person img,
+  .person-placeholder {
+    flex-basis: 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .person-name {
+    font-size: 11px;
+  }
+
+  .person-year {
+    font-size: 10px;
+  }
+
+  .discover-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 27px;
+  }
+
+  .discover-description {
+    font-size: 13px;
+  }
+
+  .discover-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .discover-card {
+    min-height: 205px;
+    padding: 22px;
+  }
+
+  .discover-card-bottom {
+    padding-top: 45px;
+  }
+
+  .discover-card-bottom h3 {
+    font-size: 29px;
+  }
+
+  .discover-icon {
+    top: 20px;
+    right: 22px;
+    font-size: 58px;
+  }
+
+  .discover-decoration {
+    margin-top: 17px;
+    padding-top: 12px;
+  }
+
+  .calendar-cta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    padding: 28px 23px;
+  }
+
+  .calendar-button {
+    width: 100%;
+  }
+
+  .cta-decoration {
+    top: -20px;
+    font-size: 170px;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 53px;
+  }
+
+  .people-list {
+    grid-template-columns: 1fr;
+  }
+
+  .edition {
+    font-size: 7px;
+  }
+
+  .music-cover {
+    flex-basis: 76px;
+    width: 76px;
+    height: 76px;
+  }
+
+  .music-info h5 {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================
+   DATE — MAKE IT MORE VISIBLE
+========================================= */
+
+.date-value {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* All artists link */
+
+.birthday-link {
+  padding: 10px 15px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  transition: .2s ease;
+}
+
+.birthday-link:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+
+/* Listen and Chords links */
+
+.music-action {
+  padding: 9px 13px;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: .2s ease;
+}
+
+.music-action-chords {
+  color: var(--text);
+}
+
+.music-action-chords:hover {
+  border-color: var(--lavender);
+  background: var(--lavender);
+  color: white;
+}
+
+/* =========================================
+   EXPLORE FULL STORY — REFINED LINK
+========================================= */
+
+.archive-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-top: 8px;
+  padding: 19px 4px 5px;
+
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: color .25s ease;
+}
+
+.archive-more:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.archive-more-text {
+  transition: transform .25s ease;
+}
+
+.archive-more:hover .archive-more-text {
+  transform: translateX(4px);
+}
+
+.archive-more-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  color: var(--accent);
+  font-size: 17px;
+
+  transition: .25s ease;
+}
+
+.archive-more:hover .archive-more-arrow {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+  transform: translateX(3px);
+}
+
+/* =========================================
+   COMPACT DESKTOP LAYOUT
+========================================= */
+
+@media (min-width: 1000px) {
+  .hero {
+    padding-top: 0;
+    padding-bottom: 16px;
+    margin-bottom: 64px;
+  }
+
+  .hero-content {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 48px;
+    padding: 48px 12px 50px;
+  }
+
+  .hero-pretitle {
+    margin-bottom: 18px;
+  }
+
+  .hero-description {
+    margin-top: 22px;
+    line-height: 1.7;
+  }
+
+  .primary-button {
+    margin-top: 26px;
+  }
+
+  .date-artwork {
+    min-height: 320px;
+  }
+
+  .hero-aside-note {
+    margin-top: 20px;
+  }
+
+  .today-section {
+    margin-bottom: 72px;
+  }
+
+  .discover-section {
+    margin-bottom: 72px;
+  }
+
+  .section-header {
+    margin-bottom: 28px;
+  }
+
+  .discover-heading {
+    gap: 36px;
+    margin-bottom: 28px;
+  }
+}
+
+</style>
 </Layout>

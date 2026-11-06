@@ -22,3 +22,18 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# local test and debug files
+gemini-real-test-50.json
+musicbrainz-validation*.json
+test-gemini-*.json
+scriptsoctober-26.html
+data/music-works.backup.json
+
+# local debug and test scripts
+scripts/debug-*.cjs
+scripts/test-*.cjs
+scripts/revalidate-october-31-test.cjs
+scripts/october-26.html
+
+data/ai-music-backup/

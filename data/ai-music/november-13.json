@@ -1,0 +1,5563 @@
+{
+  "date": "november-13",
+  "source": "november-13.json",
+  "model": "gemini-3.5-flash-lite",
+  "generatedAt": "2026-11-06T15:23:07.358Z",
+  "validatedAt": "2026-11-06T15:23:07.359Z",
+  "summary": {
+    "songs": {
+      "total": 31,
+      "confirmed": 31,
+      "normalized": 0,
+      "accept_unverified": 0,
+      "split": 0,
+      "review": 0,
+      "retry_later": 0
+    },
+    "albums": {
+      "total": 15,
+      "confirmed": 13,
+      "normalized": 0,
+      "accept_unverified": 1,
+      "split": 0,
+      "review": 1,
+      "retry_later": 0
+    }
+  },
+  "results": [
+    {
+      "id": "22638",
+      "event_artist": "Shel Talmy",
+      "songs": [
+        {
+          "input": {
+            "title": "You Really Got Me",
+            "performer": [
+              "The Kinks"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"You Really Got Me\" AND artist:\"The Kinks\"",
+            "original_title": null,
+            "normalized_title": "You Really Got Me",
+            "performers": [
+              "The Kinks"
+            ],
+            "match": {
+              "title": "You Really Got Me",
+              "artists": [
+                "The Kinks"
+              ],
+              "canonicalArtist": "The Kinks",
+              "mbid": "57ad22b1-29f7-4123-9879-03dc5fb230e5",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "57ad22b1-29f7-4123-9879-03dc5fb230e5",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "523e8731-7baa-49bc-9218-c8b5a92ef2c9",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "a9867b8e-2790-4a02-8b40-a394ef27358c",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "4c40810c-691a-4655-abe3-06d6adce4b00",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "212743a2-434f-4d7e-80e9-2684824c9e44",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "c60e627a-65b7-4ba7-b7b7-480d257c4183",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "422c32e2-513b-4b89-be61-5d68c56b4a50",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "7578593d-0018-4a61-aa92-42b9462c05c6",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "48c4ad52-ed54-477d-8449-b2deeeb1a481",
+                "score": 200
+              },
+              {
+                "title": "You Really Got Me",
+                "artists": [
+                  "The Kinks"
+                ],
+                "canonicalArtist": "The Kinks",
+                "mbid": "3678afb6-30b7-422c-994c-8f076040fdbe",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "My Generation",
+            "performer": [
+              "The Who"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"My Generation\" AND artist:\"The Who\"",
+            "original_title": null,
+            "normalized_title": "My Generation",
+            "performers": [
+              "The Who"
+            ],
+            "match": {
+              "title": "My Generation",
+              "artists": [
+                "The Who"
+              ],
+              "canonicalArtist": "The Who",
+              "mbid": "45b6cb12-69a8-477b-8046-85fd569469af",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "45b6cb12-69a8-477b-8046-85fd569469af",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "f2feb5f0-a371-4614-a711-9b31e2a9cada",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "91a13dea-15c4-42d0-85f8-80cef730b243",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "c6a163b1-6afb-4aec-99f2-d63358314280",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "7f06b030-7cc5-4b3c-b361-90d9d3dd53c6",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "22a12afc-698e-4507-8f19-f2ee895a7860",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "bbdcd6d6-0b86-48b8-b80c-fe19fa18c126",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "5e5d5fdc-b55c-4bd6-807e-f6adc0d26af3",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "86e649ea-be3a-4bcf-b9e4-0b21ea3cf99f",
+                "score": 200
+              },
+              {
+                "title": "My Generation",
+                "artists": [
+                  "The Who"
+                ],
+                "canonicalArtist": "The Who",
+                "mbid": "4bb15ae1-a241-4dcb-bf7c-db9ac2f71dee",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "Friday on My Mind",
+            "performer": [
+              "the Easybeats"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Friday on My Mind\" AND artist:\"the Easybeats\"",
+            "original_title": null,
+            "normalized_title": "Friday on My Mind",
+            "performers": [
+              "The Easybeats"
+            ],
+            "match": {
+              "title": "Friday on My Mind",
+              "artists": [
+                "The Easybeats"
+              ],
+              "canonicalArtist": "The Easybeats",
+              "mbid": "77f5b04c-b646-4133-851c-505ceb433006",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "77f5b04c-b646-4133-851c-505ceb433006",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "3ab0dafc-a257-4f4f-995f-ee78d91af8d4",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "508cb547-9d2c-451b-b510-56249472d5b4",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "db263731-b5f0-4cae-bb66-86d7e40b7317",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "26561e23-5f1e-4a79-b623-df572286a0c9",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "d53932bb-06f6-45d4-aacd-ab1fb8b51e1c",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "9d4c340e-4029-4879-8677-0b2129922080",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "e65caa8e-0cd2-40eb-b1a8-a146b6b64b42",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "ccd042ab-362f-4201-a28c-1367d2339ad9",
+                "score": 200
+              },
+              {
+                "title": "Friday on My Mind",
+                "artists": [
+                  "The Easybeats"
+                ],
+                "canonicalArtist": "The Easybeats",
+                "mbid": "e6f9c090-c198-4cc1-b197-073998628e0c",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "I Pity The Fool",
+            "performer": [
+              "The Manish Boys"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"I Pity The Fool\" AND artist:\"The Manish Boys\"",
+            "original_title": null,
+            "normalized_title": "I Pity the Fool",
+            "performers": [
+              "The Manish Boys"
+            ],
+            "match": {
+              "title": "I Pity the Fool",
+              "artists": [
+                "The Manish Boys"
+              ],
+              "canonicalArtist": "The Manish Boys",
+              "mbid": "76f83ade-226e-4616-8848-db02f08d382d",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "I Pity the Fool",
+                "artists": [
+                  "The Manish Boys"
+                ],
+                "canonicalArtist": "The Manish Boys",
+                "mbid": "76f83ade-226e-4616-8848-db02f08d382d",
+                "score": 200
+              },
+              {
+                "title": "I Pity the Fool",
+                "artists": [
+                  "The Manish Boys"
+                ],
+                "canonicalArtist": "The Manish Boys",
+                "mbid": "9bd1b363-0e89-4979-a775-2ba88f9e3ed3",
+                "score": 200
+              },
+              {
+                "title": "I Pity the Fool",
+                "artists": [
+                  "The Manish Boys"
+                ],
+                "canonicalArtist": "The Manish Boys",
+                "mbid": "95e4c566-4bc0-4c79-bf88-ebf16a627542",
+                "score": 200
+              },
+              {
+                "title": "I Pity the Fool",
+                "artists": [
+                  "The Manish Boys"
+                ],
+                "canonicalArtist": "The Manish Boys",
+                "mbid": "c65853a6-cbf7-431b-82d9-10c75e1d48a1",
+                "score": 200
+              },
+              {
+                "title": "I Pity the Fool",
+                "artists": [
+                  "The Manish Boys"
+                ],
+                "canonicalArtist": "The Manish Boys",
+                "mbid": "319d38b1-bf96-411b-a3be-88601d49be57",
+                "score": 200
+              },
+              {
+                "title": "I Pity the Fool (alternative vocal)",
+                "artists": [
+                  "The Manish Boys"
+                ],
+                "canonicalArtist": "The Manish Boys",
+                "mbid": "9d77247a-100b-4aa4-ab01-f0256bde665c",
+                "score": 160
+              },
+              {
+                "title": "I Pity the Fool (alternative vocal take)",
+                "artists": [
+                  "The Manish Boys"
+                ],
+                "canonicalArtist": "The Manish Boys",
+                "mbid": "29b12745-4e12-4674-b719-a969a70a5655",
+                "score": 100
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "You'Ve Got A Habit Of Leaving",
+            "performer": [
+              "The Lower Third"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"You'Ve Got A Habit Of Leaving\" AND artist:\"The Lower Third\"",
+            "original_title": null,
+            "normalized_title": "You’ve Got a Habit of Leaving",
+            "performers": [
+              "Davy Jones & The Lower Third"
+            ],
+            "match": {
+              "title": "You’ve Got a Habit of Leaving",
+              "artists": [
+                "Davy Jones & The Lower Third"
+              ],
+              "canonicalArtist": "Davy Jones & The Lower Third",
+              "mbid": "0071e9e7-2dde-4420-90cb-dea58e48d478",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "You’ve Got a Habit of Leaving",
+                "artists": [
+                  "Davy Jones & The Lower Third"
+                ],
+                "canonicalArtist": "Davy Jones & The Lower Third",
+                "mbid": "0071e9e7-2dde-4420-90cb-dea58e48d478",
+                "score": 200
+              },
+              {
+                "title": "You've Got a Habit of Leaving",
+                "artists": [
+                  "Davy Jones & The Lower Third"
+                ],
+                "canonicalArtist": "Davy Jones & The Lower Third",
+                "mbid": "776971b8-a0ac-4eed-84ef-29447304d147",
+                "score": 200
+              },
+              {
+                "title": "You've Got a Habit of Leaving",
+                "artists": [
+                  "David Bowie",
+                  "Davy Jones & The Lower Third"
+                ],
+                "canonicalArtist": "David Bowie & Davy Jones & The Lower Third",
+                "mbid": "0d0625f6-905a-4b83-a578-607d28ef40d8",
+                "score": 200
+              },
+              {
+                "title": "You’ve Got a Habit of Leaving",
+                "artists": [
+                  "David Bowie",
+                  "Davy Jones & The Lower Third"
+                ],
+                "canonicalArtist": "David Bowie with Davy Jones & The Lower Third",
+                "mbid": "ffcb4bca-35e0-40ad-80fb-f9b160f1bc20",
+                "score": 200
+              },
+              {
+                "title": "You’ve Got a Habit of Leaving",
+                "artists": [
+                  "Davy Jones & The Lower Third"
+                ],
+                "canonicalArtist": "Davy Jones & The Lower Third",
+                "mbid": "318b5fe5-2e46-4c17-aae2-f47ff587e715",
+                "score": 200
+              },
+              {
+                "title": "You've Got a Habit of Leaving",
+                "artists": [
+                  "Davy Jones & The Lower Third"
+                ],
+                "canonicalArtist": "Davy Jones & The Lower Third",
+                "mbid": "6812c3d7-50c7-4af1-8757-2d35bd0eb000",
+                "score": 200
+              },
+              {
+                "title": "You've Got a Habit of Leaving (alternative overdub/vocal)",
+                "artists": [
+                  "David Bowie",
+                  "Davy Jones & The Lower Third"
+                ],
+                "canonicalArtist": "David Bowie & Davy Jones & The Lower Third",
+                "mbid": "a4a7e723-29d8-4c54-9bbd-8550f48a85b7",
+                "score": 160
+              },
+              {
+                "title": "You’ve Got a Habit of Leaving (alternative overdub/vocal)",
+                "artists": [
+                  "Davy Jones & The Lower Third"
+                ],
+                "canonicalArtist": "Davy Jones & The Lower Third",
+                "mbid": "be3a2e41-529d-44e6-b88d-e0e6a330775a",
+                "score": 160
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "21346",
+      "event_artist": "Phil Margo",
+      "songs": [
+        {
+          "input": {
+            "title": "The Lion Sleeps Tonight",
+            "performer": [
+              "The Tokens"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"The Lion Sleeps Tonight\" AND artist:\"The Tokens\"",
+            "original_title": null,
+            "normalized_title": "The Lion Sleeps Tonight",
+            "performers": [
+              "The Tokens"
+            ],
+            "match": {
+              "title": "The Lion Sleeps Tonight",
+              "artists": [
+                "The Tokens"
+              ],
+              "canonicalArtist": "The Tokens",
+              "mbid": "712f028e-8639-4fbc-aa70-306f3c7dcaf2",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "712f028e-8639-4fbc-aa70-306f3c7dcaf2",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "a1b7b8b5-9f2f-4199-9c64-e161d7eb8579",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "3adc6342-d81a-4041-be21-273196834456",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "4d80713d-9ea2-4e9d-bea4-a1cddc94ffc7",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "a415099d-41f3-42fd-a210-0cd1cc63ca16",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "c024e938-56dd-4ffa-ab5c-93f2dbb6e520",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "c3c023eb-f6c3-42af-bf5c-dfd630c77b22",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "26caaf6b-6304-4b20-8b0d-0df1efed1404",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "dc945127-ebe0-43ca-a797-e9ef7cf0629f",
+                "score": 200
+              },
+              {
+                "title": "The Lion Sleeps Tonight",
+                "artists": [
+                  "The Tokens"
+                ],
+                "canonicalArtist": "The Tokens",
+                "mbid": "a89c09df-f230-4405-932f-4144737760f0",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "21231",
+      "event_artist": "Kylie Minogue",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "Disco",
+            "artist": "Kylie Minogue"
+          },
+          "validation": {
+            "type": "release",
+            "status": "REVIEW",
+            "search_level": "loose",
+            "query": "release:Disco AND artist:\"Kylie Minogue\"",
+            "original_title": null,
+            "normalized_title": null,
+            "match": null,
+            "candidates": [
+              {
+                "title": "Your Disco Needs You",
+                "artists": [
+                  "Kylie Minogue"
+                ],
+                "canonicalArtist": "Kylie Minogue",
+                "mbid": "c57c57a7-560b-4d36-af2c-57cbeecd4340",
+                "score": 100
+              },
+              {
+                "title": "Your Disco Needs You",
+                "artists": [
+                  "Kylie Minogue"
+                ],
+                "canonicalArtist": "Kylie Minogue",
+                "mbid": "5f40a331-614d-4231-a39a-708b82b2d9d3",
+                "score": 100
+              },
+              {
+                "title": "Your Disco Needs You",
+                "artists": [
+                  "Kylie Minogue"
+                ],
+                "canonicalArtist": "Kylie Minogue",
+                "mbid": "82641e5c-ea3b-434c-85ca-66a97fc8f7d0",
+                "score": 100
+              },
+              {
+                "title": "Magic (Purple Disco Machine remix)",
+                "artists": [
+                  "Kylie Minogue"
+                ],
+                "canonicalArtist": "Kylie Minogue",
+                "mbid": "f2593a2d-0bf9-4d4a-a958-9884df9c8e5c",
+                "score": 100
+              },
+              {
+                "title": "Magic (Purple Disco Machine Remix)",
+                "artists": [
+                  "Kylie Minogue"
+                ],
+                "canonicalArtist": "Kylie Minogue",
+                "mbid": "a2f7fa3d-7647-4e3f-922f-f82b82cbbedd",
+                "score": 100
+              },
+              {
+                "title": "100 Degrees (Still Disco to Me)",
+                "artists": [
+                  "Kylie Minogue",
+                  "Dannii Minogue"
+                ],
+                "canonicalArtist": "Kylie Minogue with Dannii Minogue",
+                "mbid": "765e1708-12b0-40a1-86ad-4132cd6cb1bc",
+                "score": 100
+              },
+              {
+                "title": "100 Degrees (Still Disco to Me)",
+                "artists": [
+                  "Kylie Minogue",
+                  "Dannii Minogue"
+                ],
+                "canonicalArtist": "Kylie Minogue with Dannii Minogue",
+                "mbid": "5b8e3cc4-e7ee-44e9-a886-6e20ef186f17",
+                "score": 100
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "20731",
+      "event_artist": "Rod Stewart",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "19197",
+      "event_artist": "Leon Russell",
+      "songs": [
+        {
+          "input": {
+            "title": "Superstar",
+            "performer": [
+              "Carpenters"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Superstar\" AND artist:\"Carpenters\"",
+            "original_title": null,
+            "normalized_title": "Superstar",
+            "performers": [
+              "Carpenters"
+            ],
+            "match": {
+              "title": "Superstar",
+              "artists": [
+                "Carpenters"
+              ],
+              "canonicalArtist": "Carpenters",
+              "mbid": "256fd567-1fe3-4d68-a823-60deb918f8d6",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "256fd567-1fe3-4d68-a823-60deb918f8d6",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "3b94bdde-432d-42c7-afff-0deec5f92995",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "d48da33a-f957-48ac-9d01-21ab24876f98",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "8a94a54a-9a3e-4912-8372-ab34ea30720c",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "59d090d6-9fe5-43fe-aada-856cc3a99b5d",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "25ef63ee-c96e-4406-9bb7-d8db4c4cffcf",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "2f0fbc75-6e89-4d37-b310-709026168e1b",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "388ca1fd-d14c-45bd-a5ed-acd1b901d8be",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "6269aa0a-e58f-4411-9a31-25b18e55bd4d",
+                "score": 200
+              },
+              {
+                "title": "Superstar",
+                "artists": [
+                  "Carpenters"
+                ],
+                "canonicalArtist": "Carpenters",
+                "mbid": "2d273c02-2549-4e5e-b7d9-9eae47ee6e8a",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "Delta Lady",
+            "performer": [
+              "Joe Cocker"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Delta Lady\" AND artist:\"Joe Cocker\"",
+            "original_title": null,
+            "normalized_title": "Delta Lady",
+            "performers": [
+              "Joe Cocker"
+            ],
+            "match": {
+              "title": "Delta Lady",
+              "artists": [
+                "Joe Cocker"
+              ],
+              "canonicalArtist": "Joe Cocker",
+              "mbid": "1ea5bb3d-c1b6-44ec-b39b-97d1e1fa702b",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "1ea5bb3d-c1b6-44ec-b39b-97d1e1fa702b",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "7abbfb75-a9a8-44d5-8663-a9ab8976bca5",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "3f33c8fd-8b3a-4020-bee2-58d83fd0f3ca",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "96b7fbbf-2a51-4f41-9cb5-b644b3814374",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "b82602fe-334a-4226-aa76-611e28329db6",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "9622efb0-f727-48eb-a4cf-74d409521e39",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "43e96eef-6b7a-43c7-95c8-2ecaa71b4e6a",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "a6c94253-4b08-49fc-ba4d-25dd605579e5",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "5d5cc508-1bcb-4763-941a-c8aee103a882",
+                "score": 200
+              },
+              {
+                "title": "Delta Lady",
+                "artists": [
+                  "Joe Cocker"
+                ],
+                "canonicalArtist": "Joe Cocker",
+                "mbid": "f8c375f7-3357-4ca1-b24e-2bd76c53bdd1",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "This Masquerade",
+            "performer": [
+              "George Benson"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"This Masquerade\" AND artist:\"George Benson\"",
+            "original_title": null,
+            "normalized_title": "This Masquerade",
+            "performers": [
+              "George Benson"
+            ],
+            "match": {
+              "title": "This Masquerade",
+              "artists": [
+                "George Benson"
+              ],
+              "canonicalArtist": "George Benson",
+              "mbid": "1b224055-dcf2-4f38-95a3-e936b5d2d962",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "1b224055-dcf2-4f38-95a3-e936b5d2d962",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "fc1cd467-e059-4e7e-9b61-3fc595399f82",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "eb6eef26-28f7-40bd-908e-c13e2634f949",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "d2a8e3fb-ed19-4feb-89d3-86a69d9b3b5f",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "f11a9168-40d0-4d8d-ba3e-854029766028",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "f2ca1cfc-860a-4921-863e-c25fde9fc809",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "99ae1c5a-cef4-49f6-aecb-97ffb9bb42f6",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "3cec92ea-c5b8-4e8d-82ef-1a585acc0b22",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "0e6560df-f5ae-4de7-a6da-6679462b3551",
+                "score": 200
+              },
+              {
+                "title": "This Masquerade",
+                "artists": [
+                  "George Benson"
+                ],
+                "canonicalArtist": "George Benson",
+                "mbid": "784a59bf-fda2-4f68-8aa1-1f65ae015706",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "A Song for You",
+            "performer": [
+              "Leon Russell"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"A Song for You\" AND artist:\"Leon Russell\"",
+            "original_title": null,
+            "normalized_title": "A Song for You",
+            "performers": [
+              "Leon Russell"
+            ],
+            "match": {
+              "title": "A Song for You",
+              "artists": [
+                "Leon Russell"
+              ],
+              "canonicalArtist": "Leon Russell",
+              "mbid": "88849171-504a-487b-b9c6-980aada317f9",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "A Song for You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "88849171-504a-487b-b9c6-980aada317f9",
+                "score": 200
+              },
+              {
+                "title": "A Song For You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "26dde70e-6b8a-4380-a86f-60b11577dac7",
+                "score": 200
+              },
+              {
+                "title": "A Song For You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "ef41d73a-582f-4942-9c03-9a9fc91361dc",
+                "score": 200
+              },
+              {
+                "title": "A Song for You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "6a4aaab2-1406-426a-8353-b0d8389d968f",
+                "score": 200
+              },
+              {
+                "title": "A Song for You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "e6e3e853-00a3-4f58-9bae-efe70dd0a1b9",
+                "score": 200
+              },
+              {
+                "title": "A Song For You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "06b697fb-a0a5-466f-961a-71ae11ecaa19",
+                "score": 200
+              },
+              {
+                "title": "A Song For You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "5c282e1d-d31f-4297-8821-582987063c81",
+                "score": 200
+              },
+              {
+                "title": "A Song for You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "e15c79e4-b535-4e65-b96e-f18730bdff9c",
+                "score": 200
+              },
+              {
+                "title": "A Song for You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "aef62453-7600-451a-8792-f2fe47d11291",
+                "score": 200
+              },
+              {
+                "title": "A Song for You",
+                "artists": [
+                  "Leon Russell"
+                ],
+                "canonicalArtist": "Leon Russell",
+                "mbid": "7bab7f0d-2e21-4fc2-87f1-45ab14fa0a17",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "18785",
+      "event_artist": "Adele",
+      "songs": [
+        {
+          "input": {
+            "title": "Hello",
+            "performer": [
+              "Adele"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Hello\" AND artist:\"Adele\"",
+            "original_title": null,
+            "normalized_title": "Hello",
+            "performers": [
+              "Adele"
+            ],
+            "match": {
+              "title": "Hello",
+              "artists": [
+                "Adele"
+              ],
+              "canonicalArtist": "Adele",
+              "mbid": "f9c7447b-6e87-4614-81ec-c52d9d4b1d18",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "f9c7447b-6e87-4614-81ec-c52d9d4b1d18",
+                "score": 200
+              },
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "d480a418-345b-40c6-ac55-438e3e88563f",
+                "score": 200
+              },
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "8bae4113-6d3d-40d5-990e-c9da090bfdc4",
+                "score": 200
+              },
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "623b39c5-3cf1-49b1-83a7-a22362f3b9a6",
+                "score": 200
+              },
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "8e9d3c19-f2c2-4b41-9488-6a75a2d7d5ee",
+                "score": 200
+              },
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "bd3cd6b8-d0b6-4765-ab58-9b438b760da7",
+                "score": 200
+              },
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "0a8e8d55-4b83-4f8a-9732-fbb5ded9f344",
+                "score": 200
+              },
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "5b488da9-e5e4-412d-adcb-a7139143a0f5",
+                "score": 200
+              },
+              {
+                "title": "Hello",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "2d4dc0b1-6f1c-4182-b061-f84225bc1e48",
+                "score": 200
+              },
+              {
+                "title": "Hello (remix)",
+                "artists": [
+                  "Adele"
+                ],
+                "canonicalArtist": "Adele",
+                "mbid": "f7cf4940-ddc8-4d7c-9ee5-ef448c06f874",
+                "score": 100
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "21232",
+      "event_artist": "Eagles of Death Metal",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "17606",
+      "event_artist": "The Beatles",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "Sgt. Pepper's Lonely Hearts Club Band",
+            "artist": "The Beatles"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"Sgt. Pepper's Lonely Hearts Club Band\" AND artist:\"The Beatles\"",
+            "original_title": null,
+            "normalized_title": "Sgt. Pepper’s Lonely Hearts Club Band",
+            "match": {
+              "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+              "artists": [
+                "The Beatles"
+              ],
+              "canonicalArtist": "The Beatles",
+              "mbid": "de9de34e-8d61-3c33-9f50-ccd009470cbc",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "de9de34e-8d61-3c33-9f50-ccd009470cbc",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "26d5e76b-1640-3883-887b-507e3a287116",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "8c68bf08-9bf4-48cd-8340-5a2053b3e3b4",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "6488ab60-e51f-4279-ab44-310df3c34a42",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "0ec4c8cf-34a2-3652-939c-118d494d1fd3",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "e5b6c219-bb87-4763-9587-d66a4495c500",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "82190d2e-067c-41f0-883c-167e9757d3da",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "838e39d8-a36b-4c2b-b673-031fdc53ba42",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "5fe9110d-20bc-47c0-9b8b-b159436ec0c6",
+                "score": 200
+              },
+              {
+                "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+                "artists": [
+                  "The Beatles"
+                ],
+                "canonicalArtist": "The Beatles",
+                "mbid": "0ff0998a-bcd8-4b4a-8263-1cad949008d3",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "13325",
+      "event_artist": "Simon Cowell",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "12724",
+      "event_artist": "Russell Jones",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "11567",
+      "event_artist": "The Beatles",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "Compilation 1",
+            "artist": "The Beatles"
+          },
+          "validation": {
+            "type": "release",
+            "status": "ACCEPT_UNVERIFIED",
+            "search_level": "title_only",
+            "query": "release:\"Compilation 1\"",
+            "original_title": null,
+            "normalized_title": "Compilation 1",
+            "match": {
+              "title": "Compilation 1",
+              "artists": [
+                "AS1",
+                "SiL!S"
+              ],
+              "canonicalArtist": "AS1 & SiL!S",
+              "mbid": "12c7bebc-9da5-42b7-bb22-6f4bf1dfdb82",
+              "score": 100
+            },
+            "candidates": [
+              {
+                "title": "Compilation 1",
+                "artists": [
+                  "AS1",
+                  "SiL!S"
+                ],
+                "canonicalArtist": "AS1 & SiL!S",
+                "mbid": "12c7bebc-9da5-42b7-bb22-6f4bf1dfdb82",
+                "score": 100
+              },
+              {
+                "title": "Compilation 1",
+                "artists": [
+                  "Various Artists"
+                ],
+                "canonicalArtist": "Various Artists",
+                "mbid": "402c29ac-f38f-499f-a123-44e372473fe6",
+                "score": 100
+              },
+              {
+                "title": "Compilation 1",
+                "artists": [
+                  "Various Artists"
+                ],
+                "canonicalArtist": "Various Artists",
+                "mbid": "820bbda3-2723-46e4-b187-21a47e7f9484",
+                "score": 100
+              },
+              {
+                "title": "Compilation 1",
+                "artists": [
+                  "Various Artists"
+                ],
+                "canonicalArtist": "Various Artists",
+                "mbid": "21617018-d6f4-4d55-9782-56ffba8628b7",
+                "score": 100
+              },
+              {
+                "title": "Compilation 1",
+                "artists": [
+                  "Various Artists"
+                ],
+                "canonicalArtist": "Various Artists",
+                "mbid": "82786c30-2cc7-4391-b62f-b0ab6ddc5963",
+                "score": 100
+              },
+              {
+                "title": "COMPILATION 1",
+                "artists": [
+                  "Various Artists"
+                ],
+                "canonicalArtist": "Various Artists",
+                "mbid": "9e2ba93f-38be-4c4e-925a-7b30aa718d26",
+                "score": 100
+              },
+              {
+                "title": "Compilation 1",
+                "artists": [
+                  "Various Artists"
+                ],
+                "canonicalArtist": "Various Artists",
+                "mbid": "114f1524-b372-4253-a20d-3a172d5c74b2",
+                "score": 100
+              },
+              {
+                "title": "Compilation #1",
+                "artists": [
+                  "Ken Griffin"
+                ],
+                "canonicalArtist": "Ken Griffin",
+                "mbid": "34abf163-b444-4237-a57e-ea15cf808a0e",
+                "score": 0
+              },
+              {
+                "title": "Compilation #1",
+                "artists": [
+                  "Pablo"
+                ],
+                "canonicalArtist": "Pablo",
+                "mbid": "79744d97-3d78-4c39-bdc0-0a8de1728907",
+                "score": 0
+              },
+              {
+                "title": "Compilation #1",
+                "artists": [
+                  "Various Artists"
+                ],
+                "canonicalArtist": "Various Artists",
+                "mbid": "b9305d24-31f1-47f9-9230-8b955b5b8899",
+                "score": 0
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "11289",
+      "event_artist": "Spice Girls",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "Spice",
+            "artist": "Spice Girls"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"Spice\" AND artist:\"Spice Girls\"",
+            "original_title": null,
+            "normalized_title": "Spice",
+            "match": {
+              "title": "Spice",
+              "artists": [
+                "Spice Girls"
+              ],
+              "canonicalArtist": "Spice Girls",
+              "mbid": "1f3322d5-a884-4052-918a-52ad61c45f1c",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "1f3322d5-a884-4052-918a-52ad61c45f1c",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "47553d56-ec8d-4b2e-9ea0-e968e5c390f9",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "eb086adb-3f63-4890-bf29-a5975f131704",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "3beeeb6a-8b22-46bd-9643-98361f71c698",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "5c0534cf-b384-3175-be0e-c245e2b3dd3f",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "d1ba565e-061a-4d31-b35b-eef635476ca2",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "18cfecf4-c838-4b14-b3e1-4ce201f01ea5",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "e46e1fbb-a0c3-4675-ba05-b27ac9d2cf16",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "b03660ca-0f9a-432c-a671-47ab65c61075",
+                "score": 200
+              },
+              {
+                "title": "Spice",
+                "artists": [
+                  "Spice Girls"
+                ],
+                "canonicalArtist": "Spice Girls",
+                "mbid": "ba831dee-d88e-37da-a7e8-b07e1dd08a57",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "The Lion King",
+            "artist": "Elton John"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"The Lion King\" AND artist:\"Elton John\"",
+            "original_title": null,
+            "normalized_title": "The Lion King",
+            "match": {
+              "title": "The Lion King",
+              "artists": [
+                "Elton John",
+                "Hans Zimmer"
+              ],
+              "canonicalArtist": "Elton John & Hans Zimmer",
+              "mbid": "18709876-a84e-4dbf-9164-42f2b684c454",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Lion King",
+                "artists": [
+                  "Elton John",
+                  "Hans Zimmer"
+                ],
+                "canonicalArtist": "Elton John & Hans Zimmer",
+                "mbid": "18709876-a84e-4dbf-9164-42f2b684c454",
+                "score": 200
+              },
+              {
+                "title": "The Lion King",
+                "artists": [
+                  "Elton John",
+                  "Hans Zimmer"
+                ],
+                "canonicalArtist": "Elton John & Hans Zimmer",
+                "mbid": "345eece5-29d2-3bc2-9839-537f397441e1",
+                "score": 200
+              },
+              {
+                "title": "The Lion King",
+                "artists": [
+                  "Elton John",
+                  "Hans Zimmer"
+                ],
+                "canonicalArtist": "Elton John & Hans Zimmer",
+                "mbid": "f7ad931c-2681-435a-aab8-2b51b7e8d45b",
+                "score": 200
+              },
+              {
+                "title": "The Lion King",
+                "artists": [
+                  "Elton John",
+                  "Hans Zimmer"
+                ],
+                "canonicalArtist": "Elton John & Hans Zimmer",
+                "mbid": "0abdc268-a594-3f75-b02c-9bdc0a637d84",
+                "score": 200
+              },
+              {
+                "title": "The Lion King",
+                "artists": [
+                  "Elton John",
+                  "Hans Zimmer"
+                ],
+                "canonicalArtist": "Elton John & Hans Zimmer",
+                "mbid": "e86c68be-7060-4fc4-ba6b-2488cbf83a8b",
+                "score": 200
+              },
+              {
+                "title": "The Lion King",
+                "artists": [
+                  "Elton John",
+                  "Hans Zimmer"
+                ],
+                "canonicalArtist": "Elton John & Hans Zimmer",
+                "mbid": "f7ee8ab1-2bdc-4d38-a64e-faef69682be1",
+                "score": 200
+              },
+              {
+                "title": "The Lion King",
+                "artists": [
+                  "Elton John",
+                  "Tim Rice",
+                  "Hans Zimmer"
+                ],
+                "canonicalArtist": "Elton John, Tim Rice & Hans Zimmer",
+                "mbid": "344a7741-65c8-4237-8ccb-63598089c199",
+                "score": 200
+              },
+              {
+                "title": "The Lion King: Sing-Along",
+                "artists": [
+                  "Elton John"
+                ],
+                "canonicalArtist": "Elton John",
+                "mbid": "2dd39e8d-e82a-4d11-a18f-256e2d6d73fb",
+                "score": 160
+              },
+              {
+                "title": "The Lion King: Circle of Life",
+                "artists": [
+                  "Elton John"
+                ],
+                "canonicalArtist": "Elton John",
+                "mbid": "936cc71a-995e-4c9d-80cd-2ba93065af68",
+                "score": 100
+              },
+              {
+                "title": "The Lion King: Het Nederlandse cast album",
+                "artists": [
+                  "Elton John"
+                ],
+                "canonicalArtist": "Elton John",
+                "mbid": "d4288ea4-2253-4b92-b0ee-ba1ff85aecaf",
+                "score": 100
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "22473",
+      "event_artist": "Kate Bush",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "The Red Shoes",
+            "artist": "Kate Bush"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"The Red Shoes\" AND artist:\"Kate Bush\"",
+            "original_title": null,
+            "normalized_title": "The Red Shoes",
+            "match": {
+              "title": "The Red Shoes",
+              "artists": [
+                "Kate Bush"
+              ],
+              "canonicalArtist": "Kate Bush",
+              "mbid": "6230a1b4-95fb-4efa-ac65-c2922d68591f",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "6230a1b4-95fb-4efa-ac65-c2922d68591f",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "4e7780be-8245-321f-94d4-5ae0f17398b2",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "5bb15a39-3eff-4220-96a9-cbe7586438bd",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "f6db8c75-fb2c-470a-a170-67a2d5149981",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "54dc05e2-54de-4a6e-979a-b3c1cfe7dad9",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "faf1c436-8716-4394-a6f3-98acd5c97f2f",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "d3f7a4bc-221a-4225-89b4-18df633f3785",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "1cb113b1-c2ce-46a7-a398-34ff98615925",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "e2f47c4c-1d06-4c01-9ee0-01a2e067285e",
+                "score": 200
+              },
+              {
+                "title": "The Red Shoes",
+                "artists": [
+                  "Kate Bush"
+                ],
+                "canonicalArtist": "Kate Bush",
+                "mbid": "8ce91f33-2822-4cca-89f5-4f58247125b6",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "10293",
+      "event_artist": "Ronnie Bond",
+      "songs": [
+        {
+          "input": {
+            "title": "Wild Thing",
+            "performer": [
+              "The Troggs"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Wild Thing\" AND artist:\"The Troggs\"",
+            "original_title": null,
+            "normalized_title": "Wild Thing",
+            "performers": [
+              "The Troggs"
+            ],
+            "match": {
+              "title": "Wild Thing",
+              "artists": [
+                "The Troggs"
+              ],
+              "canonicalArtist": "The Troggs",
+              "mbid": "00ca15c4-54c4-479f-a6d8-db1dbe870b39",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "00ca15c4-54c4-479f-a6d8-db1dbe870b39",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "9f6b0d84-c1c0-4682-9777-930493f141b8",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "20cdb06a-6ada-4ae9-a93c-d9da3c294460",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "61612492-179e-49d0-bc62-4a030cace7d2",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "f7d69da9-0c63-4737-beb2-b2bfe695be77",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "f78dbe12-5283-42ac-ab51-e3bc84510396",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "625998e7-a3ec-48e3-a1c5-4915cb65bf5b",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "3d327b73-eb0f-4c67-b1f9-884216f25548",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "5f06b33d-fe05-4c96-b9af-6cfee5afd3b3",
+                "score": 200
+              },
+              {
+                "title": "Wild Thing",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "02781f6d-f170-4480-bd89-3c4616c833e7",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "With A Girl Like You",
+            "performer": [
+              "The Troggs"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"With A Girl Like You\" AND artist:\"The Troggs\"",
+            "original_title": null,
+            "normalized_title": "With a Girl Like You",
+            "performers": [
+              "The Troggs"
+            ],
+            "match": {
+              "title": "With a Girl Like You",
+              "artists": [
+                "The Troggs"
+              ],
+              "canonicalArtist": "The Troggs",
+              "mbid": "2394c2b4-b1da-4936-ad17-92dcca3d2688",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "With a Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "2394c2b4-b1da-4936-ad17-92dcca3d2688",
+                "score": 200
+              },
+              {
+                "title": "With a Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "4a0f954b-401b-49ef-a0f5-2edb5bbd181c",
+                "score": 200
+              },
+              {
+                "title": "With a Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "7317d72f-ce3e-4dd5-95c9-c0ee481903d6",
+                "score": 200
+              },
+              {
+                "title": "With a Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "4eb0e2b9-45c2-4be3-9184-2171ab08d9ee",
+                "score": 200
+              },
+              {
+                "title": "With a Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "064b80a7-5c70-4b65-8cb2-d50cf9fec0d2",
+                "score": 200
+              },
+              {
+                "title": "With A Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "c14ad307-c7ef-48f1-aca5-3da8380f7b9a",
+                "score": 200
+              },
+              {
+                "title": "With a Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "df1a3beb-69a0-4d34-a4cd-99e4dc59e456",
+                "score": 200
+              },
+              {
+                "title": "With A Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "2b6ec943-0345-4b1b-a857-31e11af6b402",
+                "score": 200
+              },
+              {
+                "title": "With a Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "5a282596-195f-4ba7-816d-93b624af8aca",
+                "score": 200
+              },
+              {
+                "title": "With a Girl Like You",
+                "artists": [
+                  "The Troggs"
+                ],
+                "canonicalArtist": "The Troggs",
+                "mbid": "9de44cf1-7fbf-4ee0-9b7c-6654dfa49b9a",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "9962",
+      "event_artist": "Rod Stewart",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "8781",
+      "event_artist": "Men At Work",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "Business As Usual",
+            "artist": "Men At Work"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"Business As Usual\" AND artist:\"Men At Work\"",
+            "original_title": null,
+            "normalized_title": "Business as Usual",
+            "match": {
+              "title": "Business as Usual",
+              "artists": [
+                "Men at Work"
+              ],
+              "canonicalArtist": "Men at Work",
+              "mbid": "0062a7fc-55ba-49db-b562-8120840f4c8f",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "0062a7fc-55ba-49db-b562-8120840f4c8f",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "6e43f2b7-20ed-489d-982e-f8fae6e7d57d",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "c986cd9f-d02f-4691-9220-202a0dc06e15",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "f43f6018-82e1-3b7a-b5ac-5594d40a0a63",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "1d607bc7-fac7-429b-9fc0-310d5e4f9d1f",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "9be5ee66-c44c-3c38-a786-84dfad8e2a4b",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "417dc1e8-8b65-3227-8ee2-b5378a1528cc",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "cff7fe38-24d9-4ab8-8c9f-2e3a4e4ecf6b",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "0c77657d-6f77-4e6a-a220-b3bfeb5bfaf9",
+                "score": 200
+              },
+              {
+                "title": "Business as Usual",
+                "artists": [
+                  "Men at Work"
+                ],
+                "canonicalArtist": "Men at Work",
+                "mbid": "c4177af3-b7a2-4dd6-adb6-3cb6b218bc20",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "8649",
+      "event_artist": "U2",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "16378",
+      "event_artist": "Sex Pistols",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "7768",
+      "event_artist": "Rod Stewart",
+      "songs": [
+        {
+          "input": {
+            "title": "Tonight's The Night",
+            "performer": [
+              "Rod Stewart"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Tonight's The Night\" AND artist:\"Rod Stewart\"",
+            "original_title": null,
+            "normalized_title": "Tonight's the Night",
+            "performers": [
+              "Rod Stewart"
+            ],
+            "match": {
+              "title": "Tonight's the Night",
+              "artists": [
+                "Rod Stewart"
+              ],
+              "canonicalArtist": "Rod Stewart",
+              "mbid": "e0e510c9-11a7-4927-807f-d5858f3edbc4",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Tonight's the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "e0e510c9-11a7-4927-807f-d5858f3edbc4",
+                "score": 200
+              },
+              {
+                "title": "Tonight’s the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "6ad4a509-7c4e-4ee7-8d91-4efaabd207a1",
+                "score": 200
+              },
+              {
+                "title": "Tonight's the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "9f14acdc-e10f-4b47-8e37-64e68e307492",
+                "score": 200
+              },
+              {
+                "title": "Tonight's the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "2894e91f-df39-4cf4-90d0-87139115f616",
+                "score": 200
+              },
+              {
+                "title": "Tonight's the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "763788e1-9cd4-4e13-b44b-cb49933a20b2",
+                "score": 200
+              },
+              {
+                "title": "Tonight's the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "74491725-1703-4195-b73d-18c8f7b4551c",
+                "score": 200
+              },
+              {
+                "title": "Tonight’s the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "669b640f-9878-497d-82f5-6628ed9320c4",
+                "score": 200
+              },
+              {
+                "title": "Tonight's The Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "dbdad0c4-3a9e-4637-8f6a-22fcb02e15e0",
+                "score": 200
+              },
+              {
+                "title": "Tonight's the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "9d05b1a7-94c7-42b7-9c4e-9168a274908f",
+                "score": 200
+              },
+              {
+                "title": "Tonight’s the Night",
+                "artists": [
+                  "Rod Stewart"
+                ],
+                "canonicalArtist": "Rod Stewart",
+                "mbid": "87df935c-4d60-4316-b386-5d3a70c4bdc9",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "7767",
+      "event_artist": "Led Zeppelin",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "The Song Remains The Same",
+            "artist": "Led Zeppelin"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"The Song Remains The Same\" AND artist:\"Led Zeppelin\"",
+            "original_title": null,
+            "normalized_title": "The Song Remains the Same",
+            "match": {
+              "title": "The Song Remains the Same",
+              "artists": [
+                "Led Zeppelin"
+              ],
+              "canonicalArtist": "Led Zeppelin",
+              "mbid": "d83c92b5-7022-3e12-870d-84ed59ad2da9",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "d83c92b5-7022-3e12-870d-84ed59ad2da9",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "8f7f5fb5-bcc9-4d32-a68d-bef59e613f54",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "9244054d-44d1-495e-a3a7-b10f099646a4",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "64a42956-8c55-47ec-8687-44e72d34ff83",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "65411971-cc03-4514-bc2f-7ae17f214a2e",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "d8907e42-a5c3-4fbd-81d9-f21952f7b32d",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "99301bda-f462-41d3-ae27-658b57772dda",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "0ac86512-d5cd-4b81-a355-7b13b71ce69c",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "79fb9dd0-c84c-412a-aeb6-bf7a3f63ab59",
+                "score": 200
+              },
+              {
+                "title": "The Song Remains the Same",
+                "artists": [
+                  "Led Zeppelin"
+                ],
+                "canonicalArtist": "Led Zeppelin",
+                "mbid": "c2b153ea-3f6a-3e49-8663-b1474bc85c50",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "18754",
+      "event_artist": "Syd Barrett",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "Barrett",
+            "artist": "Syd Barrett"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"Barrett\" AND artist:\"Syd Barrett\"",
+            "original_title": null,
+            "normalized_title": "Barrett",
+            "match": {
+              "title": "Barrett",
+              "artists": [
+                "Syd Barrett"
+              ],
+              "canonicalArtist": "Syd Barrett",
+              "mbid": "aff25f8d-5370-4818-92a0-3cfce50f0169",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "aff25f8d-5370-4818-92a0-3cfce50f0169",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "ab7a4530-675f-4263-9c52-0419b1097167",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "94613ae1-818f-49f0-a9fc-d270e5302b99",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "985e5566-8392-40fd-af4e-3630faee8495",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "0dade0f4-8ed7-3429-a1e4-e22148c3dff4",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "c0c53704-27bc-31c7-bf04-4e11febaa606",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "95cab0bb-60cd-3406-958c-ddae244c83aa",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "92946419-7466-4a4a-9ac0-07077b8c41ab",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "07ece094-da81-471b-8b8d-5f1f3a59f77d",
+                "score": 200
+              },
+              {
+                "title": "Barrett",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "d2848f2f-4e3b-45ef-add1-5ce9278e99ae",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "The Madcap Laughs",
+            "artist": "Syd Barrett"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"The Madcap Laughs\" AND artist:\"Syd Barrett\"",
+            "original_title": null,
+            "normalized_title": "The Madcap Laughs",
+            "match": {
+              "title": "The Madcap Laughs",
+              "artists": [
+                "Syd Barrett"
+              ],
+              "canonicalArtist": "Syd Barrett",
+              "mbid": "2d62662c-c27a-4838-826f-d5943cdd46b5",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "2d62662c-c27a-4838-826f-d5943cdd46b5",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "24f56008-9023-491d-9643-d4495b2e80ce",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "9d0a0344-4295-3086-b73b-55fc086e06a7",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "02041c87-889e-4ab9-9bc0-c6c334d10361",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "6d08771d-b14f-39dd-82b1-c48e88b9997a",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "d6a5d857-7a77-4cf2-9cb1-7d11b7bb1905",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "df2d69f5-6b07-463a-beb2-0082c2e040bb",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "605cd6e2-d570-38de-b951-c9bf9efea104",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "78991ec3-9ba3-44ba-b24c-dc20d60a0317",
+                "score": 200
+              },
+              {
+                "title": "The Madcap Laughs",
+                "artists": [
+                  "Syd Barrett"
+                ],
+                "canonicalArtist": "Syd Barrett",
+                "mbid": "ceb1beee-f2d0-40c7-8d16-09b3cccb12c8",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "6492",
+      "event_artist": "Brian Jones",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "6493",
+      "event_artist": "Hugo Montenegro",
+      "songs": [
+        {
+          "input": {
+            "title": "The Good The Bad And The Ugly",
+            "performer": [
+              "Hugo Montenegro"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"The Good The Bad And The Ugly\" AND artist:\"Hugo Montenegro\"",
+            "original_title": null,
+            "normalized_title": "The Good, the Bad, and the Ugly",
+            "performers": [
+              "Hugo Montenegro"
+            ],
+            "match": {
+              "title": "The Good, the Bad, and the Ugly",
+              "artists": [
+                "Hugo Montenegro"
+              ],
+              "canonicalArtist": "Hugo Montenegro",
+              "mbid": "25ccb5e4-a202-480c-9454-6d954ae1883b",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Good, the Bad, and the Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "25ccb5e4-a202-480c-9454-6d954ae1883b",
+                "score": 200
+              },
+              {
+                "title": "The Good, the Bad and the Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "60b334f5-f229-4150-bda7-7741bc11a3d3",
+                "score": 200
+              },
+              {
+                "title": "The Good, the Bad and the Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "fa115e45-8f7d-446b-bd16-fc28fa909cc5",
+                "score": 200
+              },
+              {
+                "title": "The Good, the Bad and the Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "2c9d3cad-589d-4ca2-aec6-70b51dafee78",
+                "score": 200
+              },
+              {
+                "title": "The Good, the Bad and the Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "b5e1445a-9e99-4cbf-a880-7dd575755489",
+                "score": 200
+              },
+              {
+                "title": "The Good, the Bad and the Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "d64564d9-7e63-4ba7-aa35-823c4539c5bc",
+                "score": 200
+              },
+              {
+                "title": "The Good, the Bad and the Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "1997c091-7008-4e28-a096-319e77ba20cb",
+                "score": 200
+              },
+              {
+                "title": "The Good, the Bad, & The Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "657b5020-5f2f-4299-a191-ce2c14155ca9",
+                "score": 160
+              },
+              {
+                "title": "The Good, the Bad & The Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "a7161f23-186d-464a-8b8f-b4be1e99a937",
+                "score": 160
+              },
+              {
+                "title": "The Good, the Bad & The Ugly",
+                "artists": [
+                  "Hugo Montenegro"
+                ],
+                "canonicalArtist": "Hugo Montenegro",
+                "mbid": "1eb92828-8025-4f47-a643-1e38c71a53d3",
+                "score": 160
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "15642",
+      "event_artist": "Bruce Springsteen",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "17549",
+      "event_artist": "The Rolling Stones",
+      "songs": [
+        {
+          "input": {
+            "title": "Little Red Rooster",
+            "performer": [
+              "The Rolling Stones"
+            ],
+            "original_artist": "Howlin’ Wolf"
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Little Red Rooster\" AND artist:\"The Rolling Stones\"",
+            "original_title": null,
+            "normalized_title": "Little Red Rooster",
+            "performers": [
+              "The Rolling Stones"
+            ],
+            "match": {
+              "title": "Little Red Rooster",
+              "artists": [
+                "The Rolling Stones"
+              ],
+              "canonicalArtist": "The Rolling Stones",
+              "mbid": "fd709dd0-54b0-46dd-bb75-5369bf2ed4ae",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "fd709dd0-54b0-46dd-bb75-5369bf2ed4ae",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "a54527e1-1ccb-4f2a-9aee-947bee104ad6",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "4d4fae10-7a28-461d-9c9d-27f30f478890",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "d340ef9c-eb68-4dcf-8d3f-cd8b8c2615ee",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "7f63b07a-d4e2-4559-9446-7799c2bc70db",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "0b4b3c1e-a9fa-4cd9-a852-8c80d84438a2",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "76d9a715-6296-4d73-90f1-6298dbdacfb3",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "6403d940-f194-43f8-a987-55a4390b5d86",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "3a17b0f5-b315-4d5a-ad9d-06332f46686a",
+                "score": 200
+              },
+              {
+                "title": "Little Red Rooster",
+                "artists": [
+                  "The Rolling Stones"
+                ],
+                "canonicalArtist": "The Rolling Stones",
+                "mbid": "3cdfefe3-9521-4517-afcd-3c6ecfe4e9da",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "16790",
+      "event_artist": "The Beatles",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "20958",
+      "event_artist": "24kGoldn",
+      "songs": [
+        {
+          "input": {
+            "title": "Mood",
+            "performer": [
+              "24kGoldn",
+              "Iann Dior"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Mood\" AND artist:\"24kGoldn\"",
+            "original_title": null,
+            "normalized_title": "Mood",
+            "performers": [
+              "24kGoldn",
+              "iann dior"
+            ],
+            "match": {
+              "title": "Mood",
+              "artists": [
+                "24kGoldn",
+                "iann dior"
+              ],
+              "canonicalArtist": "24kGoldn feat. iann dior",
+              "mbid": "aebd1187-b1a9-4410-89dc-5749a6bfed8a",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn feat. iann dior",
+                "mbid": "aebd1187-b1a9-4410-89dc-5749a6bfed8a",
+                "score": 200
+              },
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn feat. iann dior",
+                "mbid": "5251b2e5-4e8c-43ae-978f-7bf145faf577",
+                "score": 200
+              },
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn feat. iann dior",
+                "mbid": "b2688f22-2e08-43bc-b206-17ca9599e83b",
+                "score": 200
+              },
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn ft. iann dior",
+                "mbid": "17952e7c-ee04-4491-b0a9-e490bfa9babd",
+                "score": 200
+              },
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn feat. iann dior",
+                "mbid": "2e620e8a-08fa-4ac3-b70e-5cb5fe0fa9f9",
+                "score": 200
+              },
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn ft. iann dior",
+                "mbid": "106d6d73-93a4-4602-a741-31d36e88d414",
+                "score": 200
+              },
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn feat. iann dior",
+                "mbid": "3f73d096-15e9-420d-b02b-636e512e6814",
+                "score": 200
+              },
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn feat. iann dior",
+                "mbid": "16c83afd-d204-403c-b8e1-c8289432c8f9",
+                "score": 200
+              },
+              {
+                "title": "Mood",
+                "artists": [
+                  "24kGoldn",
+                  "iann dior"
+                ],
+                "canonicalArtist": "24kGoldn ft. iann dior",
+                "mbid": "4ab8c4d1-a6f9-4cf4-b9b0-d2cfeec4fcfa",
+                "score": 200
+              },
+              {
+                "title": "Mood (remix)",
+                "artists": [
+                  "Justin Bieber",
+                  "24kGoldn",
+                  "iann dior",
+                  "J Balvin"
+                ],
+                "canonicalArtist": "Justin Bieber, 24kGoldn, iann dior & J Balvin",
+                "mbid": "97fbd5f7-d0a3-4f90-85f9-ffae58960a54",
+                "score": 100
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "19855",
+      "event_artist": "Julia Michaels",
+      "songs": [
+        {
+          "input": {
+            "title": "Issues",
+            "performer": [
+              "Julia Michaels"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Issues\" AND artist:\"Julia Michaels\"",
+            "original_title": null,
+            "normalized_title": "Issues",
+            "performers": [
+              "Julia Michaels"
+            ],
+            "match": {
+              "title": "Issues",
+              "artists": [
+                "Julia Michaels"
+              ],
+              "canonicalArtist": "Julia Michaels",
+              "mbid": "e4e52b8c-2a99-41e6-9795-751b12776a89",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Issues",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "e4e52b8c-2a99-41e6-9795-751b12776a89",
+                "score": 200
+              },
+              {
+                "title": "Issues",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "d0935978-7dd5-40df-aaa5-0cea074b32cf",
+                "score": 200
+              },
+              {
+                "title": "Issues",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "51dac379-fb4c-4304-a8d1-e11c5fec6040",
+                "score": 200
+              },
+              {
+                "title": "Issues",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "040e5dc9-9d6c-4d24-9f6f-29e13cd0bcb0",
+                "score": 200
+              },
+              {
+                "title": "Issues",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "47829489-6656-439b-b1ef-bb0a6ea2b3da",
+                "score": 200
+              },
+              {
+                "title": "Issues (acoustic)",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "16b47e8e-681a-4204-b995-e675e763056f",
+                "score": 100
+              },
+              {
+                "title": "Issues (acoustic)",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "6bb70e34-3945-4eb5-830c-0e1514ca2fe3",
+                "score": 100
+              },
+              {
+                "title": "Issues (Alan Walker remix)",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "0502c199-e46b-49e7-bd48-39e89b41c06a",
+                "score": 100
+              },
+              {
+                "title": "Issues (Alan Walker remix)",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "87d3467c-cdf1-4d04-8904-504e0a8fe18a",
+                "score": 100
+              },
+              {
+                "title": "Issues (DJ Selphi Bachata remix) Sam Tsui Cover",
+                "artists": [
+                  "Julia Michaels"
+                ],
+                "canonicalArtist": "Julia Michaels",
+                "mbid": "a6bbb3c1-2f27-494e-bb92-4e160aa89a45",
+                "score": 100
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "Sorry",
+            "performer": [
+              "Justin Bieber"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Sorry\" AND artist:\"Justin Bieber\"",
+            "original_title": null,
+            "normalized_title": "Sorry",
+            "performers": [
+              "Justin Bieber"
+            ],
+            "match": {
+              "title": "Sorry",
+              "artists": [
+                "Justin Bieber"
+              ],
+              "canonicalArtist": "Justin Bieber",
+              "mbid": "0e2463ab-1a5c-4626-a9a2-0c61f96813ed",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "0e2463ab-1a5c-4626-a9a2-0c61f96813ed",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "5a3637a0-aa83-402c-b56e-e1f7304df316",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "124bf223-cc9a-4a02-8d2f-654ae12bba1a",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "f75cf8f6-0f4e-4173-8217-f5d4555a15a2",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "336810fb-be64-487c-a9f7-41db19fc0615",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "b1ea9bef-6311-4ea9-81c1-d6dd267b8796",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "a1fbc5d5-03fc-4a07-80b0-6d1e05910c5e",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "53950cc9-e65b-4d4c-840d-ca3e07da8313",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "d865162b-50be-48ea-93e1-850384889e39",
+                "score": 200
+              },
+              {
+                "title": "Sorry",
+                "artists": [
+                  "Justin Bieber"
+                ],
+                "canonicalArtist": "Justin Bieber",
+                "mbid": "30f0402d-b868-4acc-86d6-ce143a2fba6e",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "Lose You to Love Me",
+            "performer": [
+              "Selena Gomez"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Lose You to Love Me\" AND artist:\"Selena Gomez\"",
+            "original_title": null,
+            "normalized_title": "Lose You to Love Me",
+            "performers": [
+              "Selena Gomez"
+            ],
+            "match": {
+              "title": "Lose You to Love Me",
+              "artists": [
+                "Selena Gomez"
+              ],
+              "canonicalArtist": "Selena Gomez",
+              "mbid": "87370e5e-be85-4708-94dd-389a2b471ada",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Lose You to Love Me",
+                "artists": [
+                  "Selena Gomez"
+                ],
+                "canonicalArtist": "Selena Gomez",
+                "mbid": "87370e5e-be85-4708-94dd-389a2b471ada",
+                "score": 200
+              },
+              {
+                "title": "Lose You to Love Me",
+                "artists": [
+                  "Selena Gomez"
+                ],
+                "canonicalArtist": "Selena Gomez",
+                "mbid": "d6d73b5e-bbbc-4e0e-a450-23616a47b431",
+                "score": 200
+              },
+              {
+                "title": "Lose You to Love Me (demo version)",
+                "artists": [
+                  "Selena Gomez"
+                ],
+                "canonicalArtist": "Selena Gomez",
+                "mbid": "c65f71a0-d84f-4dcd-bde2-f1f56922ae6b",
+                "score": 160
+              },
+              {
+                "title": "Lose You to Love Me (official music video)",
+                "artists": [
+                  "Selena Gomez"
+                ],
+                "canonicalArtist": "Selena Gomez",
+                "mbid": "5b5d1b70-fade-427c-b026-db1e49dd67aa",
+                "score": 160
+              },
+              {
+                "title": "Lose You to Love Me (behind the scenes)",
+                "artists": [
+                  "Selena Gomez"
+                ],
+                "canonicalArtist": "Selena Gomez",
+                "mbid": "b8bc20d8-9ec5-446e-848b-27e40fe63ee4",
+                "score": 160
+              },
+              {
+                "title": "Lose You to Love Me (remix)",
+                "artists": [
+                  "Selena Gomez",
+                  "Anh Jesslyn"
+                ],
+                "canonicalArtist": "Selena Gomez feat. Anh Jesslyn",
+                "mbid": "710c2a7c-4fa4-4466-aa8b-c8f202dfa5d7",
+                "score": 160
+              },
+              {
+                "title": "Lose You to Love Me (Rumba, 25mpm)",
+                "artists": [
+                  "Selena Gomez",
+                  "DJ ICE"
+                ],
+                "canonicalArtist": "Selena Gomez & DJ ICE",
+                "mbid": "2052523c-4678-4053-bb19-44e87971d65c",
+                "score": 160
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "14623",
+      "event_artist": "Monique Adrienne Coleman",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "High School Musical",
+            "artist": "High School Musical"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"High School Musical\" AND artist:\"High School Musical\"",
+            "original_title": null,
+            "normalized_title": "High School Musical",
+            "match": {
+              "title": "High School Musical",
+              "artists": [
+                "The High School Musical Cast"
+              ],
+              "canonicalArtist": "The High School Musical Cast",
+              "mbid": "6ed5edca-6bb7-4651-9337-e1936893b6fe",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "High School Musical",
+                "artists": [
+                  "The High School Musical Cast"
+                ],
+                "canonicalArtist": "The High School Musical Cast",
+                "mbid": "6ed5edca-6bb7-4651-9337-e1936893b6fe",
+                "score": 200
+              },
+              {
+                "title": "High School Musical 2",
+                "artists": [
+                  "The High School Musical Cast"
+                ],
+                "canonicalArtist": "The High School Musical Cast",
+                "mbid": "b1f41949-3515-4434-9473-e8d9424d2983",
+                "score": 160
+              },
+              {
+                "title": "High School Musical: Hits Remixed",
+                "artists": [
+                  "The High School Musical Cast"
+                ],
+                "canonicalArtist": "The High School Musical Cast",
+                "mbid": "b221d890-4cd6-4d6f-bfff-d57372e932ef",
+                "score": 160
+              },
+              {
+                "title": "High School Musical: The Concert",
+                "artists": [
+                  "The High School Musical Cast"
+                ],
+                "canonicalArtist": "The High School Musical Cast",
+                "mbid": "39f1dbf3-6d18-4397-9b7e-d8f749f1ae98",
+                "score": 160
+              },
+              {
+                "title": "High School Musical 3: Senior Year",
+                "artists": [
+                  "The High School Musical Cast"
+                ],
+                "canonicalArtist": "The High School Musical Cast",
+                "mbid": "e7402e1c-62eb-455a-b0b1-5cc2251f8537",
+                "score": 100
+              },
+              {
+                "title": "Twister Moves: High School Musical 2 Edition",
+                "artists": [
+                  "The High School Musical Cast"
+                ],
+                "canonicalArtist": "The High School Musical Cast",
+                "mbid": "ecfeec78-5015-4f43-8ebe-9ee96659435c",
+                "score": 100
+              },
+              {
+                "title": "High School Musical... the Musical! On Stage!",
+                "artists": [
+                  "High School Musical Original Studio Cast"
+                ],
+                "canonicalArtist": "High School Musical Original Studio Cast",
+                "mbid": "c46b5726-e1f1-44b3-8c27-7c20702c371a",
+                "score": 100
+              },
+              {
+                "title": "High School Musical: Hits Remixed",
+                "artists": [
+                  "[Disney]"
+                ],
+                "canonicalArtist": "[Disney]",
+                "mbid": "98447a6a-117b-4418-beb9-e4c0fe5f7319",
+                "score": 60
+              },
+              {
+                "title": "High School Musical: We’re All in This Together",
+                "artists": [
+                  "[Disney]"
+                ],
+                "canonicalArtist": "[Disney]",
+                "mbid": "f1a6bc4d-fa81-4c7c-a8bb-b40581b7cccc",
+                "score": 0
+              },
+              {
+                "title": "High School Musical 2: Non‐Stop Dance Party",
+                "artists": [
+                  "[Disney]"
+                ],
+                "canonicalArtist": "[Disney]",
+                "mbid": "5540b317-50c4-44f2-ab1f-8c4dc38525e4",
+                "score": 0
+              }
+            ],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "High School Musical 2",
+            "artist": "High School Musical"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"High School Musical 2\" AND artist:\"High School Musical\"",
+            "original_title": null,
+            "normalized_title": "High School Musical 2",
+            "match": {
+              "title": "High School Musical 2",
+              "artists": [
+                "The High School Musical Cast"
+              ],
+              "canonicalArtist": "The High School Musical Cast",
+              "mbid": "b1f41949-3515-4434-9473-e8d9424d2983",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "High School Musical 2",
+                "artists": [
+                  "The High School Musical Cast"
+                ],
+                "canonicalArtist": "The High School Musical Cast",
+                "mbid": "b1f41949-3515-4434-9473-e8d9424d2983",
+                "score": 200
+              },
+              {
+                "title": "Twister Moves: High School Musical 2 Edition",
+                "artists": [
+                  "The High School Musical Cast"
+                ],
+                "canonicalArtist": "The High School Musical Cast",
+                "mbid": "ecfeec78-5015-4f43-8ebe-9ee96659435c",
+                "score": 100
+              },
+              {
+                "title": "High School Musical 2: Non‐Stop Dance Party",
+                "artists": [
+                  "[Disney]"
+                ],
+                "canonicalArtist": "[Disney]",
+                "mbid": "5540b317-50c4-44f2-ab1f-8c4dc38525e4",
+                "score": 0
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "4181",
+      "event_artist": "Nikolai Fraiture",
+      "songs": [
+        {
+          "input": {
+            "title": "Last Nite",
+            "performer": [
+              "The Strokes"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Last Nite\" AND artist:\"The Strokes\"",
+            "original_title": null,
+            "normalized_title": "Last Nite",
+            "performers": [
+              "The Strokes"
+            ],
+            "match": {
+              "title": "Last Nite",
+              "artists": [
+                "The Strokes"
+              ],
+              "canonicalArtist": "The Strokes",
+              "mbid": "686af23d-c57c-4923-a2f2-05012a4472d1",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "686af23d-c57c-4923-a2f2-05012a4472d1",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "a756bf57-35c4-4069-8f41-d62d7387c308",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "eea9e8a3-3e2d-46ee-a620-fa325bacdb00",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "012dc37b-2186-4bcf-8604-efcd2fff5142",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "24e5e946-ee8c-47c1-89e7-2cba3cc45916",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "7d43c990-f3df-4da7-a3c1-dcf419905743",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "98db8829-f7a1-457c-af63-9e1bb1a9c294",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "b4f3966c-87bf-44d6-8ecc-4b0379f656be",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "1e485be2-a8a5-4511-8b17-3c353b90b5fd",
+                "score": 200
+              },
+              {
+                "title": "Last Nite",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "10c41a81-e39e-4d73-b521-3935577fa218",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": [
+        {
+          "input": {
+            "title": "Is This It",
+            "artist": "The Strokes"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"Is This It\" AND artist:\"The Strokes\"",
+            "original_title": null,
+            "normalized_title": "Is This It",
+            "match": {
+              "title": "Is This It",
+              "artists": [
+                "The Strokes"
+              ],
+              "canonicalArtist": "The Strokes",
+              "mbid": "790324e7-e570-45e3-9d82-48568c50f5e9",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "790324e7-e570-45e3-9d82-48568c50f5e9",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "2494ef4e-7d53-4097-9fa0-00b1b7182694",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "05f9032d-fda8-4ce6-99a5-fdd0fc8af8ee",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "7e3dd505-220a-3560-99df-2459afd045d8",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "c3c9e10b-2d0b-39f0-a1c7-61736dfd718c",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "a4b72651-bb31-4408-a99c-081ddbca7fcc",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "eb88fcad-d3fe-3645-b036-bdab63c54bf5",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "7d8e9d24-2f0e-473c-801c-3d895e0e0eee",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "a8170233-e6d4-3ad4-b6c0-70d72fbd0f63",
+                "score": 200
+              },
+              {
+                "title": "Is This It",
+                "artists": [
+                  "The Strokes"
+                ],
+                "canonicalArtist": "The Strokes",
+                "mbid": "38b94527-4f9d-49d4-85d3-d449545ceea4",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "2966",
+      "event_artist": "Wayne Parker",
+      "songs": [
+        {
+          "input": {
+            "title": "Don't Forget Me When I'm Gone",
+            "performer": [
+              "Glass Tiger"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Don't Forget Me When I'm Gone\" AND artist:\"Glass Tiger\"",
+            "original_title": null,
+            "normalized_title": "Don’t Forget Me (When I’m Gone)",
+            "performers": [
+              "Glass Tiger"
+            ],
+            "match": {
+              "title": "Don’t Forget Me (When I’m Gone)",
+              "artists": [
+                "Glass Tiger"
+              ],
+              "canonicalArtist": "Glass Tiger",
+              "mbid": "b0863705-9411-4b3a-92e7-f9db09946d51",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Don’t Forget Me (When I’m Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "b0863705-9411-4b3a-92e7-f9db09946d51",
+                "score": 200
+              },
+              {
+                "title": "Don’t Forget Me (When I’m Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "751f3fc8-8abb-408f-a9a5-c66fb73313ef",
+                "score": 200
+              },
+              {
+                "title": "Don't Forget Me (When I'm Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "4f8730e7-4f9d-418c-a212-10aa5daa71d4",
+                "score": 200
+              },
+              {
+                "title": "Don't Forget Me (When I'm Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "a0d9d13d-00f7-4d49-80f0-807510b93c44",
+                "score": 200
+              },
+              {
+                "title": "Don't Forget Me (When I'm Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "1eeb5407-6e5c-4d61-8e2b-58389420cdfc",
+                "score": 200
+              },
+              {
+                "title": "Don't Forget Me (When I'm Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "4829cf79-f6f9-4079-b1d4-776448975a9a",
+                "score": 200
+              },
+              {
+                "title": "Don’t Forget Me (When I’m Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "9a85aa47-de37-4f39-b085-56a775e8e013",
+                "score": 200
+              },
+              {
+                "title": "Don't Forget Me (When I'm Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "e33df37f-ae53-483c-9a12-cf131a3d5119",
+                "score": 200
+              },
+              {
+                "title": "Don't Forget Me (When I'm Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "0c9a73aa-d130-4aa8-a53d-08e3aadcdcda",
+                "score": 200
+              },
+              {
+                "title": "Don’t Forget Me (When I’m Gone)",
+                "artists": [
+                  "Glass Tiger"
+                ],
+                "canonicalArtist": "Glass Tiger",
+                "mbid": "0ee04716-c0ae-4327-bd5b-6fe2bd6f8095",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "2337",
+      "event_artist": "Andrew Ranken",
+      "songs": [
+        {
+          "input": {
+            "title": "The Irish Rover",
+            "performer": [
+              "The Pogues"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"The Irish Rover\" AND artist:\"The Pogues\"",
+            "original_title": null,
+            "normalized_title": "The Irish Rover",
+            "performers": [
+              "The Pogues"
+            ],
+            "match": {
+              "title": "The Irish Rover",
+              "artists": [
+                "The Pogues"
+              ],
+              "canonicalArtist": "The Pogues",
+              "mbid": "4d7376ed-f248-4dbd-9e03-d849e61f8da4",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "4d7376ed-f248-4dbd-9e03-d849e61f8da4",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "bc1139c6-ccae-4e6e-862c-56f3e89a613e",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "597dc238-ba62-4bb4-9250-723a8723665e",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "cdd396ae-854c-412a-9d41-23b9bf04af6d",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "655667cf-05e8-4e58-87a3-2eb4dc4b080e",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "f1cdd17e-fabd-4553-a416-0def2516e6c5",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "bb653293-b468-4816-b4c4-68ce244a463c",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "dc88e6b8-d828-4b72-87f2-2f678fd44b70",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "8a50cb31-96c6-42df-91dd-8615d90fb052",
+                "score": 200
+              },
+              {
+                "title": "The Irish Rover",
+                "artists": [
+                  "The Pogues"
+                ],
+                "canonicalArtist": "The Pogues",
+                "mbid": "ade2fede-9190-43ab-8c1c-280a78ce50d2",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "2159",
+      "event_artist": "Bill Gibson",
+      "songs": [
+        {
+          "input": {
+            "title": "The Power Of Love",
+            "performer": [
+              "Huey Lewis and the News"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"The Power Of Love\" AND artist:\"Huey Lewis and the News\"",
+            "original_title": null,
+            "normalized_title": "The Power of Love",
+            "performers": [
+              "Huey Lewis and the News"
+            ],
+            "match": {
+              "title": "The Power of Love",
+              "artists": [
+                "Huey Lewis and the News"
+              ],
+              "canonicalArtist": "Huey Lewis and the News",
+              "mbid": "fdfd3176-a9c8-4b39-a86e-b05765042817",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "fdfd3176-a9c8-4b39-a86e-b05765042817",
+                "score": 200
+              },
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "be692472-5252-4a15-84f5-eb80aa70f8ab",
+                "score": 200
+              },
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "68b78f8a-5f48-41f3-b760-eede3c58b12d",
+                "score": 200
+              },
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "0324efdb-3b75-4aec-9d53-acf6755adf0e",
+                "score": 200
+              },
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "0d9d050a-702d-4929-89e0-05be54529700",
+                "score": 200
+              },
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "b56adc8c-1b29-4fc9-9048-168f4ef405d9",
+                "score": 200
+              },
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "d45e0f51-7d63-4865-9b81-e47036e4d299",
+                "score": 200
+              },
+              {
+                "title": "The Power Of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "3678581b-280a-492e-8df0-a1e312e17c73",
+                "score": 200
+              },
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "fa008efe-9de2-476a-bef3-bcc0d9c18190",
+                "score": 200
+              },
+              {
+                "title": "The Power of Love",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "27dbf4be-a8ac-4a62-bcaf-0be593faffa9",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": [
+        {
+          "input": {
+            "title": "Sports",
+            "artist": "Huey Lewis and the News"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"Sports\" AND artist:\"Huey Lewis and the News\"",
+            "original_title": null,
+            "normalized_title": "Sports",
+            "match": {
+              "title": "Sports",
+              "artists": [
+                "Huey Lewis and the News"
+              ],
+              "canonicalArtist": "Huey Lewis and the News",
+              "mbid": "cabc3a1f-bae3-4dbb-a88f-5bb4d91cce4d",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "cabc3a1f-bae3-4dbb-a88f-5bb4d91cce4d",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "edea5491-dbd0-4ab5-ad35-702546c22eb9",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "a96ff88d-256d-428a-917f-bbc15e7c7207",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "af532815-5aeb-4cd8-abaf-5cacea27b3a5",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "4e5c4b77-ab18-4f89-9b76-aaafcb3e42b0",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "efead509-7514-4474-8180-42ce309bd1df",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "391d6eb9-a7fe-4104-860e-84c4a6eff98c",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "b2408234-8d47-46ea-b5c4-96481fa6dd5e",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "92e3bdf7-10a7-4d17-bbe0-531c9bf344de",
+                "score": 200
+              },
+              {
+                "title": "Sports",
+                "artists": [
+                  "Huey Lewis and the News"
+                ],
+                "canonicalArtist": "Huey Lewis and the News",
+                "mbid": "8ecb9459-c8f9-4224-992d-ddce335526dd",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "1912",
+      "event_artist": "Roger Steen",
+      "songs": [
+        {
+          "input": {
+            "title": "White Punks On Dope",
+            "performer": [
+              "The Tubes"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"White Punks On Dope\" AND artist:\"The Tubes\"",
+            "original_title": null,
+            "normalized_title": "White Punks on Dope",
+            "performers": [
+              "The Tubes"
+            ],
+            "match": {
+              "title": "White Punks on Dope",
+              "artists": [
+                "The Tubes"
+              ],
+              "canonicalArtist": "The Tubes",
+              "mbid": "da93e5bd-bdb4-4e34-8c06-593731c14623",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "da93e5bd-bdb4-4e34-8c06-593731c14623",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "0ae3a17a-73d6-4ba8-9316-febbfe503a04",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "2f060421-1277-46c3-ae1a-6832b2e17d70",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "46fd92f7-63ee-4517-b993-7c38adfb7267",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "0e3ebcec-a8df-4d13-a321-a661d05c9cdd",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "f4be3fa9-5061-48b0-887f-c4198eee0c02",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "2d9d5c76-2d53-4818-8972-dea3e899154d",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "64ceb46a-2eab-4e69-9ac4-a93b15c893ab",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "b68ee43d-3a5e-4767-9cdb-cfeb0e71131c",
+                "score": 200
+              },
+              {
+                "title": "White Punks on Dope",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "1d274733-57a9-4895-8408-4494814f6a81",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "She's A Beauty",
+            "performer": [
+              "The Tubes"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"She's A Beauty\" AND artist:\"The Tubes\"",
+            "original_title": null,
+            "normalized_title": "She’s a Beauty",
+            "performers": [
+              "The Tubes"
+            ],
+            "match": {
+              "title": "She’s a Beauty",
+              "artists": [
+                "The Tubes"
+              ],
+              "canonicalArtist": "The Tubes",
+              "mbid": "8227e86e-2457-469a-893f-9ab89f3272f5",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "She’s a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "8227e86e-2457-469a-893f-9ab89f3272f5",
+                "score": 200
+              },
+              {
+                "title": "She’s a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "135d0921-44c4-44a3-abba-0a45e51e8c67",
+                "score": 200
+              },
+              {
+                "title": "She’s a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "e8c84794-8cee-48e8-8977-52b946201a44",
+                "score": 200
+              },
+              {
+                "title": "She’s a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "4b908eff-c6b8-4696-b831-d0c1af490e2e",
+                "score": 200
+              },
+              {
+                "title": "She’s a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "28b1cb54-0b55-4203-8a41-e8a233656ea8",
+                "score": 200
+              },
+              {
+                "title": "She's a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "950c94e4-9bbb-4581-9861-516f775d9499",
+                "score": 200
+              },
+              {
+                "title": "She's A Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "455b02f7-60c4-4447-8b10-13cb83add07f",
+                "score": 200
+              },
+              {
+                "title": "She’s a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "4449de60-6c92-4f34-aa79-2c530b9b4288",
+                "score": 200
+              },
+              {
+                "title": "She’s a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "f2d377a8-a478-4ef3-b6f0-ec9636205993",
+                "score": 200
+              },
+              {
+                "title": "She's a Beauty",
+                "artists": [
+                  "The Tubes"
+                ],
+                "canonicalArtist": "The Tubes",
+                "mbid": "eab9c6fb-2e5f-4680-a677-06286e1789fb",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "1921",
+      "event_artist": "Terry Reid",
+      "songs": [],
+      "albums": [
+        {
+          "input": {
+            "title": "Seed of Memory",
+            "artist": "Terry Reid"
+          },
+          "validation": {
+            "type": "release",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "release:\"Seed of Memory\" AND artist:\"Terry Reid\"",
+            "original_title": null,
+            "normalized_title": "Seed of Memory",
+            "match": {
+              "title": "Seed of Memory",
+              "artists": [
+                "Terry Reid"
+              ],
+              "canonicalArtist": "Terry Reid",
+              "mbid": "3b35ff1b-1fc5-44a8-b13e-0855d1d76f74",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Seed of Memory",
+                "artists": [
+                  "Terry Reid"
+                ],
+                "canonicalArtist": "Terry Reid",
+                "mbid": "3b35ff1b-1fc5-44a8-b13e-0855d1d76f74",
+                "score": 200
+              },
+              {
+                "title": "Seed of Memory",
+                "artists": [
+                  "Terry Reid"
+                ],
+                "canonicalArtist": "Terry Reid",
+                "mbid": "d3d02eb0-4f02-436b-9f23-0a57eb38ceed",
+                "score": 200
+              },
+              {
+                "title": "Seed of Memory",
+                "artists": [
+                  "Terry Reid"
+                ],
+                "canonicalArtist": "Terry Reid",
+                "mbid": "54b4b760-e7d1-4804-8f5c-3c215be04f04",
+                "score": 200
+              }
+            ],
+            "error": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "20945",
+      "event_artist": "Toy Caldwell",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "21606",
+      "event_artist": "J.C. Crowley",
+      "songs": [
+        {
+          "input": {
+            "title": "Baby Come Back",
+            "performer": [
+              "Player"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Baby Come Back\" AND artist:\"Player\"",
+            "original_title": null,
+            "normalized_title": "Baby Come Back",
+            "performers": [
+              "Player"
+            ],
+            "match": {
+              "title": "Baby Come Back",
+              "artists": [
+                "Player"
+              ],
+              "canonicalArtist": "Player",
+              "mbid": "2bb542b8-dad1-430b-809c-d579d87ec2b4",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "2bb542b8-dad1-430b-809c-d579d87ec2b4",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "be46f743-648b-4896-84e7-51bb7e359415",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "6564ec2d-cb3c-4ca9-9b66-f76cc615621c",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "b089577c-4225-4446-9ce7-76bc233f7e62",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "8ad8fa40-0719-4d82-a943-80ac767209bb",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "f57dd826-7bd6-4349-a18b-0d23a5556b9c",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "dfed1d79-53a1-46cf-a430-f77e2c17294d",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "f52b5054-8f4a-4d5d-9ce9-a99ccd925125",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "06f67145-0d99-4a38-aee2-12957771d9a7",
+                "score": 200
+              },
+              {
+                "title": "Baby Come Back",
+                "artists": [
+                  "Player"
+                ],
+                "canonicalArtist": "Player",
+                "mbid": "485d8b95-58a2-4a66-b420-837bd6a562a3",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "20944",
+      "event_artist": "John Hammond Jr",
+      "songs": [],
+      "albums": []
+    },
+    {
+      "id": "22048",
+      "event_artist": "Raymond Froggatt",
+      "songs": [
+        {
+          "input": {
+            "title": "The Red Balloon",
+            "performer": [
+              "The Dave Clark Five"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"The Red Balloon\" AND artist:\"The Dave Clark Five\"",
+            "original_title": null,
+            "normalized_title": "The Red Balloon",
+            "performers": [
+              "The Dave Clark Five"
+            ],
+            "match": {
+              "title": "The Red Balloon",
+              "artists": [
+                "The Dave Clark Five"
+              ],
+              "canonicalArtist": "The Dave Clark Five",
+              "mbid": "4af32cbf-2775-491a-b28a-d36a8d1a0988",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "The Red Balloon",
+                "artists": [
+                  "The Dave Clark Five"
+                ],
+                "canonicalArtist": "The Dave Clark Five",
+                "mbid": "4af32cbf-2775-491a-b28a-d36a8d1a0988",
+                "score": 200
+              },
+              {
+                "title": "The Red Balloon",
+                "artists": [
+                  "The Dave Clark Five"
+                ],
+                "canonicalArtist": "The Dave Clark Five",
+                "mbid": "7ab7e510-0427-43af-8ff6-7e379499bdc5",
+                "score": 200
+              },
+              {
+                "title": "The Red Balloon",
+                "artists": [
+                  "The Dave Clark Five"
+                ],
+                "canonicalArtist": "The Dave Clark Five",
+                "mbid": "5406643e-85a0-4452-aac6-643b015c8bee",
+                "score": 200
+              },
+              {
+                "title": "The Red Balloon",
+                "artists": [
+                  "The Dave Clark Five"
+                ],
+                "canonicalArtist": "The Dave Clark Five",
+                "mbid": "4218334d-cc2f-4d11-86f6-91ee963e3364",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "Big Ship",
+            "performer": [
+              "Cliff Richard"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Big Ship\" AND artist:\"Cliff Richard\"",
+            "original_title": null,
+            "normalized_title": "Big Ship",
+            "performers": [
+              "Cliff Richard"
+            ],
+            "match": {
+              "title": "Big Ship",
+              "artists": [
+                "Cliff Richard"
+              ],
+              "canonicalArtist": "Cliff Richard",
+              "mbid": "3314810f-f71c-472e-80fc-9edf6dccfbfc",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Big Ship",
+                "artists": [
+                  "Cliff Richard"
+                ],
+                "canonicalArtist": "Cliff Richard",
+                "mbid": "3314810f-f71c-472e-80fc-9edf6dccfbfc",
+                "score": 200
+              },
+              {
+                "title": "Big Ship",
+                "artists": [
+                  "Cliff Richard"
+                ],
+                "canonicalArtist": "Cliff Richard",
+                "mbid": "8a2c55de-388d-441d-81ed-489ebb80b367",
+                "score": 200
+              },
+              {
+                "title": "Big Ship",
+                "artists": [
+                  "Cliff Richard"
+                ],
+                "canonicalArtist": "Cliff Richard",
+                "mbid": "c11c4319-3c30-4dfe-83e9-f3bc5f1d62df",
+                "score": 200
+              },
+              {
+                "title": "Big Ship",
+                "artists": [
+                  "Cliff Richard"
+                ],
+                "canonicalArtist": "Cliff Richard",
+                "mbid": "395ecaec-59a7-4bf7-9fb5-ab13a3e1db87",
+                "score": 200
+              },
+              {
+                "title": "Big Ship",
+                "artists": [
+                  "Cliff Richard"
+                ],
+                "canonicalArtist": "Cliff Richard",
+                "mbid": "8552d94a-136c-405d-9934-1055129799d9",
+                "score": 200
+              },
+              {
+                "title": "Big Ship (Full version)",
+                "artists": [
+                  "Cliff Richard"
+                ],
+                "canonicalArtist": "Cliff Richard",
+                "mbid": "2adb10f0-f9cc-435a-b66d-786f10b5bc13",
+                "score": 100
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    },
+    {
+      "id": "271",
+      "event_artist": "Timmy Thomas",
+      "songs": [
+        {
+          "input": {
+            "title": "Why Can't We Live Together",
+            "performer": [
+              "Timmy Thomas"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Why Can't We Live Together\" AND artist:\"Timmy Thomas\"",
+            "original_title": null,
+            "normalized_title": "Why Can't We Live Together",
+            "performers": [
+              "Timmy Thomas"
+            ],
+            "match": {
+              "title": "Why Can't We Live Together",
+              "artists": [
+                "Timmy Thomas"
+              ],
+              "canonicalArtist": "Timmy Thomas",
+              "mbid": "5acc9e6f-f864-4ba8-a740-47a7d42bd5d6",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Why Can't We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "5acc9e6f-f864-4ba8-a740-47a7d42bd5d6",
+                "score": 200
+              },
+              {
+                "title": "Why Can't We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "babb41b1-f296-4047-8bf7-73d15a4f62f1",
+                "score": 200
+              },
+              {
+                "title": "Why Can't We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "5ac04df6-41fd-4030-86bc-6845614b243a",
+                "score": 200
+              },
+              {
+                "title": "Why Can’t We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "ad968468-4dcc-486f-9ab5-2d70e3a66fa5",
+                "score": 200
+              },
+              {
+                "title": "Why Can't We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "44324756-e345-47da-ba85-1a7052044071",
+                "score": 200
+              },
+              {
+                "title": "Why Can’t We Live Together?",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "425c0b8e-27f5-4bc2-85f5-97d415a258aa",
+                "score": 200
+              },
+              {
+                "title": "Why Can't We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "38f0a2ce-122c-4641-bbc3-db9944d0dcd0",
+                "score": 200
+              },
+              {
+                "title": "Why Can’t We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "7ab8078d-6be9-4c4c-abca-034f12457acc",
+                "score": 200
+              },
+              {
+                "title": "Why Can’t We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "6d284b56-0167-4340-98f8-e4e345e7d3d9",
+                "score": 200
+              },
+              {
+                "title": "Why Can’t We Live Together",
+                "artists": [
+                  "Timmy Thomas"
+                ],
+                "canonicalArtist": "Timmy Thomas",
+                "mbid": "5977caec-cd83-44eb-a816-25cb3ea1acc5",
+                "score": 200
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        },
+        {
+          "input": {
+            "title": "Hotline Bling",
+            "performer": [
+              "Drake"
+            ],
+            "original_artist": null
+          },
+          "validation": {
+            "type": "recording",
+            "status": "CONFIRMED",
+            "search_level": "exact",
+            "query": "recording:\"Hotline Bling\" AND artist:\"Drake\"",
+            "original_title": null,
+            "normalized_title": "Hotline Bling",
+            "performers": [
+              "Drake"
+            ],
+            "match": {
+              "title": "Hotline Bling",
+              "artists": [
+                "Drake"
+              ],
+              "canonicalArtist": "Drake",
+              "mbid": "e288e33a-5c40-4b9f-98f6-0062be760e4a",
+              "score": 200
+            },
+            "candidates": [
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "e288e33a-5c40-4b9f-98f6-0062be760e4a",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "37b244da-6e86-4c74-a693-ca473f3eb89b",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "1c9a0b41-5776-4d8a-ac41-0f47edeb260d",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "6984a10d-c4b6-46b4-9da8-4df2d0fa756a",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "8751d504-d313-4ef5-9f93-28932be6373e",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "a9370ccb-dd67-4357-b9ec-6c9e6cabec06",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "027c6fdf-3e83-40b3-b518-2c25f570657b",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "0bbee5a3-b062-4cdc-84a8-0b5c83d2418a",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "99b0e0bb-8d70-4a15-86f1-d64437cc0ebb",
+                "score": 200
+              },
+              {
+                "title": "Hotline Bling (remix)",
+                "artists": [
+                  "Drake"
+                ],
+                "canonicalArtist": "Drake",
+                "mbid": "fcd6fdec-395f-438c-b3b6-e4330d5edd6c",
+                "score": 100
+              }
+            ],
+            "split_parts": [],
+            "error": null
+          }
+        }
+      ],
+      "albums": []
+    }
+  ],
+  "conflicts": []
+}

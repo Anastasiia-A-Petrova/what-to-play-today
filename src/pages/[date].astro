@@ -1,0 +1,1847 @@
+
+---
+import Layout from "../layouts/Layout.astro";
+import fs from "node:fs";
+import path from "node:path";
+import { createHash } from "node:crypto";
+
+const monthNames = {
+  january: "January",
+  february: "February",
+  march: "March",
+  april: "April",
+  may: "May",
+  june: "June",
+  july: "July",
+  august: "August",
+  september: "September",
+  october: "October",
+  november: "November",
+  december: "December",
+};
+
+export function getStaticPaths() {
+  const months = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+  ];
+
+  const paths = [];
+
+  for (const month of months) {
+    const monthNumber = months.indexOf(month) + 1;
+    const daysInMonth = new Date(2024, monthNumber, 0).getDate();
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      paths.push({
+        params: {
+          date: `${month}-${String(day).padStart(2, "0")}`,
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { date } = Astro.params;
+const [month, day] = date.split("-");
+const monthName = monthNames[month] ?? month;
+
+const dataPath = path.resolve(`data/${date}.json`);
+
+const events = fs.existsSync(dataPath)
+  ? JSON.parse(fs.readFileSync(dataPath, "utf8"))
+  : [];
+
+function convertLinksToWikipedia(html) {
+  return String(html || "").replace(
+    /<a\b[^>]*>(.*?)<\/a>/gi,
+    (match, text) => {
+      const cleanText = String(text)
+        .replace(/<[^>]+>/g, "")
+        .trim();
+
+      if (!cleanText) return match;
+
+      const wikipediaUrl =
+        `https://en.wikipedia.org/wiki/Special:Search?search=` +
+        encodeURIComponent(cleanText);
+
+      return `<a href="${wikipediaUrl}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+    }
+  );
+}
+
+/* Prepared data */
+
+const preparedPath = path.resolve(`data/prepared/${date}.json`);
+
+const prepared = fs.existsSync(preparedPath)
+  ? JSON.parse(fs.readFileSync(preparedPath, "utf8"))
+  : null;
+
+/* Music works */
+
+function anchorPart(value: unknown): string {
+  const normalized = String(value ?? "").trim().toLowerCase();
+
+  if (!normalized) return "";
+
+  // Обычные eventId, type и MBID сохраняются без изменений.
+  if (/^[a-z0-9_-]+$/.test(normalized)) {
+    return normalized;
+  }
+
+  // Для необычных значений формируем безопасный ASCII-фрагмент.
+  return createHash("sha256")
+    .update(normalized)
+    .digest("hex")
+    .slice(0, 16);
+}
+
+function getWorkAnchor(work) {
+  const eventId = anchorPart(work.eventId) || "no-event";
+  const type = anchorPart(work.type) || "work";
+  const mbid = anchorPart(work.mbid);
+
+  // Если MBID отсутствует, используем стабильный отпечаток
+  // типа, исполнителя и названия — без индекса записи.
+  const fallbackIdentity = JSON.stringify([
+    String(work.type ?? "").trim().toLowerCase(),
+    String(work.artist ?? "").trim().toLowerCase(),
+    String(work.title ?? "").trim().toLowerCase(),
+  ]);
+
+  const workId = mbid || createHash("sha256")
+    .update(fallbackIdentity)
+    .digest("hex")
+    .slice(0, 16);
+
+  return `work-${eventId}-${type}-${workId}`;
+}
+
+const uniquePlaySuggestions = (prepared?.works || []).map((work) => ({
+  ...work,
+  anchorId: getWorkAnchor(work),
+}));
+
+const seenAnchors = new Set<string>();
+
+for (const work of uniquePlaySuggestions) {
+  if (seenAnchors.has(work.anchorId)) {
+    throw new Error(
+      `Duplicate work anchor in data/prepared/${date}.json: ` +
+      `${work.anchorId} (${work.artist ?? ""} — ${work.title ?? ""})`
+    );
+  }
+
+  seenAnchors.add(work.anchorId);
+}
+
+/* Group works by historical event */
+
+const eventMap = new Map(
+  events.map((event) => [String(event.nID), event])
+);
+
+const groupedWorksMap = new Map();
+
+uniquePlaySuggestions.forEach((work, index) => {
+  const hasEventId =
+    work.eventId !== undefined &&
+    work.eventId !== null &&
+    String(work.eventId).trim() !== "";
+
+  // Works without an eventId remain separate.
+  const groupKey = hasEventId
+    ? `event-${String(work.eventId)}`
+    : `work-${index}`;
+
+  if (!groupedWorksMap.has(groupKey)) {
+    const sourceEvent = hasEventId
+      ? eventMap.get(String(work.eventId))
+      : null;
+
+    groupedWorksMap.set(groupKey, {
+      key: groupKey,
+      eventId: hasEventId ? String(work.eventId) : null,
+      year: sourceEvent?.nYear ?? work.year ?? null,
+      eventArtist: sourceEvent?.sArtist ?? null,
+      description:
+        sourceEvent?.sDescription ??
+        work.eventDescription ??
+        "",
+      works: [],
+    });
+  }
+
+  const group = groupedWorksMap.get(groupKey);
+
+  // Use the first available description if the source event
+  // does not contain one.
+  if (!group.description && work.eventDescription) {
+    group.description = work.eventDescription;
+  }
+
+  group.works.push(work);
+});
+
+const groupedWorks = Array.from(groupedWorksMap.values());
+
+/* IDs of events already represented in the music section */
+
+const featuredEventIds = new Set(
+  uniquePlaySuggestions
+    .map((work) => work.eventId)
+    .filter((id) => id !== undefined && id !== null && String(id).trim() !== "")
+    .map(String)
+);
+
+/* Remaining history events */
+
+const historyEvents = events.filter(
+  (event) => !featuredEventIds.has(String(event.nID))
+);
+
+/* Birthdays */
+
+const birthdays = prepared?.people || [];
+---
+
+<Layout
+  title={`${monthName} ${day} in Music History — What to Play Today?`}
+  description={`Music events from ${monthName} ${day}: songs, albums, musicians and important moments in music history.`}
+>
+  <nav class="back-nav">
+    <a href="/">← Home</a>
+  </nav>
+
+  <!-- DATE HERO -->
+
+  <header class="date-hero">
+    <div class="date-heading">
+      <div class="date-number">{day}</div>
+
+      <div class="date-heading-info">
+        <div class="date-month">{monthName}</div>
+        <div class="date-subtitle">A DAY IN MUSIC HISTORY</div>
+      </div>
+    </div>
+
+    <div class="event-count">
+      <strong>{events.length}</strong>
+      <span>HISTORICAL EVENTS</span>
+    </div>
+  </header>
+
+  <!-- PAGE SEARCH -->
+
+  <div class="page-search">
+    <div class="page-search-field">
+      <span class="page-search-icon">⌕</span>
+      <input
+        type="search"
+        id="date-search"
+        placeholder="Search artists, songs, albums, years..."
+        autocomplete="off"
+        aria-label="Search this day in music history"
+      />
+      <button
+        type="button"
+        id="search-clear"
+        class="search-clear"
+        aria-label="Clear search"
+        title="Clear search"
+        hidden
+      >
+        ×
+      </button>
+      <kbd>SEARCH</kbd>
+    </div>
+    <p id="search-status" class="search-status" aria-live="polite">
+      Search across all sections
+    </p>
+  </div>
+
+  <!-- WHAT TO PLAY TODAY -->
+
+  <section id="play" class="play-section">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">WHAT TO LISTEN TO</div>
+        <h2>What to Play Today?</h2>
+      </div>
+
+      {groupedWorks.length > 0 && (
+        <div class="section-count">
+          {groupedWorks.length} {groupedWorks.length === 1 ? "STORY" : "STORIES"}
+        </div>
+      )}
+    </div>
+
+    {groupedWorks.length > 0 ? (
+      <div class="stories-list">
+        {groupedWorks.map((group, index) => (
+          <article class="story-card">
+            <div class="story-header">
+              <div class="story-meta">
+                <span class="story-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                {group.eventArtist && (
+                  <a
+                    class="story-artist"
+                    href={`https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(group.eventArtist)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {group.eventArtist}
+                  </a>
+                )}
+
+                {group.year && (
+                  <span class="story-year">
+                    EVENT · {group.year}
+                  </span>
+                )}
+              </div>
+
+              {group.works.length > 1 && (
+                <span class="story-work-count">
+                  {group.works.length} WORKS
+                </span>
+              )}
+            </div>
+
+            {group.description && (
+              <div
+                class="story-description"
+                set:html={convertLinksToWikipedia(group.description)}
+              />
+            )}
+
+            <div class="story-works">
+              {group.works.map((work, workIndex) => (
+                <div class="work-item" id={work.anchorId}>
+                  <div class="work-cover">
+                    {work.coverUrl ? (
+                      <img
+                        src={work.coverUrl}
+                        alt={`${work.artist || ""} — ${work.title}`}
+                        loading={index === 0 && workIndex === 0 ? "eager" : "lazy"}
+                      />
+                    ) : (
+                      <div class="cover-placeholder">
+                        <span>♪</span>
+                      </div>
+                    )}
+                  </div>
+
+                  <div class="work-info">
+                    <div class="work-type">
+                      {work.type === "album" ? "ALBUM" : "SONG"}
+                    </div>
+
+                    <h3>{work.title}</h3>
+
+                    {work.artist && (
+                      <a
+                        class="work-artist"
+                        href={`https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(work.artist)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {work.artist}
+                      </a>
+                    )}
+
+                    <div class="work-actions">
+                      {work.youtubeUrl && (
+                        <a
+                          href={work.youtubeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="action-link action-youtube"
+                        >
+                          ▶ Listen
+                        </a>
+                      )}
+
+                      {work.chordsUrl && (
+                        <a
+                          href={work.chordsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="action-link action-chords"
+                        >
+                          ♫ Chords
+                        </a>
+                      )}
+
+                      <button
+                        type="button"
+                        class="action-link action-share share-button"
+                        data-share-title={[work.title, work.artist].filter(Boolean).join(" — ")}
+                        data-share-anchor={work.anchorId}
+                      >
+                        ↗ Share
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <div class="empty-icon">♫</div>
+        <strong>Nothing to play today yet.</strong>
+        <p>
+          But there are other interesting events in music history for this date.
+        </p>
+      </div>
+    )}
+  </section>
+
+  <!-- IN MUSIC HISTORY -->
+
+  <section id="history" class="history-section">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">THROUGH THE YEARS</div>
+        <h2>In Music History</h2>
+      </div>
+
+      {historyEvents.length > 0 && (
+        <div class="section-count">
+          {historyEvents.length} EVENTS
+        </div>
+      )}
+    </div>
+
+    {historyEvents.length > 0 ? (
+      <div class="history-grid">
+        {historyEvents.map((event, index) => (
+          <article class="history-card">
+            <div class="history-year">{event.nYear}</div>
+
+            <div
+              class="history-description"
+              set:html={convertLinksToWikipedia(event.sDescription)}
+            />
+          </article>
+        ))}
+      </div>
+    ) : (
+      <p class="empty-message">
+        All available events are featured in today's music picks.
+      </p>
+    )}
+  </section>
+
+  <!-- BIRTHDAYS -->
+
+  <section id="birthdays" class="birthdays-section">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">MUSICIANS & ARTISTS</div>
+        <h2>Born on {monthName} {day}</h2>
+      </div>
+
+      {birthdays.length > 0 && (
+        <div class="section-count">
+          {birthdays.length} PEOPLE
+        </div>
+      )}
+    </div>
+
+    {birthdays.length > 0 ? (
+      <div class="birthdays-grid">
+        {birthdays.map((person) => (
+          <article class="birthday-card">
+            <div class="birthday-photo">
+              {person.photo ? (
+                <img
+                  src={person.photo}
+                  alt={person.name}
+                  loading="lazy"
+                />
+              ) : (
+                <div class="photo-placeholder">
+                  <span>♪</span>
+                </div>
+              )}
+            </div>
+
+            <div class="birthday-content">
+              <div class="birthday-name">
+                {person.name}
+              </div>
+
+              {person.year && (
+                <div class="birthday-year">
+                  BORN IN {person.year}
+                </div>
+              )}
+
+              {person.description && (
+                <div
+                  class="birthday-description"
+                  set:html={convertLinksToWikipedia(person.description)}
+                />
+              )}
+
+              {person.wikipediaUrl && (
+                <a
+                  class="birthday-wikipedia"
+                  href={person.wikipediaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Wikipedia →
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <p class="empty-message">
+        No birthdays recorded for this date.
+      </p>
+    )}
+  </section>
+</Layout>
+
+<style>
+  /* GENERAL */
+
+  .back-nav {
+    margin-bottom: 30px;
+  }
+
+  .back-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color var(--transition);
+  }
+
+  .back-nav a:hover {
+    color: var(--accent);
+  }
+
+  section {
+    margin-bottom: 76px;
+  }
+
+  /* DATE HERO */
+
+  .date-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 36px 0 54px;
+    margin-bottom: 34px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .date-heading {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+  }
+
+  .date-number {
+    color: var(--accent);
+    font-family: var(--font-editorial);
+    font-size: clamp(120px, 17vw, 210px);
+    line-height: 0.72;
+    letter-spacing: -0.075em;
+  }
+
+  .date-heading-info {
+    padding-bottom: 7px;
+  }
+
+  .date-month {
+    color: var(--text);
+    font-family: var(--font-editorial);
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1;
+  }
+
+  .date-subtitle {
+    margin-top: 12px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .event-count {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 5px;
+  }
+
+  .event-count strong {
+    color: var(--text);
+    font-family: var(--font-editorial);
+    font-size: 54px;
+    line-height: 0.9;
+  }
+
+  .event-count span {
+    margin-top: 10px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  /* SECTION HEADINGS */
+
+  .section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .section-kicker {
+    margin-bottom: 9px;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-editorial);
+    font-size: clamp(32px, 4.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+  }
+
+  .section-count {
+    flex-shrink: 0;
+    padding: 8px 11px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.05em;
+  }
+
+  /* MUSIC STORIES */
+
+  .stories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .story-card {
+    overflow: hidden;
+    padding: 28px 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition:
+      border-color var(--transition),
+      transform var(--transition);
+  }
+
+  .story-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .story-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .story-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .story-number {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+
+  .story-artist {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  .story-artist:hover {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .story-year {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.04em;
+  }
+
+  .story-work-count {
+    flex-shrink: 0;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 9px;
+  }
+
+  .story-description {
+    max-width: 900px;
+    margin-bottom: 22px;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .story-description :global(a) {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    transition: text-decoration-color var(--transition);
+  }
+
+  .story-description :global(a:hover),
+  .story-description :global(a:focus-visible) {
+    text-decoration-color: var(--accent);
+  }
+
+  /* WORKS INSIDE A STORY */
+
+  .story-works {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .work-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .work-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .work-cover {
+    flex-shrink: 0;
+    width: 124px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--surface-soft);
+  }
+
+  .work-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cover-placeholder,
+  .photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background:
+      radial-gradient(circle at 70% 25%, var(--lavender), transparent 55%),
+      var(--surface-soft);
+    color: var(--text);
+  }
+
+  .cover-placeholder span {
+    font-family: var(--font-editorial);
+    font-size: 48px;
+    opacity: 0.65;
+  }
+
+  .work-info {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .work-type {
+    margin-bottom: 6px;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .work-info h3 {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-editorial);
+    font-size: clamp(23px, 2.7vw, 30px);
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  .work-artist {
+    display: inline-block;
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .work-artist:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .work-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 13px;
+  }
+
+  /* Общая форма и поведение всех трёх кнопок */
+
+  .action-link {
+    --button-bg: var(--accent);
+    --button-hover: var(--accent-hover);
+    --button-text: #24212A;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 37px;
+    margin: 0;
+    padding: 8px 14px;
+
+    appearance: none;
+    border: 1px solid var(--button-bg);
+    border-radius: 9px;
+
+    background-color: var(--button-bg);
+    color: var(--button-text);
+
+    font-family: var(--font-main);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+
+    transition:
+      background-color var(--transition),
+      border-color var(--transition),
+      color var(--transition);
+  }
+
+  .action-link:hover {
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+    color: var(--button-text);
+  }
+
+  .action-link:focus-visible {
+    outline: 2px solid var(--button-bg);
+    outline-offset: 3px;
+  }
+
+  /* Listen — коралловая */
+
+  .action-youtube {
+    --button-bg: var(--accent);
+    --button-hover: var(--accent-hover);
+  }
+
+  /* Chords — лавандовая */
+
+  .action-chords {
+    --button-bg: var(--lavender);
+    --button-hover: color-mix(
+      in srgb,
+      var(--lavender) 85%,
+      #24212A
+    );
+  }
+
+  /* Share — голубая */
+
+  .action-share {
+    --button-bg: var(--blue);
+    --button-hover: color-mix(
+      in srgb,
+      var(--blue) 85%,
+      #24212A
+    );
+  }
+
+
+  /* EMPTY STATE */
+
+  .empty-state {
+    padding: 44px 30px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    text-align: center;
+  }
+
+  .empty-icon {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 32px;
+  }
+
+  .empty-state strong {
+    color: var(--text);
+    font-family: var(--font-editorial);
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .empty-state p,
+  .empty-message {
+    margin: 9px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* HISTORY */
+
+  .history-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .history-card {
+    padding: 23px 25px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    transition: border-color var(--transition);
+  }
+
+  .history-card:hover {
+    border-color: var(--accent);
+  }
+
+  .history-year {
+    margin-bottom: 13px;
+    color: var(--accent);
+    font-family: var(--font-editorial);
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .history-description {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .history-description :global(a) {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* BIRTHDAYS */
+
+  .birthdays-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .birthday-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition:
+      transform var(--transition),
+      border-color var(--transition);
+  }
+
+  .birthday-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+  }
+
+  .birthday-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--surface-soft);
+  }
+
+  .birthday-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 350ms ease;
+  }
+
+  .birthday-card:hover .birthday-photo img {
+    transform: scale(1.035);
+  }
+
+  .photo-placeholder span {
+    font-family: var(--font-editorial);
+    font-size: 58px;
+    opacity: 0.55;
+  }
+
+  .birthday-content {
+    padding: 21px 22px 23px;
+  }
+
+  .birthday-name {
+    color: var(--text);
+    font-family: var(--font-editorial);
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .birthday-year {
+    margin-top: 8px;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.07em;
+  }
+
+  .birthday-description {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .birthday-description :global(a) {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .birthday-wikipedia {
+    display: inline-flex;
+    margin-top: 16px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .birthday-wikipedia:hover {
+    text-decoration: underline;
+  }
+
+  #play,
+  #history,
+  #birthdays,
+  .work-item {
+    scroll-margin-top: 180px;
+  }
+
+  .work-item:target {
+    background-color: var(--accent-soft);
+    border-radius: 10px;
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+  }
+
+  /* RESPONSIVE */
+
+  @media (max-width: 850px) {
+    .date-number {
+      font-size: 150px;
+    }
+
+    .birthdays-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    section {
+      margin-bottom: 54px;
+    }
+
+    .date-hero {
+      align-items: flex-start;
+      padding: 25px 0 35px;
+    }
+
+    .date-heading {
+      gap: 15px;
+    }
+
+    .date-number {
+      font-size: 112px;
+    }
+
+    .date-month {
+      font-size: 27px;
+    }
+
+    .date-subtitle {
+      max-width: 120px;
+      font-size: 8px;
+      line-height: 1.5;
+    }
+
+    .event-count strong {
+      font-size: 38px;
+    }
+
+    .event-count span {
+      max-width: 85px;
+      font-size: 8px;
+      text-align: right;
+    }
+
+    .section-heading {
+      align-items: flex-start;
+    }
+
+    .section-heading h2 {
+      font-size: 34px;
+    }
+
+    .section-count {
+      margin-top: 19px;
+      font-size: 8px;
+    }
+
+    .story-card {
+      padding: 21px 18px;
+      border-radius: 18px;
+    }
+
+    .story-header {
+      align-items: flex-start;
+    }
+
+    .story-meta {
+      gap: 8px;
+    }
+
+    .story-description {
+      font-size: 14px;
+    }
+
+    .work-item {
+      align-items: flex-start;
+      gap: 13px;
+    }
+
+    .work-cover {
+      width: 92px;
+      border-radius: 9px;
+    }
+
+    .work-info h3 {
+      font-size: 21px;
+    }
+
+    .work-artist {
+      font-size: 13px;
+    }
+
+    .work-actions {
+      gap: 6px;
+    }
+
+    .action-link {
+      min-height: 33px;
+      padding: 7px 10px;
+      font-size: 11px;
+    }
+
+    .history-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .birthdays-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .birthday-photo {
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .date-number {
+      font-size: 92px;
+    }
+
+    .date-month {
+      font-size: 23px;
+    }
+
+    .work-cover {
+      width: 76px;
+    }
+
+    .work-info h3 {
+      font-size: 19px;
+    }
+  }
+  /* =================================
+     COMPACT DESKTOP LAYOUT
+  ================================= */
+
+  @media (min-width: 1000px) {
+    /* Home → дата → первый раздел */
+
+    .back-nav {
+      margin-bottom: 18px;
+    }
+
+    .date-hero {
+      gap: 24px;
+      padding: 24px 0 32px;
+      margin-bottom: 26px;
+    }
+
+    .date-heading {
+      gap: 20px;
+    }
+
+    .date-number {
+      font-size: clamp(140px, 13vw, 170px);
+    }
+
+    .date-month {
+      font-size: 42px;
+    }
+
+    .date-subtitle {
+      margin-top: 10px;
+    }
+
+    .event-count strong {
+      font-size: 46px;
+    }
+
+    /* Расстояния между разделами */
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    /* Музыкальные истории */
+
+    .stories-list {
+      gap: 16px;
+    }
+
+    .story-card {
+      padding: 22px 24px;
+    }
+
+    .story-header {
+      margin-bottom: 14px;
+    }
+
+    .story-description {
+      margin-bottom: 16px;
+    }
+
+    .work-item {
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .work-cover {
+      width: 112px;
+    }
+
+    .work-actions {
+      margin-top: 10px;
+    }
+
+    /* Остальные исторические события */
+
+    .history-grid {
+      gap: 12px;
+    }
+
+    .history-card {
+      padding: 19px 22px;
+    }
+
+    .history-year {
+      margin-bottom: 10px;
+    }
+
+    /* Дни рождения */
+
+    .birthdays-grid {
+      gap: 16px;
+    }
+
+    .birthday-photo {
+      aspect-ratio: 3 / 2;
+    }
+
+    .birthday-content {
+      padding: 18px 20px;
+    }
+
+    .birthday-description {
+      margin-top: 10px;
+    }
+
+    .birthday-wikipedia {
+      margin-top: 12px;
+    }
+
+    /* Пустые разделы */
+
+    .empty-state {
+      padding: 32px 24px;
+    }
+  }
+
+  /* PAGE SEARCH */
+
+  .page-search {
+    margin: 0 0 48px;
+  }
+
+  .page-search-field {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 58px;
+    padding: 0 18px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    transition: border-color var(--transition);
+  }
+
+  .page-search-field:focus-within {
+    border-color: var(--accent);
+  }
+
+  .page-search-icon {
+    color: var(--accent);
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  .page-search-field input {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: 14px;
+  }
+
+  .page-search-field input::placeholder {
+    color: var(--muted);
+    opacity: 0.8;
+  }
+
+  .page-search-field kbd {
+    flex-shrink: 0;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .search-status {
+    min-height: 16px;
+    margin: 9px 3px 0;
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .search-hidden {
+    display: none !important;
+  }
+
+  @media (max-width: 600px) {
+    .page-search {
+      margin-bottom: 38px;
+    }
+
+    .page-search-field {
+      min-height: 52px;
+      padding: 0 13px;
+      gap: 9px;
+    }
+
+    .page-search-field input {
+      font-size: 13px;
+    }
+
+    .page-search-field kbd {
+      display: none;
+    }
+  }
+
+  /* Search clear button */
+
+  .page-search-field input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+  }
+
+  .search-clear {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--surface-soft);
+    color: var(--muted);
+    font: inherit;
+    font-size: 19px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      background var(--transition),
+      color var(--transition);
+  }
+
+  .search-clear:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  .search-clear[hidden] {
+    display: none;
+  }
+
+  /* Search result highlight */
+
+  :global(.search-highlight) {
+    padding: 2px 5px;
+    border-radius: 5px;
+
+    background: #ffe08a;
+    color: #352719;
+
+    font-weight: 800;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    outline: 1px solid #e9b94d;
+  }
+
+</style>
+
+<script>
+
+// Search across the current date page
+
+const searchInput = document.querySelector("#date-search");
+const searchStatus = document.querySelector("#search-status");
+const searchClear = document.querySelector("#search-clear");
+
+if (searchInput && searchStatus) {
+  const normalize = (value) =>
+    String(value || "")
+      .toLocaleLowerCase()
+      .replace(/\s+/g, " ")
+      .trim();
+
+  const getSearchText = (element) => {
+    if (!element) return "";
+
+    const clone = element.cloneNode(true);
+
+    // Исключаем кнопки и элементы управления.
+    clone.querySelectorAll(
+      "button, .work-actions, .action-link"
+    ).forEach((el) => el.remove());
+
+    return normalize(clone.textContent || "");
+  };
+
+  const storyCards = [
+    ...document.querySelectorAll(".story-card")
+  ];
+
+  const historyCards = [
+    ...document.querySelectorAll(".history-card")
+  ];
+
+  const birthdayCards = [
+    ...document.querySelectorAll(".birthday-card")
+  ];
+
+  const allCards = [
+    ...storyCards,
+    ...historyCards,
+    ...birthdayCards
+  ];
+
+  // Remove previous highlights.
+  const clearHighlights = () => {
+    document.querySelectorAll(".search-highlight").forEach((mark) => {
+      const parent = mark.parentNode;
+
+      mark.replaceWith(
+        document.createTextNode(mark.textContent || "")
+      );
+
+      parent?.normalize();
+    });
+  };
+
+  // Highlight matching words without regular expressions.
+  const highlightMatches = (root, query) => {
+    const words = query
+      .split(/\s+/)
+      .map((word) => word.trim())
+      .filter(Boolean);
+
+    if (!words.length) return;
+
+    const walker = document.createTreeWalker(
+      root,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode(node) {
+          const parent = node.parentElement;
+
+          if (
+            !parent ||
+            parent.closest(
+              "script, style, button, .work-actions, .action-link, .search-highlight, .search-hidden"
+            )
+          ) {
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      }
+    );
+
+    const textNodes = [];
+
+    while (walker.nextNode()) {
+      textNodes.push(walker.currentNode);
+    }
+
+    textNodes.forEach((node) => {
+      const text = node.textContent || "";
+      const lowerText = text.toLocaleLowerCase();
+
+      const fragment = document.createDocumentFragment();
+      let position = 0;
+      let hasMatch = false;
+
+      while (position < text.length) {
+        let nextIndex = -1;
+        let matchedWord = "";
+
+        // Ищем ближайшее совпадение с любым словом запроса.
+        for (const word of words) {
+          const index = lowerText.indexOf(
+            word.toLocaleLowerCase(),
+            position
+          );
+
+          if (index !== -1 && (nextIndex === -1 || index < nextIndex)) {
+            nextIndex = index;
+            matchedWord = text.slice(index, index + word.length);
+          }
+        }
+
+        if (nextIndex === -1) break;
+
+        if (nextIndex > position) {
+          fragment.append(
+            document.createTextNode(text.slice(position, nextIndex))
+          );
+        }
+
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.textContent = matchedWord;
+
+        fragment.append(mark);
+
+        position = nextIndex + matchedWord.length;
+        hasMatch = true;
+      }
+
+      if (hasMatch) {
+        if (position < text.length) {
+          fragment.append(
+            document.createTextNode(text.slice(position))
+          );
+        }
+
+        node.replaceWith(fragment);
+      }
+    });
+  };
+
+  searchInput.addEventListener("input", () => {
+    const query = normalize(searchInput.value);
+
+    clearHighlights();
+
+    if (searchClear) {
+      searchClear.hidden = !query;
+    }
+
+    let visibleCount = 0;
+
+    // Music stories
+    storyCards.forEach((card) => {
+      const header = card.querySelector(".story-header");
+      const description = card.querySelector(".story-description");
+
+      const storyText = [
+        getSearchText(header),
+        getSearchText(description)
+      ].join(" ");
+
+      const storyMatches =
+        !query || storyText.includes(query);
+
+      const works = [
+        ...card.querySelectorAll(".work-item")
+      ];
+
+      let visibleWorks = 0;
+
+      works.forEach((work) => {
+        const matches =
+          !query ||
+          storyMatches ||
+          getSearchText(work).includes(query);
+
+        work.classList.toggle("search-hidden", !matches);
+
+        if (matches) visibleWorks++;
+      });
+
+      const cardMatches =
+        !query ||
+        storyMatches ||
+        visibleWorks > 0;
+
+      card.classList.toggle("search-hidden", !cardMatches);
+
+      if (cardMatches) visibleCount++;
+    });
+
+    // Historical events
+    historyCards.forEach((card) => {
+      const matches =
+        !query || getSearchText(card).includes(query);
+
+      card.classList.toggle("search-hidden", !matches);
+
+      if (matches) visibleCount++;
+    });
+
+    // Artist birthdays
+    birthdayCards.forEach((card) => {
+      const matches =
+        !query || getSearchText(card).includes(query);
+
+      card.classList.toggle("search-hidden", !matches);
+
+      if (matches) visibleCount++;
+    });
+
+    // Highlight matching text
+    if (query) {
+      allCards.forEach((card) => {
+        if (!card.classList.contains("search-hidden")) {
+          highlightMatches(card, query);
+        }
+      });
+    }
+
+    // Search status
+    if (!query) {
+      searchStatus.textContent = "Search across all sections";
+    } else if (visibleCount === 0) {
+      searchStatus.textContent =
+        "No matches found. Try another search.";
+    } else {
+      searchStatus.textContent =
+        `${visibleCount} matching ${visibleCount === 1 ? "item" : "items"}`;
+    }
+  });
+
+  // Clear search
+  if (searchClear) {
+    searchClear.addEventListener("click", () => {
+      searchInput.value = "";
+      searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+      searchInput.focus();
+    });
+  }
+}
+
+  // Общая блокировка: одновременно выполняется только одна операция Share.
+  let shareInProgress = false;
+
+  document.addEventListener("click", async (event) => {
+    if (!(event.target instanceof Element)) return;
+
+    const button = event.target.closest(".share-button");
+
+    if (!(button instanceof HTMLButtonElement)) return;
+
+    if (
+      shareInProgress ||
+      button.disabled ||
+      button.dataset.busy === "true"
+    ) {
+      return;
+    }
+
+    const title = button.dataset.shareTitle || document.title;
+    const anchor = button.dataset.shareAnchor;
+
+    if (!anchor) return;
+
+    const shareUrl = new URL(window.location.href);
+
+    // Убираем query-параметры и заменяем текущий якорь.
+    shareUrl.search = "";
+    shareUrl.hash = anchor;
+
+    const url = shareUrl.href;
+    const originalText = button.textContent;
+
+    shareInProgress = true;
+    button.dataset.busy = "true";
+
+    try {
+      if (typeof navigator.share === "function") {
+        try {
+          await navigator.share({
+            title,
+            text: `What to play today: ${title}`,
+            url,
+          });
+
+          return;
+        } catch (error) {
+          // Пользователь отменил отправку — ничего больше не делаем.
+          if (
+            error instanceof DOMException &&
+            error.name === "AbortError"
+          ) {
+            return;
+          }
+
+          // При другой ошибке переходим к копированию.
+        }
+      }
+
+      try {
+        if (!navigator.clipboard?.writeText) {
+          throw new Error("Clipboard API is unavailable");
+        }
+
+        await navigator.clipboard.writeText(url);
+      } catch {
+        window.prompt("Copy this link:", url);
+        return;
+      }
+
+      button.textContent = "✓ Copied";
+
+      // Сохраняем блокировку до завершения текущего обработчика.
+      // Она будет снята в finally.
+      await new Promise<void>((resolve) => {
+        window.setTimeout(resolve, 1800);
+      });
+
+    } finally {
+      button.textContent = originalText;
+      delete button.dataset.busy;
+      shareInProgress = false;
+    }
+  });
+</script>
+
+

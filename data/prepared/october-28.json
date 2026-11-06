@@ -1,0 +1,469 @@
+{
+  "date": "october-28",
+  "generatedAt": "2026-10-28T15:16:13.615Z",
+  "eventsCount": 48,
+  "people": [
+    {
+      "name": "Frank Ocean",
+      "year": "1987",
+      "description": "American singer and songwriter Frank Ocean. His debut studio album, Channel Orange, released in July 2012 reached No. 2 on the US album chart. His second studio album Blonde debuted at No.1 in the US and the UK.  His accolades include two Grammy Awards and a Brit Award. He has been credited by several music critics as a pioneer of the alternative R&B genre. ",
+      "eventId": "19805",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Frank_Ocean_2022_Blonded.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Frank_Ocean"
+    },
+    {
+      "name": "Natina Reed",
+      "year": "1980",
+      "description": "American singer, rapper and actress Natina Reed. She was discovered by rapper Lisa Lopes and worked as a writer for the girl group TLC. Reed gained notice in the late 1990s as a member of the girl group Blaque. She was killed in a car crash on October 26, 2012, after the driver of a red Honda Accord struck Reed on the Lawrenceville Highway near Hamilton Road north of Lilburn, Georgia. She was 31 years old. ",
+      "eventId": "23117",
+      "photo": null,
+      "wikipediaUrl": null
+    },
+    {
+      "name": "Brad Paisley",
+      "year": "1972",
+      "description": "American country music singer, songwriter, and guitarist Brad Paisley. He has charted more than 50 singles on the Billboard country singles charts, including 19 No.1 singles ranging from 'He Didn't Have to Be' in 1999 and 'Perfect Storm' in 2015.  Paisley has collaborated with artists such as Alison Krauss, Keith Urban, Dolly Parton, Carrie Underwood, and Alabama.",
+      "eventId": "23118",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Brad_Paisley_performing_at_Caesars_Windsor%2C_2022-05-29_05_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Brad_Paisley"
+    },
+    {
+      "name": "Ben Harper",
+      "year": "1969",
+      "description": "American singer-songwriter and multi-instrumentalist, Ben Harper. He plays an eclectic mix of blues, folk, soul, reggae, and rock music. Harper is a three-time Grammy Award winner and seven-time nominee, with awards for Best Pop Instrumental Performance and Best Traditional Soul Gospel Album in 2004 and Best Blues Album in 2013.",
+      "eventId": "18106",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ben_Harper_003.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Ben_Harper"
+    },
+    {
+      "name": "Eros Ramazzotti",
+      "year": "1963",
+      "description": "Italian musician and singer-songwriter, Eros Ramazzotti who has sold over 60 million records in his career. He has worked with artists such as Cher, <a href=\"/artists/tina-turner\">Tina Turner</a>, Andrea Bocelli, Patsy Kensit, Anastacia, Joe Cocker, Nicole Scherzinger and Ricky Martin.",
+      "eventId": "18105",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Eros_Ramazzotti_%2821738687382%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Eros_Ramazzotti"
+    },
+    {
+      "name": "Neville Henry",
+      "year": "1959",
+      "description": "Neville Henry, from British new wave group The Blow Monkeys who had the 1986 hit 'Digging Your Scene' and the 1987 UK No.5 single 'It Doesn't Have To Be This Way'.",
+      "eventId": "2892",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Portrait_of_Neville_Cayley%2C_1892_%28crop_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Neville_Henry_Cayley"
+    },
+    {
+      "name": "Dave Wyndorf",
+      "year": "1958",
+      "description": "Dave Wyndorf, lead vocalist, guitarist, pianist, trombonist, and songwriter for the American rock group Monster Magnet. The band is credited with developing and popularising the stoner rock genre, along with Masters of Reality, Kyuss, Fu Manchu, and Sleep.",
+      "eventId": "18107",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Monster_Magnet_-_2023174184626_2023-06-23_Alpen_Flair_-_Sven_-_1D_X_MK_II_-_0773_-_AK8I3696_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Dave_Wyndorf"
+    },
+    {
+      "name": "William Reid",
+      "year": "1958",
+      "description": "William Reid, from the Scottish alternative rock band The Jesus and Mary Chain. The band revolves around the songwriting partnership of brothers William and Jim Reid. The band's biggest commercial success domestically was their second album Darklands, which reached No. 5 on the UK Albums Chart in 1987 and spawned the hit single 'April Skies', peaking at No. 8 in the UK.",
+      "eventId": "2772",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a8/The_Jesus_And_Mary_Chain_Wave-Gotik-Treffen_2018_27.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/William_Reid_(musician)"
+    },
+    {
+      "name": "Stephen Morris",
+      "year": "1957",
+      "description": "English drummer Stephen Morris, who has worked with New Order and, previously, <a href=\"/stairway-to-heaven/ian-curtis\">Joy Division</a>. While Joy Division's first recordings were heavily influenced by early punk rock, they soon developed a sparse sound and style that made them one of the pioneering groups of the post-punk genre. Morris also wrote and performed in The Other Two, a band consisting of Morris and his girlfriend and later wife, Gillian Gilbert. ",
+      "eventId": "2674",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Krankenhaus_Day_2_Stephen_Morris_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Stephen_Morris_(drummer)"
+    },
+    {
+      "name": "Desmond Child",
+      "year": "1953",
+      "description": "Desmond Child, American musician, songwriter, and producer who has co-written over 70 Top 40 singles, with songs that have sold over 300 million albums worldwide. His collaborations include <a href=\"/classic-albums/bon-jovi-slippery-when-wet\">Bon Jovi</a>, Bonnie Tyler, <a href=\"/artists/aerosmith\">Aerosmith</a>, Ricky Martin, Weezer, <a href=\"/artists/shakira\">Shakira</a>, Jennifer Rush, <a href=\"/artists/kiss\">Kiss</a>, Joan Jett & The Blackhearts, <a href=\"/artists/cher\">Cher</a>, Katy Perry, and <a href=\"/artists/alice-cooper\">Alice Cooper</a>.",
+      "eventId": "17254",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Desmond_Child_at_Lincoln_Center%27s_%22American_Songbook%22_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Desmond_Child"
+    },
+    {
+      "name": "John Regan",
+      "year": "1951",
+      "description": "American musician, songwriter, producer, and bassist John Regan. He is notable for having been a member of ex-Kiss guitarist Ace Frehley's band Frehley's Comet from 1984 to 1990 and recorded and performed with Peter Frampton from 1979 to 2011. He also recorded with John Waite, <a href=‘https://www.thisdayinmusic.com/quizzes/the-very-hard-rolling-stones-quiz/’>Rolling Stones</a>, <a href=‘https://www.thisdayinmusic.com/artists/stephen-stills/’>Stephen Stills</a>, Dave Edmunds, Robin Trower, Billy Idol, <a href=‘https://www.thisdayinmusic.com/stairway-to-heaven/david-bowie-passes/’>David Bowie</a> and David Lee Roth. Regan died at his home in Wappingers Falls, New York, on 7 April 2023, at the age of 71. ",
+      "eventId": "21926",
+      "photo": null,
+      "wikipediaUrl": null
+    },
+    {
+      "name": "Telma Hopkins",
+      "year": "1948",
+      "description": "Telma Hopkins, singer from American pop music group Dawn who were popular in the 1970s. Their signature hits include 'Candida', 'Knock Three Times', and 'Tie a Yellow Ribbon Round the Ole Oak Tree'.",
+      "eventId": "1786",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/3/39/Telma_Hopkins_By_Voelker.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Telma_Hopkins"
+    },
+    {
+      "name": "Bob Andy",
+      "year": "1944",
+      "description": "Jamaican reggae vocalist and songwriter Bob Andy. He was widely regarded as one of reggae's most influential songwriters and recorded with Marcia Griffiths as Bob and Marcia that had a major 1970 UK hit with 'Young, Gifted and Black'. The Jamaican government conferred the Order of Distinction in the rank of Commander on Andy in October 2006 for his contributions to the development of Jamaican music. He died of cancer on 27 March 2020 age 75.",
+      "eventId": "20975",
+      "photo": null,
+      "wikipediaUrl": null
+    },
+    {
+      "name": "Hank Marvin",
+      "year": "1941",
+      "description": "English multi-instrumentalist, vocalist, and songwriter Hank Marvin, from The Shadows (originally known as the Drifters between 1958 and 1959), who were known for their instrumental songs, mainly; 'Apache' (1960), 'F.B.I.' (1961), 'Wonderful Land' (1962), and 'Foot Tapper' (1963), among many others. The Shadows had 69 UK chart singles from the 1950s to the 2000s, 35 as the Shadows and 34 as Cliff Richard and the Shadows. He was later a member of Marvin, Welch and Farrar. Marvin has collaborated with many other artists including,  Roger Daltrey, Jean Michel Jarre and Mark Knopfler. ",
+      "eventId": "692",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Hank_Marvin01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Hank_Marvin"
+    },
+    {
+      "name": "Wayne Fontana",
+      "year": "1940",
+      "description": "British singer Wayne Fontana, who had the 1966 UK No.2 single with Mindbenders, 'Groovy Kind Of Love', and the 1965 US No.1 single 'Game Of Love'. Fontana died from cancer on 6 August 2020 at the age of 74. ",
+      "eventId": "571",
+      "photo": null,
+      "wikipediaUrl": null
+    },
+    {
+      "name": "Jim Post",
+      "year": "1939",
+      "description": "American folk singer-songwriter, composer, and playwright Jim Post. In 1968 his pop song 'Reach out of the Darkness' recorded by American folk duo Friend & Lover charted on the Billboard Hot 100 for 14 weeks, peaking at No.10. Post died from congestive heart failure on September 14, 2022, age 82.",
+      "eventId": "22003",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Jim_Post_1975.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Jim_Post"
+    },
+    {
+      "name": "Graham Bond",
+      "year": "1937",
+      "description": "Graham Bond, UK R&B keyboard player, saxophonist with The Graham Bond Organisation. He died on 8th May 1974 after committing suicide by throwing himself under a London tube train at Finsbury Park station. Bond had worked with Alexis Korner, <a href=\"/stairway-to-heaven/jack-bruce\">Jack Bruce</a> and <a href=\"/stairway-to-heaven/ginger-baker\">Ginger Baker</a>.",
+      "eventId": "381",
+      "photo": null,
+      "wikipediaUrl": null
+    },
+    {
+      "name": "Charlie Daniels",
+      "year": "1936",
+      "description": "Charlie Daniels who is known for his No.1 country hit 'The Devil Went Down to Georgia'. Daniels has been active as a singer since the early 1950s and was inducted into the Grand Ole Opry on January 24, 2008. He died of a hemorrhagic stroke on 6 July 2020, age 83. ",
+      "eventId": "342",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Charlie_Daniels_in_2017.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Charlie_Daniels"
+    },
+    {
+      "name": "Cleo Laine",
+      "year": "1927",
+      "description": "Cleo Laine, English jazz singer, who had the 1961 UK No.5 single 'You'll Answer To Me'. Laine is the only female performer to have received Grammy nominations in the jazz, popular and classical music categories. She is the widow of jazz composer and musician Sir John Dankworth and received a number of awards and honours, including appointment as an OBE in 1979, and became a dame in 1997. Laine died on 24 July 2025, at the age of 97. ",
+      "eventId": "151",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Cleo_Laine_in_TV-programma_Muziek_voor_U_Engelse_Jazz-zangeres_%28kop%29_%283x4_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Cleo_Laine"
+    }
+  ],
+  "works": [
+    {
+      "title": "Whole Lotta Shakin' Goin' On",
+      "type": "song",
+      "artist": "Jerry Lee Lewis",
+      "year": "2022",
+      "eventId": "21662",
+      "eventDescription": "One of the last survivors of rock 'n' roll's golden age Jerry Lee Lewis died aged 87. Nicknamed \"the Killer\", he was described as Rock and roll's first great wild man and had worldwide hits with 'Whole Lotta Shakin' Goin' On' and 'Great Balls of Fire'. His life was also marred by scandal and violence. His career was briefly halted when, aged 22, he married his 13-year-old cousin Myra Gale Brown. In 1976 he accidentally shot his bass player, Norman \"Butch\" Owens, in the chest when playing with a loaded .357 Magnum. ",
+      "coverUrl": "https://coverartarchive.org/release-group/f58a7e1e-0be1-420e-8540-6a58f6d85ddd/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "The Wonder Of You",
+      "type": "album",
+      "artist": "Elvis Presley",
+      "year": "2016",
+      "eventId": "19302",
+      "eventDescription": " <a href=\"/stairway-to-heaven/elvis-presley\">Elvis Presley</a> broke the record for the most No.1 albums by a solo artist. The late singer's new album The Wonder Of You beat competition from <a href=\"/artists/lady-gaga\">Lady Gaga</a> and Michael Buble to become his 13th album to top the chart. Before now, Elvis and <a href=\"/odds-and-sods/25-madonna-facts\">Madonna</a> were tied record holders with 12 No.1 albums each to their names.",
+      "coverUrl": "https://coverartarchive.org/release-group/ecd5b58c-9c12-3f15-aa11-3cabd904d9fc/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Royals",
+      "type": "song",
+      "artist": "Lorde",
+      "year": "2013",
+      "eventId": "18123",
+      "eventDescription": "New Zealand singer Lorde topped the UK singles chart with her debut single, 'Royals', making her the youngest solo artist to score a UK No.1 since 15-year-old Billie Piper's 'Because We Want To' in 1998. 16 year old Lorde was signed to Universal on a development deal at just 13 years old, after a friend's father sent them home recordings of her singing Duffy and Pixie Lott tracks.",
+      "coverUrl": "https://coverartarchive.org/release-group/cf73829c-27e6-4f37-93df-2236939c9d2a/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Carroll County Accident",
+      "type": "song",
+      "artist": "Porter Wagoner",
+      "year": "2007",
+      "eventId": "14544",
+      "eventDescription": "Country musician Porter Wagoner died in Nashville aged 80 from lung cancer. Wagoner helped launch the career of <a href=\"/artists/dolly-parton\">Dolly Parton</a> and had his own US TV show, which ran for 21 years until 1981. Wagoner signed his first record deal in 1955, and had hits including 'Carroll County Accident' and 'Green Green Grass of Home'.",
+      "coverUrl": "https://coverartarchive.org/release-group/275a04aa-4a42-4801-b3f3-5cb4dd664e3b/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Because I Got High",
+      "type": "song",
+      "artist": "Afroman",
+      "year": "2001",
+      "eventId": "11853",
+      "eventDescription": "Afroman (Joseph Foreman), started a two-week run at No.1 on the UK singles chart with 'Because I Got High.' The song about how cannabis use was degrading his quality of life, rose from obscurity to popularity after it was circulated around the Internet.",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Gangsta's Paradise",
+      "type": "song",
+      "artist": "Coolio",
+      "year": "1995",
+      "eventId": "10680",
+      "eventDescription": "Coolio featuring L.V. scored his first UK No.1 single with 'Gangsta's Paradise'. The song sampled the chorus of the 1976 <a href=\"/artists/stevie-wonder\">Stevie Wonder</a> song 'Pastime Paradise' and featured in the 1995 movie Dangerous Minds (starring Michelle Pfeiffer).",
+      "coverUrl": "https://coverartarchive.org/release-group/b6361a56-b3f7-4be5-ad6d-80301442c0e1/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Pastime Paradise",
+      "type": "song",
+      "artist": "Stevie Wonder",
+      "year": "1995",
+      "eventId": "10680",
+      "eventDescription": "Coolio featuring L.V. scored his first UK No.1 single with 'Gangsta's Paradise'. The song sampled the chorus of the 1976 <a href=\"/artists/stevie-wonder\">Stevie Wonder</a> song 'Pastime Paradise' and featured in the 1995 movie Dangerous Minds (starring Michelle Pfeiffer).",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Janet Jackson's Rhythm Nation 1814",
+      "type": "album",
+      "artist": "Janet Jackson",
+      "year": "1989",
+      "eventId": "9825",
+      "eventDescription": " <a href=\"/liner-notes/janet-jackson-rhythm-nation\">Janet Jackson</a> started a four week run at No.1 on the US album chart with '<a href=\"/liner-notes/janet-jackson-rhythm-nation\">Janet Jackson</a>'s Rhythm Nation 1814'. Only one of three albums to produce seven Top-ten US singles, (the other two being <a href=\"/liner-notes/thriller-the-video\">Thriller</a> by <a href=\"/stairway-to-heaven/michael-jackson\">Michael Jackson</a> and <a href=\"/artists/bruce-springsteen\">Bruce Springsteen</a>'s Born In The USA).",
+      "coverUrl": "https://coverartarchive.org/release-group/20aaac17-e4e8-373c-99cc-211321b82832/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Hot Child In The City",
+      "type": "song",
+      "artist": "Nick Gilder",
+      "year": "1978",
+      "eventId": "8175",
+      "eventDescription": "Nick Gilder went to No.1 on the US singles chart with 'Hot Child In The City'. The British-Canadian musician first came to prominence as the frontman for the glam rock band Sweeney Todd, which later briefly featured a very young Bryan Adams. ",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Everything I Own",
+      "type": "song",
+      "artist": "Ken Boothe",
+      "year": "1974",
+      "eventId": "7443",
+      "eventDescription": "Jamaican reggae artist Ken Boothe was at No.1 on the UK singles chart with his version of a song by David Gates (from Bread), 'Everything I Own.' Boy George also took the song to No.1 in 1987.",
+      "coverUrl": "https://coverartarchive.org/release-group/5819f7d9-1f70-4cf5-887e-42da253048b4/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Daydreamer / The Puppy Song",
+      "type": "song",
+      "artist": "David Cassidy",
+      "year": "1973",
+      "eventId": "7278",
+      "eventDescription": "David Cassidy was at No.1 on the UK singles chart with 'Daydreamer / The Puppy Song', the singers second No.1. 'The Puppy Song' was Cassidy's version of the <a href=\"https://www.thisdayinmusic.com/artists/harry-nilsson/\">Harry Nilsson</a> song.",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Talking Book",
+      "type": "album",
+      "artist": "Stevie Wonder",
+      "year": "1972",
+      "eventId": "18736",
+      "eventDescription": " <a href=\"/artists/stevie-wonder\">Stevie Wonder</a> released his 15th studio album Talking Book. The album's first track, 'You Are the Sunshine of My Life', hit No.1 on the Billboard charts, and earned Wonder his first Grammy Award. The album featured a guest appearance of <a href=\"/artists/jeff-beck\"><a href=\"/artists/jeff-beck\">Jeff Beck</a></a> on the track 'Superstition'.",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Superstition",
+      "type": "song",
+      "artist": "Stevie Wonder",
+      "year": "1972",
+      "eventId": "18736",
+      "eventDescription": " <a href=\"/artists/stevie-wonder\">Stevie Wonder</a> released his 15th studio album Talking Book. The album's first track, 'You Are the Sunshine of My Life', hit No.1 on the Billboard charts, and earned Wonder his first Grammy Award. The album featured a guest appearance of <a href=\"/artists/jeff-beck\"><a href=\"/artists/jeff-beck\">Jeff Beck</a></a> on the track 'Superstition'.",
+      "coverUrl": "https://coverartarchive.org/release-group/59ec8b42-b751-3046-9fb5-642e423c13bb/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Join Together",
+      "type": "song",
+      "artist": "The Who",
+      "year": "1972",
+      "eventId": "7102",
+      "eventDescription": "The United States Council for World Affairs announced it was adopting <a href=\"/quizzes/the-very-hard-the-who-quiz\">The Who</a> song 'Join Together' as it's official theme tune.",
+      "coverUrl": "https://coverartarchive.org/release-group/dffb76f6-d6e7-4ce7-8169-b9421f0aeeca/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Blonde",
+      "type": "album",
+      "artist": "Frank Ocean",
+      "year": "1987",
+      "eventId": "19805",
+      "eventDescription": "American singer and songwriter Frank Ocean. His debut studio album, Channel Orange, released in July 2012 reached No. 2 on the US album chart. His second studio album Blonde debuted at No.1 in the US and the UK.  His accolades include two Grammy Awards and a Brit Award. He has been credited by several music critics as a pioneer of the alternative R&B genre. ",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Digging Your Scene",
+      "type": "song",
+      "artist": "The Blow Monkeys who had the",
+      "year": "1959",
+      "eventId": "2892",
+      "eventDescription": "Neville Henry, from British new wave group The Blow Monkeys who had the 1986 hit 'Digging Your Scene' and the 1987 UK No.5 single 'It Doesn't Have To Be This Way'.",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Darklands",
+      "type": "album",
+      "artist": "The Jesus and Mary Chain",
+      "year": "1958",
+      "eventId": "2772",
+      "eventDescription": "William Reid, from the Scottish alternative rock band The Jesus and Mary Chain. The band revolves around the songwriting partnership of brothers William and Jim Reid. The band's biggest commercial success domestically was their second album Darklands, which reached No. 5 on the UK Albums Chart in 1987 and spawned the hit single 'April Skies', peaking at No. 8 in the UK.",
+      "coverUrl": "https://coverartarchive.org/release-group/cda63ecb-5777-37e2-8aa6-32f5c93e0f9f/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "April Skies",
+      "type": "song",
+      "artist": "The Jesus and Mary Chain",
+      "year": "1958",
+      "eventId": "2772",
+      "eventDescription": "William Reid, from the Scottish alternative rock band The Jesus and Mary Chain. The band revolves around the songwriting partnership of brothers William and Jim Reid. The band's biggest commercial success domestically was their second album Darklands, which reached No. 5 on the UK Albums Chart in 1987 and spawned the hit single 'April Skies', peaking at No. 8 in the UK.",
+      "coverUrl": "https://coverartarchive.org/release-group/18503398-2ef0-35bf-ace9-a483fe392621/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Candida",
+      "type": "song",
+      "artist": "Dawn who were popular in the",
+      "year": "1948",
+      "eventId": "1786",
+      "eventDescription": "Telma Hopkins, singer from American pop music group Dawn who were popular in the 1970s. Their signature hits include 'Candida', 'Knock Three Times', and 'Tie a Yellow Ribbon Round the Ole Oak Tree'.",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Knock Three Times",
+      "type": "song",
+      "artist": "Dawn who were popular in the",
+      "year": "1948",
+      "eventId": "1786",
+      "eventDescription": "Telma Hopkins, singer from American pop music group Dawn who were popular in the 1970s. Their signature hits include 'Candida', 'Knock Three Times', and 'Tie a Yellow Ribbon Round the Ole Oak Tree'.",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Tie a Yellow Ribbon Round the Ole Oak Tree",
+      "type": "song",
+      "artist": "Dawn who were popular in the",
+      "year": "1948",
+      "eventId": "1786",
+      "eventDescription": "Telma Hopkins, singer from American pop music group Dawn who were popular in the 1970s. Their signature hits include 'Candida', 'Knock Three Times', and 'Tie a Yellow Ribbon Round the Ole Oak Tree'.",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Young, Gifted and Black",
+      "type": "song",
+      "artist": "Bob Andy",
+      "year": "1944",
+      "eventId": "20975",
+      "eventDescription": "Jamaican reggae vocalist and songwriter Bob Andy. He was widely regarded as one of reggae's most influential songwriters and recorded with Marcia Griffiths as Bob and Marcia that had a major 1970 UK hit with 'Young, Gifted and Black'. The Jamaican government conferred the Order of Distinction in the rank of Commander on Andy in October 2006 for his contributions to the development of Jamaican music. He died of cancer on 27 March 2020 age 75.",
+      "coverUrl": "https://coverartarchive.org/release-group/55f76223-5973-48fd-966b-86f175a2afdd/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Apache",
+      "type": "song",
+      "artist": "Hank Marvin",
+      "year": "1941",
+      "eventId": "692",
+      "eventDescription": "English multi-instrumentalist, vocalist, and songwriter Hank Marvin, from The Shadows (originally known as the Drifters between 1958 and 1959), who were known for their instrumental songs, mainly; 'Apache' (1960), 'F.B.I.' (1961), 'Wonderful Land' (1962), and 'Foot Tapper' (1963), among many others. The Shadows had 69 UK chart singles from the 1950s to the 2000s, 35 as the Shadows and 34 as Cliff Richard and the Shadows. He was later a member of Marvin, Welch and Farrar. Marvin has collaborated with many other artists including,  Roger Daltrey, Jean Michel Jarre and Mark Knopfler. ",
+      "coverUrl": "https://coverartarchive.org/release-group/37ab366f-7b68-4fa2-8252-3e891e54f09a/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Groovy Kind Of Love",
+      "type": "song",
+      "artist": "Wayne Fontana",
+      "year": "1940",
+      "eventId": "571",
+      "eventDescription": "British singer Wayne Fontana, who had the 1966 UK No.2 single with Mindbenders, 'Groovy Kind Of Love', and the 1965 US No.1 single 'Game Of Love'. Fontana died from cancer on 6 August 2020 at the age of 74. ",
+      "coverUrl": "https://coverartarchive.org/release-group/f2ed0e25-35a4-4480-8217-fb0302482431/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Game Of Love",
+      "type": "song",
+      "artist": "Wayne Fontana",
+      "year": "1940",
+      "eventId": "571",
+      "eventDescription": "British singer Wayne Fontana, who had the 1966 UK No.2 single with Mindbenders, 'Groovy Kind Of Love', and the 1965 US No.1 single 'Game Of Love'. Fontana died from cancer on 6 August 2020 at the age of 74. ",
+      "coverUrl": null,
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "Reach out of the Darkness",
+      "type": "song",
+      "artist": "Friend & Lover",
+      "year": "1939",
+      "eventId": "22003",
+      "eventDescription": "American folk singer-songwriter, composer, and playwright Jim Post. In 1968 his pop song 'Reach out of the Darkness' recorded by American folk duo Friend & Lover charted on the Billboard Hot 100 for 14 weeks, peaking at No.10. Post died from congestive heart failure on September 14, 2022, age 82.",
+      "coverUrl": "https://coverartarchive.org/release-group/859a3b18-42ee-4aab-83c5-c82307844d97/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "The Devil Went Down to Georgia",
+      "type": "song",
+      "artist": "Charlie Daniels",
+      "year": "1936",
+      "eventId": "342",
+      "eventDescription": "Charlie Daniels who is known for his No.1 country hit 'The Devil Went Down to Georgia'. Daniels has been active as a singer since the early 1950s and was inducted into the Grand Ole Opry on January 24, 2008. He died of a hemorrhagic stroke on 6 July 2020, age 83. ",
+      "coverUrl": "https://coverartarchive.org/release-group/475b8fd3-5b8e-44a7-8dd5-75574552d8a4/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    },
+    {
+      "title": "You'll Answer To Me",
+      "type": "song",
+      "artist": "Cleo Laine",
+      "year": "1927",
+      "eventId": "151",
+      "eventDescription": "Cleo Laine, English jazz singer, who had the 1961 UK No.5 single 'You'll Answer To Me'. Laine is the only female performer to have received Grammy nominations in the jazz, popular and classical music categories. She is the widow of jazz composer and musician Sir John Dankworth and received a number of awards and honours, including appointment as an OBE in 1979, and became a dame in 1997. Laine died on 24 July 2025, at the age of 97. ",
+      "coverUrl": "https://coverartarchive.org/release-group/b4752d50-e52a-436e-a2cb-9eb59052aa6f/front-500",
+      "youtubeUrl": null,
+      "chordsUrl": null
+    }
+  ]
+}

@@ -1,0 +1,817 @@
+---
+import Layout from "../layouts/Layout.astro";
+import fs from "node:fs";
+import path from "node:path";
+
+const monthNames = [
+  "January", "February", "March", "April",
+  "May", "June", "July", "August",
+  "September", "October", "November", "December"
+];
+
+const monthSlugs = [
+  "january", "february", "march", "april",
+  "may", "june", "july", "august",
+  "september", "october", "november", "december"
+];
+
+const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+const today = new Date();
+const todayMonth = today.getMonth();
+const todayDay = today.getDate();
+const calendarYear = today.getFullYear();
+
+const todaySlug = `/${monthSlugs[todayMonth]}-${String(todayDay).padStart(2, "0")}/`;
+
+// Папка с уже подготовленными данными
+const preparedDir = path.resolve(process.cwd(), "data", "prepared");
+
+// Изображения, которые уже использованы другими датами
+const usedImages = new Set();
+
+// Выбираем уникальное изображение для одной даты
+function getCalendarImage(slug) {
+  const filePath = path.join(preparedDir, `${slug}.json`);
+
+  if (!fs.existsSync(filePath)) {
+    return { image: null, alt: "" };
+  }
+
+  try {
+    const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+
+  // Кандидаты: сначала альбомы, затем песни, затем музыканты
+  const candidates = [
+    ...(data.works?.filter(
+      item => item.type === "album" && item.coverUrl
+    ) || []),
+
+    ...(data.works?.filter(
+      item => item.type === "song" && item.coverUrl
+    ) || []),
+
+    ...(data.people?.filter(
+      item => item.photo
+    ) || [])
+  ];
+
+    // Ищем первое изображение, которое ещё не использовалось
+    for (const item of candidates) {
+      let image = item.coverUrl || item.photo;
+
+      if (!image) continue;
+
+      // Переводим HTTP в HTTPS
+      image = image.replace(/^http:\/\//i, "https://");
+
+      // Пропускаем уже использованные изображения
+      if (usedImages.has(image)) continue;
+
+      // Запоминаем изображение
+      usedImages.add(image);
+
+      const alt = item.title
+        ? [item.title, item.artist].filter(Boolean).join(" — ")
+        : item.name || "";
+
+      return { image, alt };
+    }
+
+    // У этой даты не осталось уникальных изображений
+    return { image: null, alt: "" };
+
+  } catch (error) {
+    console.warn(`Could not read prepared data: ${slug}`, error);
+    return { image: null, alt: "" };
+  }
+}
+
+// Готовим данные для всех 366 дат
+const calendarData = {};
+
+for (let month = 0; month < 12; month++) {
+  const daysInMonth = new Date(2024, month + 1, 0).getDate();
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const slug = `${monthSlugs[month]}-${String(day).padStart(2, "0")}`;
+    calendarData[slug] = getCalendarImage(slug);
+  }
+}
+---
+
+<Layout
+  title="Music History Calendar — What to Play Today?"
+  description="Explore music history day by day. Discover iconic events, artists and releases."
+>
+  <div class="calendar-page">
+
+    <a href="/" class="back-link">
+      <span>←</span> Back to home
+    </a>
+
+    <header class="calendar-heading">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        EXPLORE MUSIC HISTORY
+      </div>
+
+      <h1>Every day has a story.</h1>
+
+      <p>
+        Explore the moments, people and music that shaped history.
+      </p>
+    </header>
+
+    <section class="calendar-section">
+
+      <div class="calendar-card">
+
+        <div class="calendar-top">
+          <div>
+            <span class="month-label">BROWSE BY DATE</span>
+            <h2 id="month-name">November</h2>
+          </div>
+
+          <div class="month-controls">
+            <button
+              id="prev-month"
+              class="month-arrow"
+              aria-label="Previous month"
+            >←</button>
+
+            <button
+              id="next-month"
+              class="month-arrow"
+              aria-label="Next month"
+            >→</button>
+          </div>
+        </div>
+
+        <div class="weekdays">
+          {weekDays.map((day) => (
+            <span>{day}</span>
+          ))}
+        </div>
+
+        <div
+          id="calendar-grid"
+          class="calendar-grid"
+          aria-label="Calendar dates"
+        ></div>
+
+        <div class="calendar-footer">
+          <div class="today-legend">
+            <span class="today-dot"></span>
+            <span>Today</span>
+          </div>
+
+          <button id="surprise-date" class="surprise-button">
+            ✦ Surprise Me!
+          </button>
+
+          <a href={todaySlug} class="today-button">
+            Go to today <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+      <p class="calendar-note">
+        Pick a date and discover what happened in music history.
+      </p>
+
+    </section>
+  </div>
+</Layout>
+
+<script define:vars={{
+  monthNames,
+  monthSlugs,
+  calendarData
+}}>
+  const browserToday = new Date();
+  const todayMonth = browserToday.getMonth();
+  const todayDay = browserToday.getDate();
+  const calendarYear = browserToday.getFullYear();
+
+  let currentMonth = todayMonth;
+
+  const todayButton = document.querySelector(".today-button");
+
+  if (todayButton) {
+    todayButton.href =
+      `/${monthSlugs[todayMonth]}-` +
+      `${String(todayDay).padStart(2, "0")}/`;
+  }
+
+  const monthName = document.getElementById("month-name");
+  const calendarGrid = document.getElementById("calendar-grid");
+
+  function renderCalendar() {
+    monthName.textContent = monthNames[currentMonth];
+    calendarGrid.innerHTML = "";
+
+    // Первый день месяца (Monday = 0)
+    const firstDay = new Date(calendarYear, currentMonth, 1).getDay();
+    const offset = (firstDay + 6) % 7;
+
+    // Количество дней в месяце
+    const daysInMonth = new Date(
+      calendarYear,
+      currentMonth + 1,
+      0
+    ).getDate();
+
+    // Пустые ячейки перед первым числом
+    for (let i = 0; i < offset; i++) {
+      const empty = document.createElement("div");
+      empty.className = "calendar-day empty";
+      empty.setAttribute("aria-hidden", "true");
+      calendarGrid.appendChild(empty);
+    }
+
+    // Даты
+    for (let day = 1; day <= daysInMonth; day++) {
+      const slug = `${monthSlugs[currentMonth]}-${String(day).padStart(2, "0")}`;
+      const dateInfo = calendarData[slug];
+
+      const link = document.createElement("a");
+
+      link.className = "calendar-day";
+      link.href = `/${slug}/`;
+
+      link.setAttribute(
+        "aria-label",
+        `${monthNames[currentMonth]} ${day}`
+      );
+
+      // Изображение
+      if (dateInfo?.image) {
+        const img = document.createElement("img");
+
+        img.className = "day-image";
+        img.src = dateInfo.image;
+        img.alt = "";
+        img.loading = "lazy";
+        img.decoding = "async";
+
+        link.appendChild(img);
+        link.classList.add("has-image");
+      }
+
+      // Число даты
+      const number = document.createElement("span");
+      number.className = "day-number";
+      number.textContent = day;
+
+      link.appendChild(number);
+
+      // Сегодняшняя дата
+      if (currentMonth === todayMonth && day === todayDay) {
+        link.classList.add("is-today");
+        link.setAttribute("aria-current", "date");
+      }
+
+      calendarGrid.appendChild(link);
+    }
+  }
+
+  // Предыдущий месяц
+  document.getElementById("prev-month").addEventListener("click", () => {
+    currentMonth = (currentMonth + 11) % 12;
+    renderCalendar();
+  });
+
+  // Следующий месяц
+  document.getElementById("next-month").addEventListener("click", () => {
+    currentMonth = (currentMonth + 1) % 12;
+    renderCalendar();
+  });
+
+  // Случайная дата
+  document.getElementById("surprise-date").addEventListener("click", () => {
+    const dates = Object.keys(calendarData);
+
+    const randomSlug = dates[
+      Math.floor(Math.random() * dates.length)
+    ];
+
+    window.location.href = `/${randomSlug}/`;
+  });
+
+  renderCalendar();
+</script>
+
+<style>
+  .calendar-page {
+    width: min(100%, 920px);
+    margin: 0 auto;
+  }
+
+  /* Back link */
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 54px;
+
+    color: var(--muted);
+    font-size: 14px;
+
+    transition: color var(--transition);
+  }
+
+  .back-link:hover {
+    color: var(--accent);
+  }
+
+  .back-link span {
+    font-size: 18px;
+  }
+
+  /* Heading */
+
+  .calendar-heading {
+    margin-bottom: 44px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    margin-bottom: 17px;
+
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .eyebrow-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .calendar-heading h1 {
+    margin: 0 0 14px;
+    font-size: clamp(36px, 5vw, 52px);
+    letter-spacing: -1.8px;
+  }
+
+  .calendar-heading p {
+    max-width: 520px;
+    margin: 0 auto;
+
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  /* Calendar */
+
+  .calendar-section {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .calendar-card {
+    padding: 38px 44px 28px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+  }
+
+  .calendar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .month-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .calendar-top h2 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: -0.7px;
+  }
+
+  .month-controls {
+    display: flex;
+    gap: 9px;
+  }
+
+  .month-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--text);
+    font-size: 19px;
+
+    transition:
+      background var(--transition),
+      border-color var(--transition),
+      color var(--transition);
+  }
+
+  .month-arrow:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  /* Weekdays */
+
+  .weekdays,
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .weekdays {
+    margin-bottom: 12px;
+  }
+
+  .weekdays span {
+    padding: 9px 0;
+
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-align: center;
+  }
+
+  /* Days */
+
+  .calendar-grid :global(.calendar-day) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1;
+    overflow: hidden;
+
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    background: color-mix(in srgb, var(--surface-soft) 48%, transparent);
+
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+
+    transition:
+      background var(--transition),
+      border-color var(--transition),
+      transform var(--transition);
+  }
+
+  /* Изображение внутри ячейки */
+
+  .calendar-grid :global(.day-image) {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+  }
+
+  .calendar-grid :global(.calendar-day:not(.empty):hover .day-image) {
+    transform: scale(1.08);
+  }
+
+  /* Затемнение для читаемости числа */
+
+  .calendar-grid :global(.calendar-day.has-image)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      180deg,
+      transparent 35%,
+      rgba(0, 0, 0, 0.28) 100%
+    );
+
+    pointer-events: none;
+  }
+
+  /* Плашка с числом */
+
+  .calendar-grid :global(.day-number) {
+    position: absolute;
+    z-index: 2;
+    right: 6px;
+    bottom: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 25px;
+    height: 25px;
+    padding: 0 5px;
+
+    border-radius: 7px;
+
+    background: color-mix(in srgb, var(--surface) 90%, transparent);
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    backdrop-filter: blur(5px);
+  }
+
+  /* Наведение */
+
+  .calendar-grid :global(.calendar-day:not(.empty):hover) {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+
+  .calendar-grid :global(.calendar-day:not(.empty):hover .day-number) {
+    background: var(--accent);
+    color: white;
+  }
+
+  /* Сегодня */
+
+  .calendar-grid :global(.calendar-day.is-today) {
+    border: 2px solid var(--accent);
+    box-shadow: inset 0 0 0 1px var(--surface);
+  }
+
+  .calendar-grid :global(.calendar-day.is-today .day-number) {
+    background: var(--accent);
+    color: white;
+  }
+
+  .calendar-grid :global(.calendar-day.is-today:hover) {
+    border-color: var(--accent-hover);
+  }
+
+  /* Пустые ячейки */
+
+  .calendar-grid :global(.calendar-day.empty) {
+    background: transparent;
+    border-color: transparent;
+    pointer-events: none;
+  }
+
+  /* Footer */
+
+  .calendar-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 27px;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+  }
+
+  .today-legend {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .today-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .today-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+      background var(--transition),
+      border-color var(--transition),
+      color var(--transition);
+  }
+
+  .today-button:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  .today-button span {
+    color: var(--accent);
+  }
+
+  .calendar-note {
+    margin: 25px auto 0;
+
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .surprise-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    background: var(--accent-soft);
+    color: var(--accent);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+      background var(--transition),
+      border-color var(--transition),
+      transform var(--transition);
+  }
+
+  .surprise-button:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  /* Responsive */
+
+  @media (max-width: 700px) {
+    .calendar-page {
+      width: 100%;
+    }
+
+    .back-link {
+      margin-bottom: 38px;
+    }
+
+    .calendar-heading {
+      margin-bottom: 32px;
+    }
+
+    .calendar-heading h1 {
+      font-size: 37px;
+    }
+
+    .calendar-card {
+      padding: 24px 12px 18px;
+      border-radius: 22px;
+    }
+
+    .calendar-top h2 {
+      font-size: 27px;
+    }
+
+    .weekdays,
+    .calendar-grid {
+      gap: 5px;
+    }
+
+    .weekdays span {
+      font-size: 9px;
+      padding: 7px 0;
+    }
+
+    .calendar-day {
+      border-radius: 11px;
+      font-size: 13px;
+    }
+
+    .calendar-footer {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .surprise-button {
+      order: 3;
+      width: 100%;
+    }
+
+    .calendar-grid :global(.calendar-day) {
+      border-radius: 9px;
+    }
+
+    .calendar-grid :global(.day-number) {
+      right: 3px;
+      bottom: 3px;
+
+      min-width: 16px;
+      height: 16px;
+      padding: 0 2px;
+
+      border-radius: 5px;
+      font-size: 9px;
+      font-weight: 600;
+    }
+  }
+  /* Compact desktop layout */
+
+  @media (min-width: 1000px) {
+    .calendar-page {
+      width: min(100%, 840px);
+    }
+
+    .back-link {
+      margin-bottom: 28px;
+    }
+
+    .calendar-heading {
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    .calendar-heading h1 {
+      margin-bottom: 10px;
+    }
+
+    .calendar-card {
+      padding: 26px 30px 22px;
+    }
+
+    .calendar-top {
+      margin-bottom: 18px;
+    }
+
+    .weekdays,
+    .calendar-grid {
+      gap: 9px;
+    }
+
+    .weekdays {
+      margin-bottom: 9px;
+    }
+
+    .weekdays span {
+      padding: 6px 0;
+    }
+
+    .calendar-footer {
+      margin-top: 20px;
+      padding-top: 16px;
+    }
+
+    .calendar-note {
+      margin-top: 18px;
+    }
+  }
+</style>

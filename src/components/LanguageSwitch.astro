@@ -1,0 +1,31 @@
+<div class="language-switch">
+  <a href="/" class="active">EN</a>
+  <span>/</span>
+  <span class="disabled">RU</span>
+</div>
+
+<style>
+  .language-switch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+  }
+
+  .language-switch a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .language-switch a:hover,
+  .language-switch a.active {
+    color: var(--text);
+  }
+
+  .language-switch span {
+    color: var(--border);
+  }
+</style>

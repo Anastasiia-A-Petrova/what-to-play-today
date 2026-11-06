@@ -6,9 +6,17 @@ What to Play Today? is a music discovery website that explores what happened in 
 
 From iconic album releases and legendary performances to artists' birthdays and memorable milestones, discover the stories behind the music — and find something worth listening to today.
 
-🌐 **Website:** [What to Play Today?](https://what-to-play-today.pages.dev/)
+🌐 **Website:** [what-to-play-today.pages.dev](https://what-to-play-today.pages.dev/)
 
----
+## 📸 Screenshots
+
+### Homepage
+
+![What to Play Today? — Homepage](screenshots/main-page.png)
+
+### Music history by date
+
+![What to Play Today? — Date page](screenshots/date-page.png)
 
 ## ✨ Features
 
@@ -28,7 +36,9 @@ From iconic album releases and legendary performances to artists' birthdays and 
 - CSS — responsive layouts, visual design, and themes.
 - [MusicBrainz](https://musicbrainz.org/) — music metadata validation and enrichment.
 - [Wikipedia](https://www.wikipedia.org/) — supplementary artist information and images.
-- [Google Gemini](https://ai.google.dev/) — assistance with extracting structured music information from historical event descriptions.
+- [Google Gemini](https://ai.google.dev/) — AI-assisted extraction of structured music information from historical event descriptions.
+- [Cloudflare Pages](https://pages.cloudflare.com/) — website hosting.
+- [GitHub Actions](https://github.com/features/actions) — automated data processing.
 
 ## 📂 Project Structure
 
@@ -38,22 +48,24 @@ From iconic album releases and legendary performances to artists' birthdays and 
 ├── src/
 │   ├── components/         # Reusable UI components
 │   ├── layouts/            # Shared page layouts
-│   ├── pages/              # Home, calendar, and date pages
-│   └── styles/             # Global styles
+│   └── pages/              # Homepage, calendar, and date pages
 ├── data/
 │   ├── prepared/           # Enriched daily music data
 │   ├── ai-music/           # AI-extracted music information
-│   └── ...                 # Source data and metadata caches
-├── scripts/                # Data collection and processing pipeline
+│   ├── music-enrichment/   # Music metadata and enrichment cache
+│   └── ...                 # Source data and other caches
+├── scripts/                # Data processing pipeline
+├── screenshots/            # Project screenshots
 ├── astro.config.mjs
-└── package.json
+├── package.json
+└── README.md
 ```
 
 ## ⚙️ Getting Started
 
 ### Requirements
 
-- Node.js
+- Node.js 22.23.4 or newer
 - npm
 
 ### Installation
@@ -101,25 +113,55 @@ Preview the production build locally:
 npm run preview
 ```
 
-## 🔄 Data Processing
+## 🔄 Data Processing Pipeline
 
-The project includes a dedicated data preparation pipeline that enriches historical music events with structured music information.
+The website uses a separate data preparation pipeline to enrich historical music events with structured music information.
 
-The processing workflow combines:
+The workflow combines several sources and processing stages:
 
-- Historical music event descriptions.
-- AI-assisted extraction of artists, songs, and albums.
-- MusicBrainz metadata validation.
-- Wikipedia-based supplementary information and images.
-- Cached results to reduce repeated API requests.
+1. Historical music event descriptions provide the original context.
+2. Google Gemini extracts information about artists, songs, and albums.
+3. MusicBrainz validates extracted music metadata.
+4. Wikipedia provides supplementary artist information and images.
+5. Cached results help reduce repeated API requests.
 
-The pipeline is maintained separately from the website's static build process.
+### Configuration
+
+The data extraction pipeline requires a Google Gemini API key.
+
+Create a `.env` file in the project root:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+Keep this file private. Do not commit API keys or other secrets to GitHub.
+
+### Running the Pipeline
+
+The main pipeline script is:
+
+```bash
+node scripts/run-full-pipeline.cjs
+```
+
+To process the next seven days:
+
+```bash
+node scripts/run-full-pipeline.cjs --next-days 7
+```
+
+The pipeline processes available source data and prepares enriched files for the website.
+
+**Important:** The Astro production build and the data processing pipeline are separate processes. Running `npm run build` uses the prepared data already available in the project; it does not automatically run Gemini extraction or MusicBrainz validation.
 
 ## 🚀 Deployment
 
-The website is built as a static Astro site and can be deployed to static hosting platforms.
+What to Play Today? is built as a static Astro website and hosted on Cloudflare Pages.
 
-The project is configured for deployment through Cloudflare Pages, with GitHub as its source repository.
+The GitHub repository is used as the source for the project, while GitHub Actions automates periodic music data processing.
+
+🌐 **Live website:** [what-to-play-today.pages.dev](https://what-to-play-today.pages.dev/)
 
 ## 💡 Project Goal
 

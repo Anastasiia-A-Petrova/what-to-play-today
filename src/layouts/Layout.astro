@@ -10,12 +10,52 @@ const {
   title = "What to Play Today?",
   description = "Music history for every day: events, musician birthdays and important dates in music.",
 } = Astro.props;
+
+const siteURL = new URL("/", Astro.site ?? new URL("https://what-to-play-today.pages.dev")).toString();
+const canonicalURL = new URL(Astro.url.pathname, siteURL).toString();
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteURL}#website`,
+      "url": siteURL,
+      "name": "What to Play Today?",
+      "description": "Music history for every day: events, musician birthdays and important dates in music.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonicalURL}#webpage`,
+      "url": canonicalURL,
+      "name": title,
+      "description": description,
+      "isPartOf": {
+        "@id": `${siteURL}#website`
+      },
+      "inLanguage": "en"
+    }
+  ]
+};
+
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta name="theme-color" content="#F5F1E8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#17151C" media="(prefers-color-scheme: dark)" />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData).replace(/</g, "\\u003c")}
+    />
+
     <meta name="google-site-verification" content="DByS59H_8LqHDNFt3oKv6EENOvt1BuIv1fdfe3SkzYU" />
     <meta name="yandex-verification" content="743a1e0b4a4a9659" />
 
@@ -42,10 +82,7 @@ const {
     <meta property="og:site_name" content="What to Play Today?" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta
-      property="og:url"
-      content={`https://what-to-play-today.pages.dev${Astro.url.pathname}`}
-    />
+    <meta property="og:url" content={canonicalURL} />
     <meta
       property="og:image"
       content="https://what-to-play-today.pages.dev/og-image.png"

@@ -1797,10 +1797,21 @@ if (searchInput && searchStatus) {
     try {
       if (typeof navigator.share === "function") {
         try {
-          await navigator.share({
-            title,
-            text: `What to play today: ${title}`,
+          const shareText = [
+            `🎵 ${title}`,
+            "",
+            "Discover more music history, iconic songs and artist birthdays on What to Play Today?",
+            "",
+            "🎧 Explore music history every day:",
+            "https://what-to-play-today.pages.dev/",
+            "",
+            "🔗 Explore this story:",
             url,
+          ].join("\n");
+
+          await navigator.share({
+            title: "What to Play Today?",
+            text: shareText,
           });
 
           return;

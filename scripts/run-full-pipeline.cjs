@@ -35,6 +35,49 @@ function getDates() {
   return dates;
 }
 
+function getNextDays(count, allDates) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Belgrade",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  }).formatToParts(new Date());
+
+  const year = Number(parts.find(p => p.type === "year").value);
+  const month = Number(parts.find(p => p.type === "month").value);
+  const day = Number(parts.find(p => p.type === "day").value);
+
+  const currentDate = new Date(Date.UTC(year, month - 1, day));
+
+  const selectedDates = [];
+  const missingDates = [];
+
+  for (let i = 0; i < count; i++) {
+    const date = new Date(currentDate);
+    date.setUTCDate(date.getUTCDate() + i);
+
+    const slug =
+      `${MONTHS[date.getUTCMonth()]}-${String(date.getUTCDate()).padStart(2, "0")}`;
+
+    if (allDates.includes(slug)) {
+      selectedDates.push(slug);
+    } else {
+      missingDates.push(slug);
+    }
+  }
+
+  if (missingDates.length > 0) {
+    console.log("⚠ Нет исходных файлов для дат:");
+    console.log(missingDates.join(", "));
+  }
+
+  if (selectedDates.length === 0) {
+    throw new Error("Не найдены исходные файлы для выбранного периода.");
+  }
+
+  return selectedDates;
+}
+
 function selectDates(args, allDates) {
   if (args.length === 0) {
     return allDates;
@@ -150,11 +193,48 @@ function main() {
 
   const refreshMissing = args.includes("--refresh-missing");
 
-  const positionalArgs = args
-    .filter((arg) => !arg.startsWith("--"));
+  const nextDaysIndex = args.indexOf("--next-days");
+
+  const positionalArgs = args.filter((arg, index) => {
+    if (arg.startsWith("--")) return false;
+
+    if (
+      nextDaysIndex !== -1 &&
+      index === nextDaysIndex + 1
+    ) {
+      return false;
+    }
+
+    return true;
+  });
 
   const allDates = getDates();
-  const dates = selectDates(positionalArgs, allDates);
+
+  let dates;
+
+  if (nextDaysIndex !== -1) {
+    const count = Number(args[nextDaysIndex + 1]);
+
+    if (
+      !Number.isInteger(count) ||
+      count < 1 ||
+      count > 14
+    ) {
+      throw new Error(
+        "Укажи количество дней от 1 до 14 после --next-days."
+      );
+    }
+
+    if (positionalArgs.length > 0) {
+      throw new Error(
+        "--next-days нельзя использовать вместе с другими датами."
+      );
+    }
+
+    dates = getNextDays(count, allDates);
+  } else {
+    dates = selectDates(positionalArgs, allDates);
+  }
 
   console.log("========================================");
   console.log("WHAT TO PLAY TODAY — FULL DATA PIPELINE");

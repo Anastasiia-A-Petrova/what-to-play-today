@@ -1,0 +1,54 @@
+
+name: Music Data Pipeline
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: music-data-pipeline
+  cancel-in-progress: false
+
+jobs:
+  update-music-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        id: checkout
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run music data pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/run-full-pipeline.cjs --next-days 7
+
+      - name: Save generated data
+        if: always() && steps.checkout.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/
+
+          if git diff --cached --quiet; then
+            echo "Нет новых данных для сохранения."
+          else
+            git commit -m "chore: update music data"
+            git push
+          fi

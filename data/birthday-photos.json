@@ -2302,5 +2302,71 @@
     "wikipediaTitle": "Jean Shepard",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jean_Shepard",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Jean_Shepard--Billboard--1967.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Ben Adams": {
+    "name": "Ben Adams",
+    "wikipediaTitle": "Ben Adams",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ben_Adams",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Ben_Adams_2010.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Scott Robinson": {
+    "name": "Scott Robinson",
+    "wikipediaTitle": "Scott Robinson (jazz musician)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Scott_Robinson_(jazz_musician)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Scott-robinson_DSC08861.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Karen O": {
+    "name": "Karen O",
+    "wikipediaTitle": "Karen O",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Karen_O",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/YYY_RAH180625_%289_of_51%29_-_54600109164_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Charlie Colin": {
+    "name": "Charlie Colin",
+    "wikipediaTitle": "Charlie Colin",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Charlie_Colin",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Charlie_Colin_2017.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jim Bob": {
+    "name": "Jim Bob",
+    "wikipediaTitle": "Jim Bob",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jim_Bob",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Jim_Bob_at_Relentless_Garage.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jason Ringenberg": {
+    "name": "Jason Ringenberg",
+    "wikipediaTitle": "Jason Ringenberg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jason_Ringenberg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Jason_Ringenberg_2015_by_Brian_Mansfield.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tina Weymouth": {
+    "name": "Tina Weymouth",
+    "wikipediaTitle": "Tina Weymouth",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tina_Weymouth",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Tina_weymouth_tom_tom_club.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Steven Van Zandt": {
+    "name": "Steven Van Zandt",
+    "wikipediaTitle": "Steven Van Zandt",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Steven_Van_Zandt",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Steven_Van_Zandt_Springsteen-65_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Rod Price": {
+    "name": "Rod Price",
+    "wikipediaTitle": "Rod Price",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rod_Price",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Rod_Price_-_Foghat_-_1973.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Max Romeo": {
+    "name": "Max Romeo",
+    "wikipediaTitle": "Max Romeo",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Max_Romeo",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/MaxRomeo1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jesse Colin Young": {
+    "name": "Jesse Colin Young",
+    "wikipediaTitle": "Jesse Colin Young",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jesse_Colin_Young",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/57/Jesse_Colin_Young_2019_by_Glenn_Francis.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   }
 }

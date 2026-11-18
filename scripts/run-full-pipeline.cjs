@@ -140,7 +140,7 @@ function selectDates(args, allDates) {
   );
 }
 
-function runScript(scriptName, date) {
+function runScript(scriptName, date, extraArgs = []) {
   const scriptPath = path.join(__dirname, scriptName);
 
   console.log("\n----------------------------------------");
@@ -149,7 +149,7 @@ function runScript(scriptName, date) {
 
   const result = spawnSync(
     process.execPath,
-    [scriptPath, date],
+    [scriptPath, date, ...extraArgs],
     {
       cwd: ROOT,
       stdio: "inherit",
@@ -186,6 +186,101 @@ function validatePreparedFile(file) {
   }
 
   return data;
+}
+
+function syncRewrittenDescriptions(date, preparedFile) {
+  const rewrittenDir = path.join(DATA_DIR, "rewritten");
+
+  const rewrittenFile = path.join(
+    rewrittenDir,
+    `${date}.json`
+  );
+
+  const reportFile = path.join(
+    rewrittenDir,
+    `${date}-report.json`
+  );
+
+  if (
+    !fs.existsSync(rewrittenFile) ||
+    !fs.existsSync(reportFile)
+  ) {
+    throw new Error(
+      `Не найдены результаты переписывания для ${date}.`
+    );
+  }
+
+  const rewritten = readJson(rewrittenFile);
+  const report = readJson(reportFile);
+  const prepared = readJson(preparedFile);
+
+  if (
+    !Array.isArray(rewritten) ||
+    !Array.isArray(report.completed)
+  ) {
+    throw new Error(
+      `Некорректный результат переписывания: ${date}`
+    );
+  }
+
+  if (report.date !== date) {
+    throw new Error(
+      `Дата в отчёте переписывания не совпадает: ${date}`
+    );
+  }
+
+  const completedIds = new Set(
+    report.completed.map(item => String(item.id))
+  );
+
+  const descriptionsById = new Map(
+    rewritten
+      .filter(item =>
+        completedIds.has(String(item.nID))
+      )
+      .map(item => [
+        String(item.nID),
+        item.sDescription || ""
+      ])
+  );
+
+  let peopleUpdated = 0;
+  let worksUpdated = 0;
+
+  for (const person of prepared.people) {
+    const id = String(person.eventId);
+
+    if (descriptionsById.has(id)) {
+      person.description = descriptionsById.get(id);
+      peopleUpdated++;
+    }
+  }
+
+  for (const work of prepared.works) {
+    const id = String(work.eventId);
+
+    if (descriptionsById.has(id)) {
+      work.eventDescription = descriptionsById.get(id);
+      worksUpdated++;
+    }
+  }
+
+  fs.writeFileSync(
+    preparedFile,
+    JSON.stringify(prepared, null, 2),
+    "utf8"
+  );
+
+  console.log("");
+  console.log("Описания обновлены:");
+  console.log(`  Именинники: ${peopleUpdated}`);
+  console.log(`  Произведения: ${worksUpdated}`);
+  console.log(
+    `  Успешно переписано исходных записей: ${completedIds.size}`
+  );
+  console.log(
+    `  Неудачных записей: ${report.skippedCount || 0}`
+  );
 }
 
 function main() {
@@ -296,6 +391,29 @@ function main() {
     if (!fs.existsSync(preparedFile)) {
       throw new Error(`Prepared-файл не создан: ${preparedFile}`);
     }
+
+    validatePreparedFile(preparedFile);
+
+    // Переписываем описания после подготовки музыки,
+    // фотографий и обложек.
+
+    const sourceEvents = readJson(sourceFile);
+
+    if (!Array.isArray(sourceEvents)) {
+      throw new Error(`Некорректный исходный файл: ${sourceFile}`);
+    }
+
+    console.log("\nПереписываем описания...");
+
+    runScript(
+      "rewrite-descriptions.cjs",
+      date,
+      [String(sourceEvents.length)]
+    );
+
+    // Переносим успешные результаты в prepared.
+
+    syncRewrittenDescriptions(date, preparedFile);
 
     validatePreparedFile(preparedFile);
 

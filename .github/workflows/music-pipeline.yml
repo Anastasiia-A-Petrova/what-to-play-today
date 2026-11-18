@@ -36,7 +36,7 @@ jobs:
       - name: Run music data pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node scripts/run-full-pipeline.cjs --next-days 7
+        run: node scripts/run-full-pipeline.cjs --next-days 8
 
       - name: Save generated data
         if: always() && steps.checkout.outcome == 'success'

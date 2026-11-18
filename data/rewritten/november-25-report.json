@@ -1,0 +1,174 @@
+{
+  "date": "november-25",
+  "status": "partial",
+  "totalRecords": 39,
+  "selectedRecords": 39,
+  "completedCount": 33,
+  "skippedCount": 6,
+  "completed": [
+    {
+      "id": "23201",
+      "artist": "D4vd"
+    },
+    {
+      "id": "22013",
+      "artist": "Irene Cara"
+    },
+    {
+      "id": "20715",
+      "artist": "Iain Sutherland"
+    },
+    {
+      "id": "19774",
+      "artist": "Boston"
+    },
+    {
+      "id": "17214",
+      "artist": "Don DeVito"
+    },
+    {
+      "id": "17023",
+      "artist": "Bob Dylan"
+    },
+    {
+      "id": "17590",
+      "artist": "Freddie Mercury"
+    },
+    {
+      "id": "15389",
+      "artist": "Michael Jackson"
+    },
+    {
+      "id": "13227",
+      "artist": "Madonna"
+    },
+    {
+      "id": "12633",
+      "artist": "Glen Campbell"
+    },
+    {
+      "id": "12634",
+      "artist": "Meat Loaf"
+    },
+    {
+      "id": "11840",
+      "artist": "Robbie Williams"
+    },
+    {
+      "id": "11583",
+      "artist": "Alice Cooper"
+    },
+    {
+      "id": "17841",
+      "artist": "Freddie Mercury"
+    },
+    {
+      "id": "10667",
+      "artist": "Whitney Houston"
+    },
+    {
+      "id": "10303",
+      "artist": "Whitney Houston"
+    },
+    {
+      "id": "9020",
+      "artist": "Bob Geldof"
+    },
+    {
+      "id": "4430",
+      "artist": "Nick Drake"
+    },
+    {
+      "id": "7095",
+      "artist": "Chuck Berry"
+    },
+    {
+      "id": "6657",
+      "artist": "John Lennon"
+    },
+    {
+      "id": "17517",
+      "artist": "The Jimi Hendrix Experience"
+    },
+    {
+      "id": "6024",
+      "artist": "The Seekers"
+    },
+    {
+      "id": "6023",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "3627",
+      "artist": "Rodney Sheppard"
+    },
+    {
+      "id": "22592",
+      "artist": "Fernando and Nefty Sallaberry"
+    },
+    {
+      "id": "23173",
+      "artist": "Tim Armstrong"
+    },
+    {
+      "id": "18512",
+      "artist": "Mark Lanegan"
+    },
+    {
+      "id": "2971",
+      "artist": "Amy Grant"
+    },
+    {
+      "id": "2880",
+      "artist": "Steve Rothery"
+    },
+    {
+      "id": "2050",
+      "artist": "Jocelyn Brown"
+    },
+    {
+      "id": "1110",
+      "artist": "Bev Bevan"
+    },
+    {
+      "id": "1111",
+      "artist": "Bob Lind"
+    },
+    {
+      "id": "561",
+      "artist": "Percy Sledge"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "14609",
+      "artist": "Kevin Dubrow",
+      "reason": "Ошибка проверки Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+    },
+    {
+      "id": "12190",
+      "artist": "Michael Jackson",
+      "reason": "Gemini вернул пустой ответ"
+    },
+    {
+      "id": "7783",
+      "artist": "Joni Mitchell",
+      "reason": "Не пройдена проверка фактов: The rewritten description introduces the specific year '1976', which is not present in the original description."
+    },
+    {
+      "id": "5368",
+      "artist": "Lord Rockinghams XI",
+      "reason": "Не пройдена проверка фактов: The rewritten description adds the new factual claim that the UK television show 'Oh Boy' was hosted by Jack Good, whereas the original text only states that it was a 'Jack Good TV show' without explicitly stating he was the host."
+    },
+    {
+      "id": "3708",
+      "artist": "Tunde",
+      "reason": "Ошибка проверки Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+    },
+    {
+      "id": "3541",
+      "artist": "Stacey Lattishaw",
+      "reason": "Ошибка проверки Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+    }
+  ]
+}

@@ -2506,5 +2506,47 @@
     "wikipediaTitle": "Eileen Barton",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Eileen_Barton",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Eileen_Barton.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tunde": {
+    "name": "Tunde",
+    "wikipediaTitle": "Tunde Baiyewu",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tunde_Baiyewu",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Tundebaiyewu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tim Armstrong": {
+    "name": "Tim Armstrong",
+    "wikipediaTitle": "Tim Armstrong",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tim_Armstrong",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/HF2023Rancid_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Mark Lanegan": {
+    "name": "Mark Lanegan",
+    "wikipediaTitle": "Mark Lanegan",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mark_Lanegan",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Mark_Lanegan_Live_Sala_Apolo_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Steve Rothery": {
+    "name": "Steve Rothery",
+    "wikipediaTitle": "Steve Rothery",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Steve_Rothery",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Marillion_live_in_Cambridge_20th_November_2021_-_51693734737_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Bev Bevan": {
+    "name": "Bev Bevan",
+    "wikipediaTitle": "Bev Bevan",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bev_Bevan",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Bev_Bevan_-_Electric_Light_Orchestra_%281977%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Bob Lind": {
+    "name": "Bob Lind",
+    "wikipediaTitle": "Bob Lind",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bob_Lind",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Bob_Lind_singer_songwriter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Percy Sledge": {
+    "name": "Percy Sledge",
+    "wikipediaTitle": "Percy Sledge",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Percy_Sledge",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Percy_Sledge_at_the_Alabama_Music_Hall_of_Fame_Concert.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   }
 }

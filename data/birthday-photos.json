@@ -2416,5 +2416,95 @@
     "wikipediaTitle": "Marcia Griffiths",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Marcia_Griffiths",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Ruhr_Reggae_Summer_Muelheim_2016_Marcia_Griffiths_05.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tom Odell": {
+    "name": "Tom Odell",
+    "wikipediaTitle": "Tom Odell",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tom_Odell",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Tom_Odell-2140.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Chad Taylor": {
+    "name": "Chad Taylor",
+    "wikipediaTitle": "Chad Taylor (guitarist)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chad_Taylor_(guitarist)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tgfchadtface.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Dawn Robinson": {
+    "name": "Dawn Robinson",
+    "wikipediaTitle": "Dawn Robinson",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dawn_Robinson",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/DR2023_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tony Rombola": {
+    "name": "Tony Rombola",
+    "wikipediaTitle": "Tony Rombola",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tony_Rombola",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/2015_RiP_Godsmack_Tony_Rombola_by_2eight_-_3SC5095.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "John Squire": {
+    "name": "John Squire",
+    "wikipediaTitle": "John Squire",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/John_Squire",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Johnsquire.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Clem Burke": {
+    "name": "Clem Burke",
+    "wikipediaTitle": "Clem Burke",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clem_Burke",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Blondie_drummer_Clem_Burke_on_July_11%2C_2008.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Bob Burns": {
+    "name": "Bob Burns",
+    "wikipediaTitle": "Bob Burns (humorist)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bob_Burns_(humorist)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Gladys_George%2C_Bob_Burns_-I%27m_from_Missouri%2C1939.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Dave Sinclair": {
+    "name": "Dave Sinclair",
+    "wikipediaTitle": "Dave Sinclair",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dave_Sinclair",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Dave_Sinclair.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Lee Michaels": {
+    "name": "Lee Michaels",
+    "wikipediaTitle": "Lee Michaels",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lee_Michaels",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lee_Michaels_1968.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Robin Williamson": {
+    "name": "Robin Williamson",
+    "wikipediaTitle": "Robin Williamson",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Robin_Williamson",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Robin_Williamson.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Billy Connolly": {
+    "name": "Billy Connolly",
+    "wikipediaTitle": "Billy Connolly",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Billy_Connolly",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Billy_Connolly_Festival_Cine_Sidney.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Wayne Jackson": {
+    "name": "Wayne Jackson",
+    "wikipediaTitle": "Wayne Jackson (musician)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Wayne_Jackson_(musician)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/2013-Lonnie_Wayne_Jackson_RnR_Museum_Memphis_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Pete Best": {
+    "name": "Pete Best",
+    "wikipediaTitle": "Pete Best",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pete_Best",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Pete_Best_drumming.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jim Yester": {
+    "name": "Jim Yester",
+    "wikipediaTitle": "Jim Yester",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jim_Yester",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Jim_Yester.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Eileen Barton": {
+    "name": "Eileen Barton",
+    "wikipediaTitle": "Eileen Barton",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Eileen_Barton",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Eileen_Barton.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   }
 }

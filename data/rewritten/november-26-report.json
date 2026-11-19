@@ -1,0 +1,180 @@
+{
+  "date": "november-26",
+  "status": "partial",
+  "totalRecords": 41,
+  "selectedRecords": 41,
+  "completedCount": 37,
+  "skippedCount": 4,
+  "completed": [
+    {
+      "id": "19292",
+      "artist": "Malcolm McLaren"
+    },
+    {
+      "id": "18775",
+      "artist": "Willie Nelson"
+    },
+    {
+      "id": "15388",
+      "artist": "Manic Street Preachers"
+    },
+    {
+      "id": "13181",
+      "artist": "Soulja Slim"
+    },
+    {
+      "id": "11585",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "11584",
+      "artist": "Madonna"
+    },
+    {
+      "id": "10574",
+      "artist": "Boyz II Men"
+    },
+    {
+      "id": "10575",
+      "artist": "Eagles"
+    },
+    {
+      "id": "10145",
+      "artist": "Garth Brooks"
+    },
+    {
+      "id": "16859",
+      "artist": "Pink Floyd"
+    },
+    {
+      "id": "7785",
+      "artist": "Sex Pistols"
+    },
+    {
+      "id": "7784",
+      "artist": "Kevin Godley"
+    },
+    {
+      "id": "4418",
+      "artist": "John Rostill"
+    },
+    {
+      "id": "7256",
+      "artist": "New York Dolls"
+    },
+    {
+      "id": "6498",
+      "artist": "Cream"
+    },
+    {
+      "id": "13524",
+      "artist": "Jimi Hendrix"
+    },
+    {
+      "id": "6341",
+      "artist": "Ed Sullivan"
+    },
+    {
+      "id": "14611",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "15344",
+      "artist": "Johnny Cash"
+    },
+    {
+      "id": "23176",
+      "artist": "Olivia O'Brien"
+    },
+    {
+      "id": "18076",
+      "artist": "Rita Ora"
+    },
+    {
+      "id": "16780",
+      "artist": "Benjamin Wysocki"
+    },
+    {
+      "id": "13031",
+      "artist": "Natasha Bedingfield"
+    },
+    {
+      "id": "22894",
+      "artist": "Beau  Dozier"
+    },
+    {
+      "id": "16892",
+      "artist": "John Stirratt"
+    },
+    {
+      "id": "3542",
+      "artist": "Mark Gillespie"
+    },
+    {
+      "id": "3370",
+      "artist": "Adam Gaynor"
+    },
+    {
+      "id": "1919",
+      "artist": "Martin Lee"
+    },
+    {
+      "id": "1769",
+      "artist": "John Rossall"
+    },
+    {
+      "id": "23177",
+      "artist": "Raymond Louis Kennedy "
+    },
+    {
+      "id": "1413",
+      "artist": "Burt Reiter"
+    },
+    {
+      "id": "1250",
+      "artist": "John McVie"
+    },
+    {
+      "id": "22749",
+      "artist": "Michael Omartian"
+    },
+    {
+      "id": "1119",
+      "artist": "Alan Henderson"
+    },
+    {
+      "id": "1112",
+      "artist": "Jean Terrell"
+    },
+    {
+      "id": "20267",
+      "artist": "David White"
+    },
+    {
+      "id": "475",
+      "artist": "Tina Turner"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "22486",
+      "artist": "Adele",
+      "reason": "Не удалось восстановить маркер [[LINK_0]]"
+    },
+    {
+      "id": "12933",
+      "artist": "Ron Jones",
+      "reason": "Ошибка проверки Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 7.6921824s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.5-flash-lite\"\n            },\n            \"quotaValue\": \"15\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"7s\"\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "id": "20142",
+      "artist": "Bob Babbitt",
+      "reason": "Ошибка проверки Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 1.672268024s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-3.5-flash-lite\",\n              \"location\": \"global\"\n            },\n            \"quotaValue\": \"15\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"1s\"\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "id": "127",
+      "artist": "Michael Holliday",
+      "reason": "Не пройдена проверка фактов: The rewritten description changes the meaning of the original text regarding the Merchant Navy anecdote. The original states that Holliday worked as a seaman in the Merchant Navy and smuggled records, which were then sold by Costello's mother. The rewrite incorrectly attributes the time working as a seaman in the Merchant Navy to Elvis Costello instead of Michael Holliday."
+    }
+  ]
+}

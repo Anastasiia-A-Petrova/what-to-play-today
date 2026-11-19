@@ -135,7 +135,12 @@
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Adam_Faith",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Adam_Faith.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   },
-  "Adam Gaynor": null,
+  "Adam Gaynor": {
+    "name": "Adam Gaynor",
+    "wikipediaTitle": "Adam Gaynor",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Adam_Gaynor",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Adam_Gaynor_on_RealTVfilms.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
   "Adam Goldstein": null,
   "Adam Hann": null,
   "Adam Horovitz": null,
@@ -2548,5 +2553,65 @@
     "wikipediaTitle": "Percy Sledge",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Percy_Sledge",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Percy_Sledge_at_the_Alabama_Music_Hall_of_Fame_Concert.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Olivia O'Brien": {
+    "name": "Olivia O'Brien",
+    "wikipediaTitle": "Olivia O'Brien",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Olivia_O%27Brien",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Olivia_O%27Brien_%40_Mack_Sennett_Studios_09_26_2019_%2849311330527%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Rita Ora": {
+    "name": "Rita Ora",
+    "wikipediaTitle": "Rita Ora",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rita_Ora",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Oliver_Mark_-_Rita_Ora%2C_Berlin_2018.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Natasha Bedingfield": {
+    "name": "Natasha Bedingfield",
+    "wikipediaTitle": "Natasha Bedingfield",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Natasha_Bedingfield",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Natasha_Bedingfield_-_2016330204319_2016-11-25_Night_of_the_Proms_-_Sven_-_1D_X_II_-_0285_-_AK8I4621_mod_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Ron Jones": {
+    "name": "Ron Jones",
+    "wikipediaTitle": "Ron Jones (ice hockey)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ron_Jones_(ice_hockey)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ron_Jones_1973.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "John Stirratt": {
+    "name": "John Stirratt",
+    "wikipediaTitle": "John Stirratt",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/John_Stirratt",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/John_Stirratt_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Mark Gillespie": {
+    "name": "Mark Gillespie",
+    "wikipediaTitle": "Mark Gillespie (New Zealand cricketer)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mark_Gillespie_(New_Zealand_cricketer)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Mark_Gillespie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Martin Lee": {
+    "name": "Martin Lee",
+    "wikipediaTitle": "Martin Lee",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Martin_Lee",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Martin_Lee_2014_cut.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "John McVie": {
+    "name": "John McVie",
+    "wikipediaTitle": "John McVie",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/John_McVie",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/FleetMacTulsa031018-79_%2830294524767%29_%28Cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "David White": {
+    "name": "David White",
+    "wikipediaTitle": "David White (Scottish footballer)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/David_White_(Scottish_footballer)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/David_White_%281969%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tina Turner": {
+    "name": "Tina Turner",
+    "wikipediaTitle": "Tina Turner",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tina_Turner",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Tina_Turner_Breaks_All_the_Rules.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   }
 }

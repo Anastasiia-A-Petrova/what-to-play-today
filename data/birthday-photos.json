@@ -2613,5 +2613,71 @@
     "wikipediaTitle": "Tina Turner",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tina_Turner",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Tina_Turner_Breaks_All_the_Rules.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Oritsé Williams": {
+    "name": "Oritsé Williams",
+    "wikipediaTitle": "Oritsé Williams",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Orits%C3%A9_Williams",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/OritseWilliamsLCM2016.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Professor Green": {
+    "name": "Professor Green",
+    "wikipediaTitle": "Professor Green",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Professor_Green",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Profesor_Green2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Mike Skinner": {
+    "name": "Mike Skinner",
+    "wikipediaTitle": "Mike Skinner (racing driver)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mike_Skinner_(racing_driver)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Mike_Skinner_2015_Goodwood.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Twista": {
+    "name": "Twista",
+    "wikipediaTitle": "Twista",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Twista",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Twista_101109_photoby_Adam-Bielawski.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Myles Kennedy": {
+    "name": "Myles Kennedy",
+    "wikipediaTitle": "Myles Kennedy",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Myles_Kennedy",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/HF2022MylesKennedy_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Mike Bordin": {
+    "name": "Mike Bordin",
+    "wikipediaTitle": "Mike Bordin",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Mike_Bordin",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Faith_No_More_-_Flickr_-_p_a_h_%287%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Charlie Burchill": {
+    "name": "Charlie Burchill",
+    "wikipediaTitle": "Charlie Burchill",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Charlie_Burchill",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Simple_Minds_-_2018173230337_2018-06-22_Rock_the_Ring_-_1D_X_MK_II_-_2737_-_AK8I5153.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Randy Brecker": {
+    "name": "Randy Brecker",
+    "wikipediaTitle": "Randy Brecker",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Randy_Brecker",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Randy_Brecker_Kongsberg_Jazzfestival_2018_%28224735%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Trevor Davis": {
+    "name": "Trevor Davis",
+    "wikipediaTitle": "Trevor Davis",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Trevor_Davis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Trevor_Davis_%28Green_Bay_Packers_player%29_during_pre-season_game_against_Denver_Broncos_on_August_26%2C_2017_in_Denver%2C_Colorado.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jimi Hendrix": {
+    "name": "Jimi Hendrix",
+    "wikipediaTitle": "Jimi Hendrix",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jimi_Hendrix",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jimi_Hendrix_%281967%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Al Jackson": {
+    "name": "Al Jackson",
+    "wikipediaTitle": "Al Jackson",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Al_Jackson",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Al_Jackson_1963.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   }
 }

@@ -1,0 +1,183 @@
+{
+  "date": "november-28",
+  "status": "partial",
+  "totalRecords": 42,
+  "selectedRecords": 42,
+  "completedCount": 39,
+  "skippedCount": 3,
+  "completed": [
+    {
+      "id": "22015",
+      "artist": "David Bowie"
+    },
+    {
+      "id": "19328",
+      "artist": "Ray Columbus"
+    },
+    {
+      "id": "18778",
+      "artist": "George Harrison"
+    },
+    {
+      "id": "14813",
+      "artist": "Kid Rock"
+    },
+    {
+      "id": "15865",
+      "artist": "Metallica"
+    },
+    {
+      "id": "12026",
+      "artist": "Tony McCarroll"
+    },
+    {
+      "id": "11587",
+      "artist": "Madonna"
+    },
+    {
+      "id": "11586",
+      "artist": "David Bowie"
+    },
+    {
+      "id": "11301",
+      "artist": "Cliff Richard"
+    },
+    {
+      "id": "4672",
+      "artist": "Jerry Edmonton"
+    },
+    {
+      "id": "10305",
+      "artist": "Whitney Houston"
+    },
+    {
+      "id": "9435",
+      "artist": "Jennifer Warnes"
+    },
+    {
+      "id": "13752",
+      "artist": "David Bowie"
+    },
+    {
+      "id": "15349",
+      "artist": "R.E.M."
+    },
+    {
+      "id": "7789",
+      "artist": "Tom Robinson"
+    },
+    {
+      "id": "7788",
+      "artist": "Sex Pistols"
+    },
+    {
+      "id": "7426",
+      "artist": "John Lennon"
+    },
+    {
+      "id": "6811",
+      "artist": "Dave Edmunds"
+    },
+    {
+      "id": "6810",
+      "artist": "Bob Dylan"
+    },
+    {
+      "id": "6342",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "5866",
+      "artist": "The Shangri-Las"
+    },
+    {
+      "id": "14610",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "5460",
+      "artist": "Elvis Presley"
+    },
+    {
+      "id": "5194",
+      "artist": "Winifred Atwell"
+    },
+    {
+      "id": "18502",
+      "artist": "Trey Songz"
+    },
+    {
+      "id": "3864",
+      "artist": "Matt Cheslin"
+    },
+    {
+      "id": "3184",
+      "artist": "Matt Cameron"
+    },
+    {
+      "id": "20198",
+      "artist": "Richard Grossman"
+    },
+    {
+      "id": "2765",
+      "artist": "David Van Day"
+    },
+    {
+      "id": "2418",
+      "artist": "David Jaymes"
+    },
+    {
+      "id": "23254",
+      "artist": "Jeanette Hutchinson"
+    },
+    {
+      "id": "1920",
+      "artist": "Hugh McKenna"
+    },
+    {
+      "id": "23181",
+      "artist": "Paul Shaffer"
+    },
+    {
+      "id": "1770",
+      "artist": "Beeb Birtles"
+    },
+    {
+      "id": "951",
+      "artist": "Randy Newman"
+    },
+    {
+      "id": "562",
+      "artist": "Bruce Channel"
+    },
+    {
+      "id": "19700",
+      "artist": "Clem Curtis"
+    },
+    {
+      "id": "476",
+      "artist": "Gary Troxel"
+    },
+    {
+      "id": "186",
+      "artist": "Berry Gordy"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "13810",
+      "artist": "Nirvana",
+      "reason": "Не пройдена проверка фактов: The rewritten description changes the meaning of an original fact by stating that Kurt Cobain sang an octave below his 'normal range', whereas the original text only stated he sang an octave lower (without specifying his normal range)."
+    },
+    {
+      "id": "18082",
+      "artist": "Rostam Batmanglij",
+      "reason": "Не пройдена проверка фактов: The rewritten description incorrectly states that Rostam Batmanglij is a member of Vampire Weekend, whereas the original description states that he left the band in 2016."
+    },
+    {
+      "id": "13651",
+      "artist": "Chamillionaire",
+      "reason": "Ошибка проверки Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 56.42385883s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-3.5-flash-lite\",\n              \"location\": \"global\"\n            },\n            \"quotaValue\": \"15\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"56s\"\n      }\n    ]\n  }\n}\n"
+    }
+  ]
+}

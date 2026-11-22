@@ -1,0 +1,196 @@
+{
+  "date": "november-29",
+  "status": "partial",
+  "totalRecords": 45,
+  "selectedRecords": 45,
+  "completedCount": 41,
+  "skippedCount": 4,
+  "completed": [
+    {
+      "id": "23226",
+      "artist": "Kendrick Lamar "
+    },
+    {
+      "id": "20713",
+      "artist": "Irving Burgie"
+    },
+    {
+      "id": "19775",
+      "artist": "Dick Dodd"
+    },
+    {
+      "id": "16811",
+      "artist": "Susan Boyle"
+    },
+    {
+      "id": "14607",
+      "artist": "Morrissey"
+    },
+    {
+      "id": "14588",
+      "artist": "Joy Division"
+    },
+    {
+      "id": "13326",
+      "artist": "Simon Cowell"
+    },
+    {
+      "id": "12027",
+      "artist": "Paul McCartney"
+    },
+    {
+      "id": "11589",
+      "artist": "Larry Mullen"
+    },
+    {
+      "id": "22489",
+      "artist": "Chuck Berry"
+    },
+    {
+      "id": "4808",
+      "artist": "Curtis Knight"
+    },
+    {
+      "id": "11002",
+      "artist": "Lou Reed"
+    },
+    {
+      "id": "10891",
+      "artist": "Whitney Houston"
+    },
+    {
+      "id": "22491",
+      "artist": "Bon Jovi"
+    },
+    {
+      "id": "22027",
+      "artist": "Now That's What I Call Music "
+    },
+    {
+      "id": "8505",
+      "artist": "John Lennon"
+    },
+    {
+      "id": "8504",
+      "artist": "Abba"
+    },
+    {
+      "id": "7790",
+      "artist": "Sex Pistols"
+    },
+    {
+      "id": "22490",
+      "artist": "Neil Young"
+    },
+    {
+      "id": "6659",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "13530",
+      "artist": "The Rolling Stones"
+    },
+    {
+      "id": "13529",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "14223",
+      "artist": "The Game"
+    },
+    {
+      "id": "4044",
+      "artist": "Apl.De.Ap"
+    },
+    {
+      "id": "21609",
+      "artist": "Keith Carlock"
+    },
+    {
+      "id": "19228",
+      "artist": "Jonathan Knight"
+    },
+    {
+      "id": "2882",
+      "artist": "Wendy Wu"
+    },
+    {
+      "id": "20233",
+      "artist": "Michael Dempsey"
+    },
+    {
+      "id": "19227",
+      "artist": "Jennifer Batten"
+    },
+    {
+      "id": "21980",
+      "artist": "Chris Bailey"
+    },
+    {
+      "id": "2164",
+      "artist": "Barry Goudreau"
+    },
+    {
+      "id": "19226",
+      "artist": "Roger Troutman"
+    },
+    {
+      "id": "1605",
+      "artist": "Ronnie Montrose"
+    },
+    {
+      "id": "1115",
+      "artist": "Felix Cavaliere"
+    },
+    {
+      "id": "20225",
+      "artist": "Twink"
+    },
+    {
+      "id": "21151",
+      "artist": "Tim Davis"
+    },
+    {
+      "id": "22005",
+      "artist": "Jody Miller"
+    },
+    {
+      "id": "683",
+      "artist": "Denny Doherty"
+    },
+    {
+      "id": "20622",
+      "artist": "Chuck Mangione"
+    },
+    {
+      "id": "246",
+      "artist": "John Mayall"
+    },
+    {
+      "id": "72",
+      "artist": "Merle Travis"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "15345",
+      "artist": "Lynyrd Skynyrd",
+      "reason": "Не пройдена проверка фактов: The rewritten description incorrectly applies the age '59-year-old' to the year 1993 when he pleaded guilty, whereas the original description states his age as 59 at the time of the arrest, creating a chronological impossibility."
+    },
+    {
+      "id": "4871",
+      "artist": "George Harrison",
+      "reason": "Не удалось восстановить маркер [[LINK_3]]"
+    },
+    {
+      "id": "3710",
+      "artist": "Martin Carr",
+      "reason": "Не пройдена проверка фактов: The rewritten description changed the character's name from 'Boo Radley' in the original text to 'Boo Radleys'."
+    },
+    {
+      "id": "477",
+      "artist": "Meco Monardo",
+      "reason": "Не удалось восстановить маркер [[LINK_0]]"
+    }
+  ]
+}

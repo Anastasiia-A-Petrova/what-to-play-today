@@ -2751,5 +2751,95 @@
     "wikipediaTitle": "Berry Gordy",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Berry_Gordy",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Berry_Gordy.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "The Game": {
+    "name": "The Game",
+    "wikipediaTitle": "The Game (rapper)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Game_(rapper)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/The_Game_2016.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Apl.De.Ap": {
+    "name": "Apl.De.Ap",
+    "wikipediaTitle": "Apl.de.ap",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Apl.de.ap",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Apl.de.ap_at_San_Diego_Comic_Con_2026.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Keith Carlock": {
+    "name": "Keith Carlock",
+    "wikipediaTitle": "Keith Carlock",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Keith_Carlock",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Keith_Carlock_Drum_Solo_with_the_Band_Of_Brothers_at_the_Jazz_Kitchen_in_Indianapolis.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jonathan Knight": {
+    "name": "Jonathan Knight",
+    "wikipediaTitle": "Jonathan Knight",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jonathan_Knight",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Jonathan_Knight_2011_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jennifer Batten": {
+    "name": "Jennifer Batten",
+    "wikipediaTitle": "Jennifer Batten",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jennifer_Batten",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Jennifer_Batten.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Chris Bailey": {
+    "name": "Chris Bailey",
+    "wikipediaTitle": "Chris Bailey (musician, born 1956)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chris_Bailey_(musician,_born_1956)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/The_Saints_%28Australian_band%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Barry Goudreau": {
+    "name": "Barry Goudreau",
+    "wikipediaTitle": "Barry Goudreau",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Barry_Goudreau",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/BarryGoudreau1970s.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Ronnie Montrose": {
+    "name": "Ronnie Montrose",
+    "wikipediaTitle": "Ronnie Montrose",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ronnie_Montrose",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Ronnie_Montrose_4_-_Montrose_-_1974.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Felix Cavaliere": {
+    "name": "Felix Cavaliere",
+    "wikipediaTitle": "Felix Cavaliere",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Felix_Cavaliere",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Felix_Cavaliere_1966.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tim Davis": {
+    "name": "Tim Davis",
+    "wikipediaTitle": "Tim Davis (activist)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tim_Davis_(activist)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Tim_Davis_self-portrait.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jody Miller": {
+    "name": "Jody Miller",
+    "wikipediaTitle": "Jody Miller",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jody_Miller",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jody_Miller.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Denny Doherty": {
+    "name": "Denny Doherty",
+    "wikipediaTitle": "Denny Doherty",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Denny_Doherty",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/97/Denny_Doherty%2C_circa_1967.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Chuck Mangione": {
+    "name": "Chuck Mangione",
+    "wikipediaTitle": "Chuck Mangione",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chuck_Mangione",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Chuck_Mangione_1998.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "John Mayall": {
+    "name": "John Mayall",
+    "wikipediaTitle": "John Mayall",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/John_Mayall",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/John_Mayall_1968.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Merle Travis": {
+    "name": "Merle Travis",
+    "wikipediaTitle": "Merle Travis",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Merle_Travis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Merle_Travis_in_Five_Minutes_to_Live_%281961%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   }
 }

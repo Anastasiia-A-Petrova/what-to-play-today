@@ -1,0 +1,243 @@
+{
+  "date": "november-30",
+  "status": "partial",
+  "totalRecords": 56,
+  "selectedRecords": 56,
+  "completedCount": 49,
+  "skippedCount": 7,
+  "completed": [
+    {
+      "id": "21844",
+      "artist": "Shane MacGowan"
+    },
+    {
+      "id": "21967",
+      "artist": "Christine McVie"
+    },
+    {
+      "id": "21843",
+      "artist": "Adele"
+    },
+    {
+      "id": "22074",
+      "artist": "Kid Rock"
+    },
+    {
+      "id": "18781",
+      "artist": "Sinead O'Connor"
+    },
+    {
+      "id": "18780",
+      "artist": "Rihanna"
+    },
+    {
+      "id": "17012",
+      "artist": "Christies Rock & Roll Auction"
+    },
+    {
+      "id": "14240",
+      "artist": "Syd Barrett"
+    },
+    {
+      "id": "13199",
+      "artist": "50 Cent"
+    },
+    {
+      "id": "15945",
+      "artist": "Ramones"
+    },
+    {
+      "id": "12029",
+      "artist": "George Harrison"
+    },
+    {
+      "id": "11845",
+      "artist": "Jennifer Lopez"
+    },
+    {
+      "id": "4809",
+      "artist": "Don Harris"
+    },
+    {
+      "id": "11305",
+      "artist": "Elton John"
+    },
+    {
+      "id": "10819",
+      "artist": "Ice Cube"
+    },
+    {
+      "id": "4722",
+      "artist": "Tiny Tim"
+    },
+    {
+      "id": "10576",
+      "artist": "Tupac Shakur"
+    },
+    {
+      "id": "10150",
+      "artist": "Rob Pilatus"
+    },
+    {
+      "id": "10149",
+      "artist": "Michael Jackson"
+    },
+    {
+      "id": "9811",
+      "artist": "Happy Mondays"
+    },
+    {
+      "id": "9179",
+      "artist": "Wham!"
+    },
+    {
+      "id": "23249",
+      "artist": "Pink Floyd"
+    },
+    {
+      "id": "6957",
+      "artist": "Sly and the Family Stone"
+    },
+    {
+      "id": "15713",
+      "artist": "The Rolling Stones"
+    },
+    {
+      "id": "6499",
+      "artist": "Glen Campbell"
+    },
+    {
+      "id": "5726",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "12341",
+      "artist": "Dougie Poynter"
+    },
+    {
+      "id": "4148",
+      "artist": "Clay Aiken"
+    },
+    {
+      "id": "22103",
+      "artist": "Mindy McCready"
+    },
+    {
+      "id": "13493",
+      "artist": "John Moyer"
+    },
+    {
+      "id": "3711",
+      "artist": "Des\\'ree"
+    },
+    {
+      "id": "3459",
+      "artist": "Paul Wheeler"
+    },
+    {
+      "id": "23184",
+      "artist": "Cherie Currie"
+    },
+    {
+      "id": "23185",
+      "artist": "Stacey Q"
+    },
+    {
+      "id": "2663",
+      "artist": "Richard Barbieri"
+    },
+    {
+      "id": "4299",
+      "artist": "John Ashton"
+    },
+    {
+      "id": "2503",
+      "artist": "Billy Idol"
+    },
+    {
+      "id": "2419",
+      "artist": "George McArdale"
+    },
+    {
+      "id": "23186",
+      "artist": "Johnny Shuggie Otis"
+    },
+    {
+      "id": "13373",
+      "artist": "David Sancious"
+    },
+    {
+      "id": "2339",
+      "artist": "June Pointer"
+    },
+    {
+      "id": "1253",
+      "artist": "Roger Glover"
+    },
+    {
+      "id": "1117",
+      "artist": "Rob Grill"
+    },
+    {
+      "id": "21709",
+      "artist": "J. J. Barnesm"
+    },
+    {
+      "id": "22573",
+      "artist": "Frank Ifield"
+    },
+    {
+      "id": "21330",
+      "artist": "Bob Moore"
+    },
+    {
+      "id": "188",
+      "artist": "Dick Clark"
+    },
+    {
+      "id": "119",
+      "artist": "Allan Sherman"
+    },
+    {
+      "id": "20001",
+      "artist": "Brownie McGhee"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "18783",
+      "artist": "Peter Hook",
+      "reason": "Не пройдена проверка фактов: The rewritten description introduces the year 2015, which is not present in the original description."
+    },
+    {
+      "id": "19908",
+      "artist": "Glen Campbell",
+      "reason": "Ошибка проверки Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 26.437875752s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.5-flash-lite\"\n            },\n            \"quotaValue\": \"15\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"26s\"\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "id": "13206",
+      "artist": "Pete Doherty",
+      "reason": "Не пройдена проверка фактов: The rewritten description introduces the year '2005', which was not present in the original text."
+    },
+    {
+      "id": "19860",
+      "artist": "Loverboy",
+      "reason": "Не пройдена проверка фактов: The rewritten description incorrectly introduces a claim that the band received an additional six wins in 1986, whereas the original text only states they won six Juno Awards in 1982."
+    },
+    {
+      "id": "8699",
+      "artist": "Michael Jackson",
+      "reason": "Не пройдена проверка фактов: The rewritten description changes the meaning of the original text regarding who featured on which song. The original text states that 'Beat It' featured guitarists Eddie Van Halen and Steve Lukather on 'Billie Jean'. The rewrite incorrectly splits this by stating 'Beat It' featured Eddie Van Halen, and 'Billie Jean' featured Steve Lukather."
+    },
+    {
+      "id": "6661",
+      "artist": "Monkees",
+      "reason": "Ошибка проверки Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 29.476713528s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"model\": \"gemini-3.5-flash-lite\",\n              \"location\": \"global\"\n            },\n            \"quotaValue\": \"15\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"29s\"\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "id": "952",
+      "artist": "Leo Lyons",
+      "reason": "Не пройдена проверка фактов: The rewritten description alters the syntax in a way that suggests Leo Lyons served as the bassist specifically 'Woodstock Festival for Ten Years After' rather than being the bassist in Ten Years After who performed at Woodstock."
+    }
+  ]
+}

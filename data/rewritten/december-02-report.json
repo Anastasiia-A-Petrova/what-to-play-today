@@ -1,0 +1,186 @@
+{
+  "date": "december-02",
+  "status": "partial",
+  "totalRecords": 42,
+  "selectedRecords": 42,
+  "completedCount": 36,
+  "skippedCount": 6,
+  "completed": [
+    {
+      "id": "21348",
+      "artist": "Richard Cole "
+    },
+    {
+      "id": "19289",
+      "artist": "Duran Duran"
+    },
+    {
+      "id": "18489",
+      "artist": "Bobby Keys"
+    },
+    {
+      "id": "17555",
+      "artist": "Led Zeppelin"
+    },
+    {
+      "id": "19868",
+      "artist": "Eric Woolfson"
+    },
+    {
+      "id": "19871",
+      "artist": "Odetta"
+    },
+    {
+      "id": "14604",
+      "artist": "Ozzy Osbourne"
+    },
+    {
+      "id": "13608",
+      "artist": "Dave Mount"
+    },
+    {
+      "id": "13937",
+      "artist": "Beyonce"
+    },
+    {
+      "id": "12090",
+      "artist": "Justin Hawkins"
+    },
+    {
+      "id": "11905",
+      "artist": "Liam Gallagher"
+    },
+    {
+      "id": "10615",
+      "artist": "Mariah Carey"
+    },
+    {
+      "id": "8840",
+      "artist": "Michael Jackson"
+    },
+    {
+      "id": "4512",
+      "artist": "David Blue"
+    },
+    {
+      "id": "15355",
+      "artist": "Neil Diamond"
+    },
+    {
+      "id": "8049",
+      "artist": "Rod Stewart"
+    },
+    {
+      "id": "17223",
+      "artist": "Pink Floyd"
+    },
+    {
+      "id": "15357",
+      "artist": "The Supremes"
+    },
+    {
+      "id": "18912",
+      "artist": "David Bowie"
+    },
+    {
+      "id": "14606",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "5293",
+      "artist": "Elvis Presley"
+    },
+    {
+      "id": "22789",
+      "artist": "Juice Wrld"
+    },
+    {
+      "id": "18641",
+      "artist": "Charlie Puth"
+    },
+    {
+      "id": "17983",
+      "artist": "Tal Wilkenfeld"
+    },
+    {
+      "id": "4220",
+      "artist": "Britney Spears"
+    },
+    {
+      "id": "4137",
+      "artist": "Nelly Furtado"
+    },
+    {
+      "id": "12379",
+      "artist": "Chris Wolstenholme"
+    },
+    {
+      "id": "3889",
+      "artist": "Donna Matthews"
+    },
+    {
+      "id": "3663",
+      "artist": "Nate Mendel"
+    },
+    {
+      "id": "2916",
+      "artist": "Rick Savage"
+    },
+    {
+      "id": "2917",
+      "artist": "Sydney Youngblood"
+    },
+    {
+      "id": "21361",
+      "artist": "Garth Dennis"
+    },
+    {
+      "id": "732",
+      "artist": "Ted Bluechel"
+    },
+    {
+      "id": "607",
+      "artist": "Tom McGuinness"
+    },
+    {
+      "id": "19950",
+      "artist": "Ernest Warren"
+    },
+    {
+      "id": "35",
+      "artist": "Peter Carl Goldmark"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "18469",
+      "artist": "Queen",
+      "reason": "Не удалось восстановить маркер [[LINK_0]]"
+    },
+    {
+      "id": "18209",
+      "artist": "Junior Murvin",
+      "reason": "Ошибка проверки Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+    },
+    {
+      "id": "15356",
+      "artist": "Shocking Blue",
+      "reason": "Ошибка проверки Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+    },
+    {
+      "id": "4856",
+      "artist": "Valerie Jones",
+      "reason": "Не пройдена проверка фактов: The rewritten description misspells the singer's first name as 'Valerine Jones' instead of 'Valerie Jones'."
+    },
+    {
+      "id": "11407",
+      "artist": "Madonna",
+      "reason": "RETRYABLE 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+    },
+    {
+      "id": "6240",
+      "artist": "Monkees",
+      "reason": "Не пройдена проверка фактов: The rewritten description introduces the word 'consecutive', which was not present in the original text regarding their four albums that sold over a million copies."
+    }
+  ]
+}

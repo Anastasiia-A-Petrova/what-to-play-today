@@ -2979,5 +2979,59 @@
     "wikipediaTitle": "Matt Monro",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Matt_Monro",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Matt_Monro.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Juice Wrld": {
+    "name": "Juice Wrld",
+    "wikipediaTitle": "Juice Wrld",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Juice_Wrld",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Juice_WRLD_-_Les_Ardentes_2019_%28cropped_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Charlie Puth": {
+    "name": "Charlie Puth",
+    "wikipediaTitle": "Charlie Puth",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Charlie_Puth",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Charlie_Puth.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tal Wilkenfeld": {
+    "name": "Tal Wilkenfeld",
+    "wikipediaTitle": "Tal Wilkenfeld",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tal_Wilkenfeld",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Tal_Wilkenfeld.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Britney Spears": {
+    "name": "Britney Spears",
+    "wikipediaTitle": "Britney Spears",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Britney_Spears",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Britney_Spears_2013_%28Straighten_Crop%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Nelly Furtado": {
+    "name": "Nelly Furtado",
+    "wikipediaTitle": "Nelly Furtado",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Nelly_Furtado",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Nelly_Furtado_at_Beyond_the_Valley_2022_%28cropped%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Chris Wolstenholme": {
+    "name": "Chris Wolstenholme",
+    "wikipediaTitle": "Chris Wolstenholme",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chris_Wolstenholme",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/2018_Chris_Wolstenholme_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Nate Mendel": {
+    "name": "Nate Mendel",
+    "wikipediaTitle": "Nate Mendel",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Nate_Mendel",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Nate_Mendel_2011-12-05_Adelaide_Oval_Australia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Rick Savage": {
+    "name": "Rick Savage",
+    "wikipediaTitle": "Rick Savage",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rick_Savage",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Rick_Savage_Performing.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Tom McGuinness": {
+    "name": "Tom McGuinness",
+    "wikipediaTitle": "Tom McGuinness (musician)",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tom_McGuinness_(musician)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/The_Blues_Band_-_Tom_McGuiness_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   }
 }

@@ -1,0 +1,212 @@
+{
+  "date": "december-03",
+  "status": "partial",
+  "totalRecords": 49,
+  "selectedRecords": 49,
+  "completedCount": 45,
+  "skippedCount": 4,
+  "completed": [
+    {
+      "id": "23241",
+      "artist": "Steve Cropper"
+    },
+    {
+      "id": "19874",
+      "artist": "Gladstone Anderson"
+    },
+    {
+      "id": "18809",
+      "artist": "Scott Weiland"
+    },
+    {
+      "id": "19872",
+      "artist": "Ian McLagan"
+    },
+    {
+      "id": "18487",
+      "artist": "Ed Sheeran"
+    },
+    {
+      "id": "16816",
+      "artist": "Ronnie Wood"
+    },
+    {
+      "id": "15531",
+      "artist": "Derek Wadsworth"
+    },
+    {
+      "id": "14603",
+      "artist": "Diana Ross and Brian Wilson"
+    },
+    {
+      "id": "13549",
+      "artist": "Take That"
+    },
+    {
+      "id": "12092",
+      "artist": "Barbra Streisand"
+    },
+    {
+      "id": "4857",
+      "artist": "Grady Martin"
+    },
+    {
+      "id": "4830",
+      "artist": "Hoyt Curtin"
+    },
+    {
+      "id": "11206",
+      "artist": "Jay-Z"
+    },
+    {
+      "id": "11207",
+      "artist": "Bono"
+    },
+    {
+      "id": "10507",
+      "artist": "Boyz II Men"
+    },
+    {
+      "id": "9217",
+      "artist": "Judas Priest"
+    },
+    {
+      "id": "8226",
+      "artist": "The Who"
+    },
+    {
+      "id": "7858",
+      "artist": "Paul McCartney"
+    },
+    {
+      "id": "7647",
+      "artist": "Bob Marley"
+    },
+    {
+      "id": "7646",
+      "artist": "Pink Floyd"
+    },
+    {
+      "id": "7648",
+      "artist": "Abba"
+    },
+    {
+      "id": "14860",
+      "artist": " Ronnie Wood"
+    },
+    {
+      "id": "6559",
+      "artist": "The Rolling Stones"
+    },
+    {
+      "id": "6090",
+      "artist": "The Monkees"
+    },
+    {
+      "id": "6089",
+      "artist": "Ray Charles"
+    },
+    {
+      "id": "6088",
+      "artist": "The New Vaudeville Band"
+    },
+    {
+      "id": "5929",
+      "artist": "Keith Richards"
+    },
+    {
+      "id": "20020",
+      "artist": "The Who"
+    },
+    {
+      "id": "5779",
+      "artist": "The Rolling Stones"
+    },
+    {
+      "id": "15359",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "5246",
+      "artist": "Guy Mitchell"
+    },
+    {
+      "id": "15358",
+      "artist": "Elvis Presley"
+    },
+    {
+      "id": "4160",
+      "artist": "Daniel Bedingfield"
+    },
+    {
+      "id": "3664",
+      "artist": "Montell Jordan"
+    },
+    {
+      "id": "2203",
+      "artist": "Duane Roland"
+    },
+    {
+      "id": "19232",
+      "artist": "Don Barnes"
+    },
+    {
+      "id": "2099",
+      "artist": "Mike Stock"
+    },
+    {
+      "id": "2100",
+      "artist": "Nicky Stevens"
+    },
+    {
+      "id": "20239",
+      "artist": "Kimberley Rew"
+    },
+    {
+      "id": "1832",
+      "artist": "Mickey Thomas"
+    },
+    {
+      "id": "1675",
+      "artist": "John Wilson"
+    },
+    {
+      "id": "1316",
+      "artist": "Vic Malcolm"
+    },
+    {
+      "id": "1013",
+      "artist": "Ralph McTell"
+    },
+    {
+      "id": "736",
+      "artist": "Ken Lewis"
+    },
+    {
+      "id": "161",
+      "artist": "Andy Williams"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "21351",
+      "artist": "Melvin Parker",
+      "reason": "Ошибка проверки Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+    },
+    {
+      "id": "5930",
+      "artist": "Beryl Marsden",
+      "reason": "Ошибка проверки Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 42.48584674s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"description\": \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\",\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.5-flash-lite\"\n            },\n            \"quotaValue\": \"15\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"42s\"\n      }\n    ]\n  }\n}\n"
+    },
+    {
+      "id": "19875",
+      "artist": "The Beatles",
+      "reason": "Не пройдена проверка фактов: The rewritten description changes 'longtime hero' to 'childhood hero' when referring to Elvis Presley."
+    },
+    {
+      "id": "1676",
+      "artist": "Ozzy Osbourne",
+      "reason": "Не пройдена проверка фактов: The rewritten description changed the phrase 'just seventeen days after' to 'exactly seventeen days after', changing the meaning of the original fact."
+    }
+  ]
+}

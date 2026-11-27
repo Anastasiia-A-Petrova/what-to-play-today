@@ -1,0 +1,181 @@
+{
+  "date": "december-04",
+  "status": "partial",
+  "totalRecords": 42,
+  "selectedRecords": 42,
+  "completedCount": 41,
+  "skippedCount": 1,
+  "completed": [
+    {
+      "id": "21353",
+      "artist": "Stonewall Jackson"
+    },
+    {
+      "id": "19343",
+      "artist": "Wayne Duncan"
+    },
+    {
+      "id": "18823",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "18822",
+      "artist": "Justin Bieber"
+    },
+    {
+      "id": "17605",
+      "artist": "Lamb of God"
+    },
+    {
+      "id": "13548",
+      "artist": "Britney Spears"
+    },
+    {
+      "id": "11907",
+      "artist": "Whitney Houston"
+    },
+    {
+      "id": "12661",
+      "artist": "Jay-Z"
+    },
+    {
+      "id": "4666",
+      "artist": "Frank Zappa"
+    },
+    {
+      "id": "9517",
+      "artist": "Roy Orbison"
+    },
+    {
+      "id": "8703",
+      "artist": "The Jam"
+    },
+    {
+      "id": "15898",
+      "artist": "Prince"
+    },
+    {
+      "id": "19876",
+      "artist": "Led Zeppelin"
+    },
+    {
+      "id": "8227",
+      "artist": "U2"
+    },
+    {
+      "id": "7649",
+      "artist": "Sex Pistols"
+    },
+    {
+      "id": "4441",
+      "artist": "Tommy Bolin"
+    },
+    {
+      "id": "6875",
+      "artist": "Led Zeppelin"
+    },
+    {
+      "id": "17255",
+      "artist": "Pink Floyd & Jimi Hendrix"
+    },
+    {
+      "id": "5931",
+      "artist": "The Byrds"
+    },
+    {
+      "id": "5780",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "14591",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "18723",
+      "artist": "The Crickets"
+    },
+    {
+      "id": "5247",
+      "artist": "Carl Perkins"
+    },
+    {
+      "id": "20966",
+      "artist": "Kim Seok-jin"
+    },
+    {
+      "id": "22685",
+      "artist": "Jelly Roll"
+    },
+    {
+      "id": "22705",
+      "artist": "Adam Blackstone"
+    },
+    {
+      "id": "15363",
+      "artist": " Kate Rusby"
+    },
+    {
+      "id": "3959",
+      "artist": "Justin Welch"
+    },
+    {
+      "id": "3741",
+      "artist": "Jay-Z"
+    },
+    {
+      "id": "20372",
+      "artist": "Dionne Farris"
+    },
+    {
+      "id": "3578",
+      "artist": "Adamski"
+    },
+    {
+      "id": "20266",
+      "artist": "Danny Weinkauf"
+    },
+    {
+      "id": "2101",
+      "artist": "Gary Rossington"
+    },
+    {
+      "id": "1677",
+      "artist": "Southside Johnny"
+    },
+    {
+      "id": "1497",
+      "artist": "Terry Woods"
+    },
+    {
+      "id": "1014",
+      "artist": "Dennis Wilson"
+    },
+    {
+      "id": "20993",
+      "artist": "Hux Brown"
+    },
+    {
+      "id": "738",
+      "artist": "Chris Hillman"
+    },
+    {
+      "id": "737",
+      "artist": "Bob Mosley"
+    },
+    {
+      "id": "524",
+      "artist": "Freddy Cannon"
+    },
+    {
+      "id": "21546",
+      "artist": "Tommy Morgan"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "6873",
+      "artist": "Frank Zappa",
+      "reason": "Не пройдена проверка фактов: The rewritten description changes 'fire announcement' to 'evacuation announcement', which introduces a detail not present in the original text."
+    }
+  ]
+}

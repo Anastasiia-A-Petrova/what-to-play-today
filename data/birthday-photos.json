@@ -3087,5 +3087,77 @@
     "wikipediaTitle": "Andy Williams",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Andy_Williams",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Andy_Williams_1963.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jelly Roll": {
+    "name": "Jelly Roll",
+    "wikipediaTitle": "Jelly Roll Morton",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jelly_Roll_Morton",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Jelly_Roll_Morton_%28c._1927%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Kate Rusby": {
+    "name": "Kate Rusby",
+    "wikipediaTitle": "Kate Rusby",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kate_Rusby",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Kate_Rusby_-_Cambridge_Folk_Festival_50th_Anniversary_%2814828569321%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Jay-Z": {
+    "name": "Jay-Z",
+    "wikipediaTitle": "Jay-Z",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Jay-Z",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Jay-Z_meets_with_New_York_Senate_Majority_Leader_in_Albany_%28cropped%29.webp?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Dionne Farris": {
+    "name": "Dionne Farris",
+    "wikipediaTitle": "Dionne Farris",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dionne_Farris",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Dionne_Farris_Black_Women_Rock_2013.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Danny Weinkauf": {
+    "name": "Danny Weinkauf",
+    "wikipediaTitle": "Danny Weinkauf",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Danny_Weinkauf",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Danny_Weinkauf_2011.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Gary Rossington": {
+    "name": "Gary Rossington",
+    "wikipediaTitle": "Gary Rossington",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gary_Rossington",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Gary_Rossington_of_Lynyrd_Skynyrd_-_Simpleman_2011.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Southside Johnny": {
+    "name": "Southside Johnny",
+    "wikipediaTitle": "Southside Johnny",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Southside_Johnny",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/SouthsideJohnny2008.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Terry Woods": {
+    "name": "Terry Woods",
+    "wikipediaTitle": "Terry Woods",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Terry_Woods",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Terry_woods.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Dennis Wilson": {
+    "name": "Dennis Wilson",
+    "wikipediaTitle": "Dennis Wilson",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dennis_Wilson",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Dennis_Wilson_1982_%28portrait_crop%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Chris Hillman": {
+    "name": "Chris Hillman",
+    "wikipediaTitle": "Chris Hillman",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Chris_Hillman",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Chris_Hillman_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Bob Mosley": {
+    "name": "Bob Mosley",
+    "wikipediaTitle": "Bob Mosley",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Bob_Mosley",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Ducks000.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
+  },
+  "Freddy Cannon": {
+    "name": "Freddy Cannon",
+    "wikipediaTitle": "Freddy Cannon",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Freddy_Cannon",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Freddie_Cannon_1965_%283x4_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original"
   }
 }

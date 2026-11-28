@@ -1,0 +1,205 @@
+{
+  "date": "december-05",
+  "status": "partial",
+  "totalRecords": 47,
+  "selectedRecords": 47,
+  "completedCount": 42,
+  "skippedCount": 5,
+  "completed": [
+    {
+      "id": "21876",
+      "artist": "Denny Laine"
+    },
+    {
+      "id": "21711",
+      "artist": "Jim Stewart"
+    },
+    {
+      "id": "21354",
+      "artist": "John Miles"
+    },
+    {
+      "id": "19288",
+      "artist": "David Bowie"
+    },
+    {
+      "id": "18208",
+      "artist": "Spotify"
+    },
+    {
+      "id": "17833",
+      "artist": "Phish"
+    },
+    {
+      "id": "17111",
+      "artist": "George Michael"
+    },
+    {
+      "id": "14602",
+      "artist": "Robbie Williams"
+    },
+    {
+      "id": "13546",
+      "artist": "Paul McCartney"
+    },
+    {
+      "id": "12898",
+      "artist": "Band Aid 20"
+    },
+    {
+      "id": "12912",
+      "artist": "U2"
+    },
+    {
+      "id": "4667",
+      "artist": "Doug Hopkins"
+    },
+    {
+      "id": "16116",
+      "artist": "Whitney Houston"
+    },
+    {
+      "id": "9359",
+      "artist": "Jesus And Mary Chain"
+    },
+    {
+      "id": "9358",
+      "artist": "Belinda Carlisle"
+    },
+    {
+      "id": "8573",
+      "artist": "Julio Iglesias"
+    },
+    {
+      "id": "23007",
+      "artist": "Stevie Ray Vaughan"
+    },
+    {
+      "id": "7650",
+      "artist": "Johnny Rotten"
+    },
+    {
+      "id": "18740",
+      "artist": "Paul McCartney"
+    },
+    {
+      "id": "6734",
+      "artist": "Judy Collins"
+    },
+    {
+      "id": "15365",
+      "artist": "The Rolling Stones"
+    },
+    {
+      "id": "20745",
+      "artist": "The Beach Boys"
+    },
+    {
+      "id": "5781",
+      "artist": "Lorne Greene"
+    },
+    {
+      "id": "15364",
+      "artist": "The Beatles"
+    },
+    {
+      "id": "5429",
+      "artist": "Elvis Presley"
+    },
+    {
+      "id": "23227",
+      "artist": "Conan Gray"
+    },
+    {
+      "id": "20360",
+      "artist": "Keri Hilson"
+    },
+    {
+      "id": "4199",
+      "artist": "Zainam Higgins"
+    },
+    {
+      "id": "23243",
+      "artist": "David Hodges"
+    },
+    {
+      "id": "3890",
+      "artist": "Craig Gill"
+    },
+    {
+      "id": "23228",
+      "artist": "Michel'le"
+    },
+    {
+      "id": "3399",
+      "artist": "Johnny Rzeznik"
+    },
+    {
+      "id": "2919",
+      "artist": "Les Nemes"
+    },
+    {
+      "id": "22363",
+      "artist": "Jack Russell"
+    },
+    {
+      "id": "1498",
+      "artist": "Jim Messina"
+    },
+    {
+      "id": "21708",
+      "artist": "Kim Simmonds"
+    },
+    {
+      "id": "21234",
+      "artist": "Andy Kim"
+    },
+    {
+      "id": "1168",
+      "artist": "Eddie Serrato"
+    },
+    {
+      "id": "23229",
+      "artist": "Frank Wilson"
+    },
+    {
+      "id": "402",
+      "artist": "JJ Cale"
+    },
+    {
+      "id": "214",
+      "artist": "Little Richard"
+    },
+    {
+      "id": "21660",
+      "artist": "Sonny Boy Williamson II"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "17276",
+      "artist": "Adele",
+      "reason": "Описание не изменилось: Gemini вернул исходный текст."
+    },
+    {
+      "id": "4577",
+      "artist": "Fat Larry",
+      "reason": "Не пройдена проверка фактов: The rewritten description introduces the specific year '1987' for his death, which is not present in the original description."
+    },
+    {
+      "id": "6243",
+      "artist": "Jimi Hendrix",
+      "reason": "Не удалось восстановить маркер [[LINK_1]]"
+    },
+    {
+      "id": "13535",
+      "artist": "The Beatles",
+      "reason": "Не пройдена проверка фактов: The rewritten description incorrectly states that The Beatles performed their 'final concert in their hometown of Liverpool', whereas the original text states they played their 'last ever show in their hometown of Liverpool' during their final UK tour, which changes the meaning from being the last home show of that tour to being their absolute final concert ever in Liverpool."
+    },
+    {
+      "id": "20251",
+      "artist": "Rick Wills",
+      "reason": "Не пройдена проверка фактов: The rewritten description changes the meaning of the original text by awkwardly attaching 'Small Faces' directly to Rick Wills' title ('British bass guitarist Small Faces'), removing the intended context that he had associations with the Small Faces, Peter Frampton, and Bad Company."
+    }
+  ]
+}
